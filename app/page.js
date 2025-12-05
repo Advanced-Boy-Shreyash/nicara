@@ -106,9 +106,6 @@ export default function Home() {
               <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Interiors
               </Link>
-              <Link href="/project/buy-stay" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
-                Buy & Stay
-              </Link>
               <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Events & Experiences
               </Link>
@@ -168,13 +165,6 @@ export default function Home() {
                     onClick={() => setMenuOpen(false)}
                   >
                     Interiors
-                  </a>
-                  <a
-                    href="/project/buy-stay"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Buy & Stay
                   </a>
                   <a
                     href="/project/events-experiences"
@@ -335,15 +325,11 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-10 items-start">
         <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
       <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-        NICARA Design is a Hyderabad-based interior and lifestyle studio focusing on luxury residential,
-        commercial, and hospitality projects across India. We craft thoughtful, bespoke interiors, curate
-        signature furniture and décor, provide styling, and design exclusive events and experiences, all infused
-        with a spirit of warmth, playfulness, and subtle theatricality.
+      NICARA Design is a Hyderabad-based interior and lifestyle studio shaping luxury residential, commercial, and hospitality projects across India. We craft thoughtful, bespoke interiors, curate signature furniture and décor, provide styling, and design exclusive events and experiences — all infused with a spirit of warmth, playfulness, and subtle theatricality.
       </p>
 
-      <p className="text-sm sm:text-base md:text-sm -mb-1 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-        We also curate and showcase handpicked properties for purchase and stay, including residences and holiday
-        homes, offering clients&apos; a seamless path to refined, effortless living.
+      <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+      We also scout and curate handpicked properties for clients based on their requirements, including apartments, villas, and land. From discovering the right space to designing, building, and executing the complete environment, NICARA offers a seamless path to refined, effortless living.
       </p>
 
       <div className="relative inline-block">
@@ -394,13 +380,13 @@ export default function Home() {
               },
               {
                 quote:
-                  '“Nicara’s curated property listings helped us find a home that perfectly matched our lifestyle and aspirations. Their expertise made the search effortless and enjoyable.”',
-                cite: '— Vikram P., Investor, Hyderabad',
+                  '"We had been searching endlessly for a holiday home that fit our vision but nothing truly matched. Nicara stepped in, understood exactly what we were looking for, and helped us discover the perfect property. They didn’t stop there; the interiors, the detailing, the finishing touches - everything was taken care of beautifully. Now we have a holiday home that feels personal, peaceful, and meaningful to us."',
+                cite: '— Vikram P., Investor, Goa',
               },
               {
                 quote:
-                  '“Nicara’s curated holiday homes and retreats offered us unique and unforgettable experiences. Every property they recommended was stylish, charming, and perfectly suited for a luxurious getaway.”',
-                cite: '— Sanya R., Luxury Traveler, Goa',
+                  '“We had a clear vision for our restaurant, but didn’t know how to bring it alive. Nicara understood our concept, planned every detail - layout, seating, lighting, decor, and executed it beautifully. Today, customers compliment the ambience as much as the food. Nicara helped us create a space that feels exactly like we imagined.”',
+                cite: '— Sanya R., Restaurant Owner, Hyderabad',
               },
             ].map((t, i) => (
               <div key={i} className="text-black">
@@ -510,9 +496,7 @@ export default function Home() {
                                 <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                   Interiors
                                 </a>
-                                <a href="/project/buy-stay" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Buy & Stay
-                                </a>
+                                
                                 <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                   Events & Experiences
                                 </a>

@@ -84,9 +84,6 @@ export default function About() {
               <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Interiors
               </Link>
-              <Link href="/project/buy-stay" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
-                Buy & Stay
-              </Link>
               <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Events & Experiences
               </Link>
@@ -146,13 +143,6 @@ export default function About() {
                     onClick={() => setMenuOpen(false)}
                   >
                     Interiors
-                  </a>
-                  <a
-                    href="/project/buy-stay"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Buy & Stay
                   </a>
                   <a
                     href="/project/events-experiences"
@@ -307,23 +297,28 @@ export default function About() {
             Every space has a story, and every story deserves to be lived beautifully.<br className="hidden md:block" />
             NICARA began in Hyderabad with a simple vision: to transform interiors<br className="hidden md:block" />
             into experiences, and experiences into memories. What started as a passion<br className="hidden md:block" />
-            for luxury residential, commercial, and hospitality design soon evolved<br className="hidden md:block" />
-            into a broader vision &mdash; a lifestyle brand that curates not just<br className="hidden md:block" />
-            interiors, but furniture, d&eacute;cor, events, and extraordinary experiences.<br className="hidden md:block" />
+            for luxury residential, commercial, and hospitality design soon grew into a <br className="hidden md:block" />
+            broader lifestyle philosophy — one that curates not just interiors, but<br className="hidden md:block" />
+            furniture, décor, events, and extraordinary experiences.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Our team believes that design is more than aesthetics. It&apos;s about creating<br className="hidden md:block" />
-            warmth, joy, and theatrical moments in everyday life. Each project is<br className="hidden md:block" />
-            approached as a bespoke journey, where interiors, curated furniture, styling,<br className="hidden md:block" />
+            At NICARA, we believe design is more than aesthetics. It is about creating<br className="hidden md:block" />
+            warmth, joy, and sub theatrical moments in everyday life. Each project is<br className="hidden md:block" />
+            approached as a bespoke journey where interiors, curated furniture, styling,<br className="hidden md:block" />
             and immersive events come together to reflect the unique personality<br className="hidden md:block" />
             and aspirations of our clients.<br className="hidden md:block" />
             </p>
+            <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
+            As NICARA grew, we began helping clients find the right spaces to call their<br className="hidden md:block" />
+            own. We scout and curate handpicked properties — from apartments and villas <br className="hidden md:block" />
+            to land and holiday homes — based on their lifestyle and vision. From<br className="hidden md:block" />
+            discovering the perfect property to designing and shaping the entire<br className="hidden md:block" />
+            environment, we offer a seamless, end-to-end journey.<br className="hidden md:block" />
+            </p>
             <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
-            As NICARA grew, we expanded into handpicked properties for purchase and<br className="hidden md:block" />
-            stay, helping clients discover spaces &mdash; from residences to holiday<br className="hidden md:block" />
-            homes &mdash; that resonate with their lifestyle and taste. Today,<br className="hidden md:block" />
-            NICARA is a celebration of living elegantly, effortlessly, and intentionally,<br className="hidden md:block" />
-            turning spaces into stories, moments into memories, and dreams into reality.<br className="hidden md:block" />
+            Today, NICARA stands as a celebration of living elegantly, effortlessly, and<br className="hidden md:block" />
+            intentionally — turning spaces into stories, moments into memories, and<br className="hidden md:block" />
+            dreams into reality.<br className="hidden md:block" />
             </p>
           </div>
         </div>
@@ -379,9 +374,7 @@ export default function About() {
                                 <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                   Interiors
                                 </a>
-                                <a href="/project/buy-stay" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Buy & Stay
-                                </a>
+                                
                                 <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                   Events & Experiences
                                 </a>

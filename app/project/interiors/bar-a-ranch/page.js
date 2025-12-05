@@ -84,9 +84,7 @@ const BarARanch = () => {
               <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100 font-avenir-next-lt-pro-light font-medium">
                 Interiors
               </Link>
-              <Link href="/project/buy-stay" className="block px-4 py-2 text-sm text-black hover:bg-gray-100 font-avenir-next-lt-pro-light font-medium">
-                Buy & Stay
-              </Link>
+              
               <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100 font-avenir-next-lt-pro-light font-medium">
                 Events & Experiences
               </Link>
@@ -147,13 +145,8 @@ const BarARanch = () => {
                   >
                     Interiors
                   </a>
-                  <a
-                    href="/project/buy-stay"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Buy & Stay
-                  </a>
+                  
+              
                   <a
                     href="/project/events-experiences"
                     className="py-2 text-white hover:underline"
@@ -365,9 +358,7 @@ const BarARanch = () => {
                               <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                 Interiors
                               </a>
-                              <a href="/project/buy-stay" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                Buy & Stay
-                              </a>
+                              
                               <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                                 Events & Experiences
                               </a>

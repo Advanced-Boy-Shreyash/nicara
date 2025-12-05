@@ -227,9 +227,7 @@ export default function ContactSection() {
               <Link href="/project/interiors" className="block px-4 py-2 text-sm text-[#fffbea] hover:bg-[#fffbea] hover:text-[#845547]">
                 Interiors
               </Link>
-              <Link href="/project/buy-stay" className="block px-4 py-2 text-sm text-[#fffbea] hover:bg-[#fffbea] hover:text-[#845547]">
-                Buy & Stay
-              </Link>
+              
               <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-[#fffbea] hover:bg-[#fffbea] hover:text-[#845547]">
                 Events & Experiences
               </Link>
@@ -290,13 +288,7 @@ export default function ContactSection() {
                   >
                     Interiors
                   </a>
-                  <a
-                    href="/project/buy-stay"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Buy & Stay
-                  </a>
+                  
                   <a
                     href="/project/events-experiences"
                     className="py-2 text-white hover:underline"
@@ -620,9 +612,7 @@ export default function ContactSection() {
                     <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                       Interiors
                     </a>
-                    <a href="/project/buy-stay" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                      Buy & Stay
-                    </a>
+                    
                     <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
                       Events & Experiences
                     </a>
