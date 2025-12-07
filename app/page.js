@@ -380,7 +380,7 @@ export default function Home() {
               },
               {
                 quote:
-                  '"We spent months looking for a holiday home but nothing matched our vision - until Nicara took charge. They found us the perfect space & beautifully executed the interiors with every detail in place. The result is a space that feels personal, peaceful, & meaningful to us."',
+                  '"We spent months looking for a holiday home but nothing matched our vision - until Nicara took charge. They found us the perfect space & beautifully executed the interiors with every detail in place. The result is a space that feels personal, peaceful, & meaningful to ."',
                 cite: '— Vikram P., Investor, Goa',
               },
               {
