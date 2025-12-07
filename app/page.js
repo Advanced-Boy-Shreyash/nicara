@@ -380,12 +380,12 @@ export default function Home() {
               },
               {
                 quote:
-                  '"We had been searching endlessly for a holiday home that fit our vision but nothing truly matched. Nicara stepped in, understood exactly what we were looking for, and helped us discover the perfect property. They didn’t stop there; the interiors, the detailing, the finishing touches - everything was taken care of beautifully. Now we have a holiday home that feels personal, peaceful, and meaningful to us."',
+                  '"We spent months looking for a holiday home but nothing matched our vision - until Nicara took charge. They found us the perfect space & beautifully executed the interiors with every detail. The result is a space that feels personal, peaceful, & meaningful to us."',
                 cite: '— Vikram P., Investor, Goa',
               },
               {
                 quote:
-                  '“We had a clear vision for our restaurant, but didn’t know how to bring it alive. Nicara understood our concept, planned every detail - layout, seating, lighting, decor, and executed it beautifully. Today, customers compliment the ambience as much as the food. Nicara helped us create a space that feels exactly like we imagined.”',
+                  '"We had a vision for our restaurant but struggled to translate it into reality. Nicara stepped in, refined our concept, and executed layout, lighting, seating and decor beautifully. Today, customers praise the ambience as much as the food its truly the space we imagined."',
                 cite: '— Sanya R., Restaurant Owner, Hyderabad',
               },
             ].map((t, i) => (
