@@ -395,7 +395,7 @@ Avery and her team embarked on a light renovation,<br className="hidden sm:block
                 
                       {/* Description section */}
                       <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                         Established in 2019, Nicara Design is a full-service design firm based in Hyderabad, India.
+                         Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
                       </div>
           
                       {/* Social section */}

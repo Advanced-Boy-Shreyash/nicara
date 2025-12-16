@@ -325,17 +325,17 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-10 items-start">
         <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
       <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      NICARA Design is a Hyderabad-based interior and lifestyle studio shaping luxury residential, commercial, and hospitality projects across India. We craft thoughtful, bespoke interiors, curate signature furniture and décor, provide styling, and design exclusive events and experiences — all infused with a spirit of warmth, playfulness, and subtle theatricality.
-      </p>
-
+      NICARA  is a Hyderabad-based Interior Architecture & Lifestyle Studio shaping luxury residential, commercial, and hospitality projects across India.      </p>
+      <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+      We craft thoughtful, bespoke interiors, curate signature furniture and décor, provide styling, and design exclusive events and experiences — all infused with warmth, playfulness, and subtle theatricality. </p>
       <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      We also scout and curate handpicked properties for clients based on their requirements, including apartments, villas, and land. From discovering the right space to designing, building, and executing the complete environment, NICARA offers a seamless path to refined, effortless living.
+      For our clients, we also scout and curate handpicked spaces aligned with their lifestyle vision, including apartments, villas, residential <br/>and farm plots, holiday homes, and select commercial spaces. From discovering the right space to designing and executing the complete environment, NICARA offers a seamless path to refined, effortless living.
       </p>
 
       <div className="relative inline-block">
         <Link
           href="/project/interiors"
-          className="inline-block mt-20 sm:mt-22 md:mt-20 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
+          className="inline-block mt-20 sm:mt-22 md:mt-15 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
         >
           View Projects
         </Link>
@@ -509,7 +509,7 @@ export default function Home() {
                   
                         {/* Description section */}
                         <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara Design is a full-service design firm based in Hyderabad, India.
+                           Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
                         </div>
             
                         {/* Social section */}

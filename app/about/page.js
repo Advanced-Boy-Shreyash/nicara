@@ -295,30 +295,29 @@ export default function About() {
           <h2 className="text-xl md:text-xl font-medium mb-4" style={{ fontFamily: 'serif' }}>Our Story</h2>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
             Every space has a story, and every story deserves to be lived beautifully.<br className="hidden md:block" />
-            NICARA began in Hyderabad with a simple vision: to transform interiors<br className="hidden md:block" />
-            into experiences, and experiences into memories. What started as a passion<br className="hidden md:block" />
-            for luxury residential, commercial, and hospitality design soon grew into a <br className="hidden md:block" />
-            broader lifestyle philosophy — one that curates not just interiors, but<br className="hidden md:block" />
-            furniture, décor, events, and extraordinary experiences.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            At NICARA, we believe design is more than aesthetics. It is about creating<br className="hidden md:block" />
-            warmth, joy, and sub theatrical moments in everyday life. Each project is<br className="hidden md:block" />
-            approached as a bespoke journey where interiors, curated furniture, styling,<br className="hidden md:block" />
-            and immersive events come together to reflect the unique personality<br className="hidden md:block" />
-            and aspirations of our clients.<br className="hidden md:block" />
+            NICARA began in Hyderabad with a simple belief — that design is not just<br className="hidden md:block" />
+            about aesthetics, but about creating experiences that linger as memories.<br className="hidden md:block" />
+            What started as a passion for luxury residential, commercial, and hospitality<br className="hidden md:block" />
+            interior architecture soon evolved into a broader lifestyle philosophy.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            As NICARA grew, we began helping clients find the right spaces to call their<br className="hidden md:block" />
-            own. We scout and curate handpicked properties — from apartments and villas <br className="hidden md:block" />
-            to land and holiday homes — based on their lifestyle and vision. From<br className="hidden md:block" />
-            discovering the perfect property to designing and shaping the entire<br className="hidden md:block" />
-            environment, we offer a seamless, end-to-end journey.<br className="hidden md:block" />
+            At NICARA, each project is approached as a deeply personal journey. Interiors,<br className="hidden md:block" />
+            curated furniture, styling, and immersive experiences come together to reflect<br className="hidden md:block" />
+            the individuality, aspirations, and rhythm of our clients’ lives.<br className="hidden md:block" />
+              </p>
+            <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
+            As our work deepened, clients began seeking our perspective even before a <br className="hidden md:block" />
+            space was chosen. Naturally, our role expanded into helping them discover<br className="hidden md:block" />
+            spaces aligned with their sensibility and long-term vision — from apartments <br className="hidden md:block" />
+            and villas to plots and holiday homes. Designing and shaping these environments <br className="hidden md:block" />
+            then became a seamless continuation of that trust.<br className="hidden md:block" />
+           
             </p>
             <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
-            Today, NICARA stands as a celebration of living elegantly, effortlessly, and<br className="hidden md:block" />
-            intentionally — turning spaces into stories, moments into memories, and<br className="hidden md:block" />
-            dreams into reality.<br className="hidden md:block" />
+            Today, NICARA stands for living elegantly, effortlessly, and intentionally — <br className="hidden md:block" />
+            turning spaces into stories, moments into memories, and dreams into reality.<br className="hidden md:block" />
             </p>
           </div>
         </div>
@@ -329,16 +328,14 @@ export default function About() {
           <div className="text-black leading-7 mt-10 md:mt-0 md:translate-y-67 md:-translate-x-19">
             <h2 className="text-xl md:text-xl font mb-4" style={{ fontFamily: 'serif' }}>Founders</h2>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Nishanth is the co-founder of NICARA, holding a Master&rsquo;s in Design from London and an MBA from Bangalore. He is inspired by the idea of turning spaces into experiences, creating interiors that are luxurious, warm, playful, and deeply personal.</p>
+            Nishanth is the co-founder of NICARA. With a Master’s from London and an MBA from Bangalore, he is driven by the belief that spaces should be experienced, not just designed. His work blends luxury with warmth, playfulness, and a deeply personal sensibility.</p>
              <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-             A traveler with a love for beautiful homes, boutique stays, and curated experiences, Nishanth finds inspiration in every journey and every unique space he encounters. With a background in real estate and lifestyle consulting, he combines design, property insight, and refined living to craft projects that are thoughtful, elegant, and effortlessly luxurious.</p>
+             A passionate traveler with a love for beautiful homes, boutique stays, and curated experiences, Nishanth draws inspiration from every journey. With a background in real estate and lifestyle consulting, he brings together design vision, property insight, and refined living to shape environments that feel thoughtful, elegant, and effortless.</p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He started his professional journey with a Corporator, building a foundation in operations, systems, and on-ground project execution.</p>
+            Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He brings clarity, structure, and precision to every project, ensuring that design intent is translated seamlessly into reality.</p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            With strong expertise in operations and project management, Sriniketh ensures that every NICARA project is delivered with precision, efficiency, and attention to detail. He believes in the power of well-structured systems, blending creativity with discipline to bring ambitious designs to life seamlessly.</p>
-            <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
-            At NICARA, Sriniketh&rsquo;s ability to balance design vision with flawless execution makes him an integral force behind the studio&rsquo;s commitment to luxury, reliability, and refined living.</p>
-          </div>
+            With strong expertise in operations and project management, Sriniketh oversees systems, execution, and on-ground delivery. His ability to balance creative ambition with disciplined execution forms the backbone of NICARA’s commitment to quality, reliability, and refined living.</p>
+            </div>
         </div>
             </section>
             <footer
@@ -387,7 +384,7 @@ export default function About() {
                   
                         {/* Description section */}
                         <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara Design is a full-service design firm based in Hyderabad, India.
+                           Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
                         </div>
             
                         {/* Social section */}

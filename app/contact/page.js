@@ -532,7 +532,7 @@ export default function ContactSection() {
         <div className="space-y-6 text-lg transform md:translate-x-19"  style={{ fontFamily: 'Crimson Text, serif' }}>
           <p>
             <span className="font-">NICARA</span> is now offering
-            1-on-1<br/> consultations via <em>the expert</em>.
+            1-on-1 curated<br/> consultations via <em>the expert</em>.
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -625,7 +625,7 @@ export default function ContactSection() {
       
             {/* Description section */}
             <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-               Established in 2019, Nicara Design is a full-service design firm based in Hyderabad, India.
+               Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
             </div>
 
             {/* Social section */}
