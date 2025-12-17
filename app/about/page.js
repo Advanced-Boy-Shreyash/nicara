@@ -297,7 +297,7 @@ export default function About() {
             Every space has a story, and every story deserves to be lived beautifully.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            NICARA began in Hyderabad with a simple belief — that design is not just<br className="hidden md:block" />
+            NICARA began in Hyderabad with a simple belief - that design is not just<br className="hidden md:block" />
             about aesthetics, but about creating experiences that linger as memories.<br className="hidden md:block" />
             What started as a passion for luxury residential, commercial, and hospitality<br className="hidden md:block" />
             interior architecture soon evolved into a broader lifestyle philosophy.<br className="hidden md:block" />
@@ -310,13 +310,13 @@ export default function About() {
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
             As our work deepened, clients began seeking our perspective even before a <br className="hidden md:block" />
             space was chosen. Naturally, our role expanded into helping them discover<br className="hidden md:block" />
-            spaces aligned with their sensibility and long-term vision — from apartments <br className="hidden md:block" />
+            spaces aligned with their sensibility and long-term vision - from apartments <br className="hidden md:block" />
             and villas to plots and holiday homes. Designing and shaping these environments <br className="hidden md:block" />
             then became a seamless continuation of that trust.<br className="hidden md:block" />
            
             </p>
             <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
-            Today, NICARA stands for living elegantly, effortlessly, and intentionally — <br className="hidden md:block" />
+            Today, NICARA stands for living elegantly, effortlessly, and intentionally - <br className="hidden md:block" />
             turning spaces into stories, moments into memories, and dreams into reality.<br className="hidden md:block" />
             </p>
           </div>
@@ -384,7 +384,7 @@ export default function About() {
                   
                         {/* Description section */}
                         <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
+                           Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
                         </div>
             
                         {/* Social section */}

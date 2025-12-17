@@ -1,6 +1,7 @@
+
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Mail, Phone, ChevronRight, ChevronLeft } from 'lucide-react';
@@ -18,12 +19,17 @@ export default function Home() {
   const [isFormHovered, setIsFormHovered] = useState(false);
   const [mobileFormOpen, setMobileFormOpen] = useState(false);
   const [showPopupForm, setShowPopupForm] = useState(false);
+
   const [contactFormData, setContactFormData] = useState({
     name: '',
     phone: '',
     email: '',
     message: ''
   });
+
+
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -327,7 +333,7 @@ export default function Home() {
       <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
       NICARA  is a Hyderabad-based Interior Architecture & Lifestyle Studio shaping luxury residential, commercial, and hospitality projects across India.      </p>
       <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      We craft thoughtful, bespoke interiors, curate signature furniture and décor, provide styling, and design exclusive events and experiences — all infused with warmth, playfulness, and subtle theatricality. </p>
+      We craft thoughtful, bespoke interiors, curate signature furniture and decor, provide styling, and design exclusive events and experiences - all infused with warmth, playfulness, and subtle theatricality. </p>
       <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
       For our clients, we also scout and curate handpicked spaces aligned with their lifestyle vision, including apartments, villas, residential <br/>and farm plots, holiday homes, and select commercial spaces. From discovering the right space to designing and executing the complete environment, NICARA offers a seamless path to refined, effortless living.
       </p>
@@ -398,10 +404,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ✅ FULL IMAGE */}
+
+
+
+
+
+
+      {/* ✅ FULL VIDEO */}
       <section className="bg-white min-h-screen">
         <div className="relative w-full h-[100vh]">
-          <Image src="/hero6.png" alt="Full page showcase" fill priority className="object-cover" />
+
+          <video
+            ref={videoRef}
+            src="/nicara.mp4"
+            playsInline
+            className="w-full h-full object-cover cursor-pointer"
+            onClick={() => {
+              const video = videoRef.current;
+              if (video && !video.paused) {
+                video.pause();
+                setVideoPlaying(false);
+              }
+            }}
+          />
+          {!videoPlaying && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button
+                onClick={() => {
+                  const video = videoRef.current;
+                  if (video) {
+                    video.play();
+                    setVideoPlaying(true);
+                  }
+                }}
+                className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-200 cursor-pointer"
+              >
+                <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -509,7 +552,7 @@ export default function Home() {
                   
                         {/* Description section */}
                         <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara Design is a full-service design and lifestyle studio based in Hyderabad, India.
+                           Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
                         </div>
             
                         {/* Social section */}
