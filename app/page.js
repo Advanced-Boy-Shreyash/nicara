@@ -417,7 +417,7 @@ export default function Home() {
     className="
       relative w-full 
       h-[30vh]              /* 📱 mobile height */
-      sm:h-[80vh]           /* 📱 large mobile */
+      sm:h-[70vh]           /* 📱 large mobile */
       md:h-[100vh]          /* 💻 desktop untouched */
     "
   >
@@ -542,7 +542,7 @@ export default function Home() {
          text-amber-50 
          py-16 sm:py-24 
          px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32
-         -mt-148 sm:-mt-8 md:mt-0
+         -mt-138 sm:-mt-8 md:mt-0
        "
        style={{ backgroundColor: '#755306' }}
       >
