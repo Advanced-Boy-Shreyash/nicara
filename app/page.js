@@ -421,7 +421,7 @@ export default function Home() {
             >
               <X className="w-6 h-6" />
             </button>
-            <h3 className="text-lg font-bold mb-4 text-black text-center font-poppins">Get a Free Design Consultation</h3>
+            <h3 className="text-lg font-bold mb-4 text-black text-center font-poppins">Get a Free Curated Consultation</h3>
             <form onSubmit={handleContactSubmit} className="flex flex-col justify-center flex-grow">
               <div className="mb-4">
                 <label className="block text-sm font-medium mb-2 text-black">Name</label>
