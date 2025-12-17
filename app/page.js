@@ -410,43 +410,73 @@ export default function Home() {
 
 
 
+
       {/* ✅ FULL VIDEO */}
       <section className="bg-white min-h-screen">
-        <div className="relative w-full h-[100vh]">
+  <div
+    className="
+      relative w-full 
+      h-[30vh]              /* 📱 mobile height */
+      sm:h-[80vh]           /* 📱 large mobile */
+      md:h-[100vh]          /* 💻 desktop untouched */
+    "
+  >
+    <video
+      ref={videoRef}
+      src="/nicara.mp4"
+      playsInline
+      className="
+        w-full h-full object-cover cursor-pointer
+      "
+      onClick={() => {
+        const video = videoRef.current;
+        if (video && !video.paused) {
+          video.pause();
+          setVideoPlaying(false);
+        }
+      }}
+    />
 
-          <video
-            ref={videoRef}
-            src="/nicara.mp4"
-            playsInline
-            className="w-full h-full object-cover cursor-pointer"
-            onClick={() => {
-              const video = videoRef.current;
-              if (video && !video.paused) {
-                video.pause();
-                setVideoPlaying(false);
-              }
-            }}
-          />
-          {!videoPlaying && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button
-                onClick={() => {
-                  const video = videoRef.current;
-                  if (video) {
-                    video.play();
-                    setVideoPlaying(true);
-                  }
-                }}
-                className="w-20 h-20 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-200 cursor-pointer"
-              >
-                <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+    {!videoPlaying && (
+      <div className="absolute inset-0 flex items-center justify-center">
+        <button
+          onClick={() => {
+            const video = videoRef.current;
+            if (video) {
+              video.play();
+              setVideoPlaying(true);
+            }
+          }}
+          className="
+            w-14 h-14            /* 📱 mobile */
+            sm:w-16 sm:h-16
+            md:w-20 md:h-20     /* 💻 desktop unchanged */
+            bg-white bg-opacity-80 
+            rounded-full 
+            flex items-center justify-center 
+            hover:bg-opacity-100 
+            transition-all duration-200
+            cursor-pointer
+          "
+        >
+          <svg
+            className="
+              w-5 h-5            /* 📱 mobile */
+              sm:w-6 sm:h-6
+              md:w-8 md:h-8     /* 💻 desktop unchanged */
+              text-black ml-1
+            "
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+    )}
+  </div>
+</section>
+
 
       {/* Popup Contact Form */}
       {showPopupForm && (
@@ -505,10 +535,16 @@ export default function Home() {
         </div>
       )}
 
+
       {/* ✅ FOOTER */}
       <footer
-        className="text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
-        style={{ backgroundColor: '#755306' }}
+         className="
+         text-amber-50 
+         py-16 sm:py-24 
+         px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32
+         -mt-148 sm:-mt-8 md:mt-0
+       "
+       style={{ backgroundColor: '#755306' }}
       >
         <div className="mx-auto w-full max-w-[2200px] space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
