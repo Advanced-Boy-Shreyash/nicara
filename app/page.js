@@ -30,6 +30,17 @@ export default function Home() {
 
   const [videoPlaying, setVideoPlaying] = useState(false);
   const videoRef = useRef(null);
+  
+  // Video control states
+  const [videoVolume, setVideoVolume] = useState(1);
+  const [videoMuted, setVideoMuted] = useState(false);
+  const [videoProgress, setVideoProgress] = useState(0);
+  const [videoDuration, setVideoDuration] = useState(0);
+  const [videoCurrentTime, setVideoCurrentTime] = useState(0);
+  const [showControls, setShowControls] = useState(true);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isBuffering, setIsBuffering] = useState(false);
+  const [controlsTimeout, setControlsTimeout] = useState(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -85,6 +96,234 @@ export default function Home() {
       alert('Error sending message. Please try again.');
     });
   };
+
+  // Video control functions
+  const togglePlayPause = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (videoPlaying) {
+        video.pause();
+        setVideoPlaying(false);
+      } else {
+        video.play();
+        setVideoPlaying(true);
+      }
+    }
+  };
+
+  const handleVideoProgress = () => {
+    const video = videoRef.current;
+    if (video && video.duration) {
+      const progress = (video.currentTime / video.duration) * 100;
+      setVideoProgress(progress);
+      setVideoCurrentTime(video.currentTime);
+    }
+  };
+
+  const handleVideoLoadedMetadata = () => {
+    const video = videoRef.current;
+    if (video) {
+      console.log('Video metadata loaded:', {
+        duration: video.duration,
+        readyState: video.readyState,
+        networkState: video.networkState
+      });
+      
+      if (video.duration && !isNaN(video.duration) && video.duration > 0) {
+        setVideoDuration(video.duration);
+      }
+    }
+  };
+
+  const handleVideoCanPlay = () => {
+    const video = videoRef.current;
+    if (video) {
+      console.log('Video can play:', {
+        duration: video.duration,
+        readyState: video.readyState
+      });
+      
+      if (video.duration && !isNaN(video.duration) && video.duration > 0) {
+        setVideoDuration(video.duration);
+      }
+    }
+  };
+
+  const handleVideoLoadStart = () => {
+    console.log('Video load started');
+  };
+
+  const handleVideoLoadedData = () => {
+    const video = videoRef.current;
+    if (video) {
+      console.log('Video loaded data:', {
+        duration: video.duration,
+        readyState: video.readyState
+      });
+      
+      if (video.duration && !isNaN(video.duration) && video.duration > 0) {
+        setVideoDuration(video.duration);
+      }
+    }
+  };
+
+  // Force metadata loading effect
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      // Force load metadata
+      video.load();
+      
+      const checkMetadata = () => {
+        if (video.duration && !isNaN(video.duration) && video.duration > 0) {
+          setVideoDuration(video.duration);
+        } else {
+          // Retry after a short delay
+          setTimeout(checkMetadata, 100);
+        }
+      };
+      
+      // Start checking after a brief delay
+      setTimeout(checkMetadata, 500);
+    }
+  }, []);
+
+  const handleVideoSeeking = (e) => {
+    const video = videoRef.current;
+    if (video && video.duration) {
+      const seekTime = (parseFloat(e.target.value) / 100) * video.duration;
+      video.currentTime = seekTime;
+      setVideoProgress(parseFloat(e.target.value));
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const video = videoRef.current;
+    const newVolume = parseFloat(e.target.value);
+    if (video) {
+      video.volume = newVolume;
+      setVideoVolume(newVolume);
+      setVideoMuted(newVolume === 0);
+    }
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (videoMuted) {
+        video.volume = videoVolume;
+        setVideoMuted(false);
+      } else {
+        video.volume = 0;
+        setVideoMuted(true);
+      }
+    }
+  };
+
+  const formatTime = (time) => {
+    if (isNaN(time)) return '0:00';
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  const toggleFullscreen = () => {
+    const videoContainer = document.getElementById('video-container');
+    if (videoContainer) {
+      if (!isFullscreen) {
+        if (videoContainer.requestFullscreen) {
+          videoContainer.requestFullscreen();
+        } else if (videoContainer.webkitRequestFullscreen) {
+          videoContainer.webkitRequestFullscreen();
+        } else if (videoContainer.mozRequestFullScreen) {
+          videoContainer.mozRequestFullScreen();
+        } else if (videoContainer.msRequestFullscreen) {
+          videoContainer.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+      }
+    }
+  };
+
+  const showControlsTemporarily = () => {
+    setShowControls(true);
+    if (controlsTimeout) {
+      clearTimeout(controlsTimeout);
+    }
+    const timeout = setTimeout(() => {
+      if (videoPlaying) {
+        setShowControls(false);
+      }
+    }, 3000);
+    setControlsTimeout(timeout);
+  };
+
+  const handleKeyPress = (e) => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    switch (e.code) {
+      case 'Space':
+        e.preventDefault();
+        togglePlayPause();
+        break;
+      case 'ArrowLeft':
+        e.preventDefault();
+        video.currentTime = Math.max(0, video.currentTime - 10);
+        break;
+      case 'ArrowRight':
+        e.preventDefault();
+        video.currentTime = Math.min(video.duration, video.currentTime + 10);
+        break;
+      case 'KeyM':
+        e.preventDefault();
+        toggleMute();
+        break;
+      case 'KeyF':
+        e.preventDefault();
+        toggleFullscreen();
+        break;
+    }
+  };
+
+  // Effect to handle fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!(document.fullscreenElement || 
+        document.webkitFullscreenElement || 
+        document.mozFullScreenElement || 
+        document.msFullscreenElement));
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+    };
+  }, []);
+
+  // Effect to add keyboard event listeners
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [videoPlaying, videoMuted, videoVolume, isFullscreen, handleKeyPress]);
 
   return (
     <div className="font-sans relative min-h-screen bg-white overflow-x-hidden">
@@ -413,69 +652,204 @@ export default function Home() {
 
       {/* ✅ FULL VIDEO */}
       <section className="bg-white min-h-screen">
-  <div
-    className="
-      relative w-full 
-      h-[30vh]              /* 📱 mobile height */
-      sm:h-[70vh]           /* 📱 large mobile */
-      md:h-[100vh]          /* 💻 desktop untouched */
-    "
-  >
-    <video
-      ref={videoRef}
-      src="/nicara.mp4"
-      playsInline
-      className="
-        w-full h-full object-cover cursor-pointer
-      "
-      onClick={() => {
-        const video = videoRef.current;
-        if (video && !video.paused) {
-          video.pause();
-          setVideoPlaying(false);
-        }
-      }}
-    />
-
-    {!videoPlaying && (
-      <div className="absolute inset-0 flex items-center justify-center">
-        <button
-          onClick={() => {
-            const video = videoRef.current;
-            if (video) {
-              video.play();
-              setVideoPlaying(true);
-            }
-          }}
+        <div
+          id="video-container"
           className="
-            w-14 h-14            /* 📱 mobile */
-            sm:w-16 sm:h-16
-            md:w-20 md:h-20     /* 💻 desktop unchanged */
-            bg-white bg-opacity-80 
-            rounded-full 
-            flex items-center justify-center 
-            hover:bg-opacity-100 
-            transition-all duration-200
-            cursor-pointer
+            relative w-full 
+            h-[30vh]              /* 📱 mobile height */
+            sm:h-[70vh]           /* 📱 large mobile */
+            md:h-[100vh]          /* 💻 desktop untouched */
+            bg-black overflow-hidden
           "
+          onMouseMove={showControlsTemporarily}
+          onMouseLeave={() => videoPlaying && setShowControls(false)}
+          onClick={togglePlayPause}
         >
-          <svg
-            className="
-              w-5 h-5            /* 📱 mobile */
-              sm:w-6 sm:h-6
-              md:w-8 md:h-8     /* 💻 desktop unchanged */
-              text-black ml-1
-            "
-            fill="currentColor"
-            viewBox="0 0 24 24"
+          <video
+            ref={videoRef}
+            src="/nicara.mp4"
+            poster="/IMG_9927.jpg"
+            playsInline
+            preload="metadata"
+            className="w-full h-full object-cover cursor-pointer"
+            onTimeUpdate={handleVideoProgress}
+            onLoadedMetadata={handleVideoLoadedMetadata}
+            onLoadStart={handleVideoLoadStart}
+            onLoadedData={handleVideoLoadedData}
+            onPlay={() => setVideoPlaying(true)}
+            onPause={() => setVideoPlaying(false)}
+            onWaiting={() => setIsBuffering(true)}
+            onCanPlay={() => {
+              handleVideoCanPlay();
+              setIsBuffering(false);
+            }}
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Loading Spinner */}
+          {isBuffering && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            </div>
+          )}
+
+          {/* Video Controls Overlay */}
+          <div
+            className={`
+              absolute bottom-0 left-0 right-0 
+              bg-gradient-to-t from-black/80 via-black/40 to-transparent
+              p-4 transition-opacity duration-300
+              ${showControls ? 'opacity-100' : 'opacity-0'}
+            `}
+            onClick={(e) => e.stopPropagation()}
           >
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </button>
-      </div>
-    )}
-  </div>
-</section>
+            {/* Progress Bar */}
+            <div className="mb-4">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={videoProgress}
+                onChange={handleVideoSeeking}
+                className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${videoProgress}%, #6b7280 ${videoProgress}%, #6b7280 100%)`
+                }}
+              />
+            </div>
+
+            {/* Controls Row */}
+            <div className="flex items-center justify-between text-white">
+              {/* Left Controls */}
+              <div className="flex items-center space-x-4">
+                {/* Play/Pause Button */}
+                <button
+                  onClick={togglePlayPause}
+                  className="hover:scale-110 transition-transform"
+                >
+                  {videoPlaying ? (
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  )}
+                </button>
+
+                {/* Volume Controls */}
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={toggleMute}
+                    className="hover:scale-110 transition-transform"
+                  >
+                    {videoMuted || videoVolume === 0 ? (
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                      </svg>
+                    )}
+                  </button>
+                  <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    value={videoMuted ? 0 : videoVolume}
+                    onChange={handleVolumeChange}
+                    className="w-20 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 100%)`
+                    }}
+                  />
+                </div>
+
+                {/* Time Display */}
+                <div className="text-sm font-mono">
+                  {formatTime(videoCurrentTime)} / {formatTime(videoDuration)}
+                </div>
+              </div>
+
+              {/* Right Controls */}
+              <div className="flex items-center space-x-4">
+                {/* Fullscreen Button */}
+                <button
+                  onClick={toggleFullscreen}
+                  className="hover:scale-110 transition-transform"
+                >
+                  {isFullscreen ? (
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                    </svg>
+                  )}
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Center Play Button (when paused) */}
+          {!videoPlaying && !isBuffering && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <button
+                onClick={togglePlayPause}
+                className="
+                  w-20 h-20 
+                  bg-white bg-opacity-90 
+                  rounded-full 
+                  flex items-center justify-center 
+                  hover:bg-opacity-100 
+                  hover:scale-110
+                  transition-all duration-200
+                  cursor-pointer
+                  shadow-lg
+                "
+              >
+                <svg
+                  className="w-8 h-8 text-black ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Custom Slider Styles */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .slider::-webkit-slider-thumb {
+            appearance: none;
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background: #ef4444;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          }
+          
+          .slider::-moz-range-thumb {
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background: #ef4444;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+          }
+        `
+      }} />
 
 
       {/* Popup Contact Form */}
