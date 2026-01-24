@@ -214,7 +214,7 @@ export default function EventsExperiences() {
                      <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
                  </div>
                </footer>
-               <FloatingContactBar />
+              <FloatingContactBar />
     </div>
   );
 }

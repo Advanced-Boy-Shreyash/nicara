@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from 'next/link';
 import { Menu, X, ChevronDown, Mail, Phone, ChevronRight, ChevronLeft } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import FloatingContactBar from '../components/FloatingContactBar';
 
 export default function About() {
 
@@ -411,7 +410,6 @@ export default function About() {
                         <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
                     </div>
                   </footer>
-                  <FloatingContactBar />
-    </div>
+
   );
 }

@@ -102,8 +102,7 @@ export default function ContactSection() {
       console.log('Floating contact email sent successfully:', result.text);
       alert('Message sent successfully!');
       setContactFormData({
-        firstName: '',
-        lastName: '',
+        name: '',
         phone: '',
         email: '',
         hearAboutUs: '',
@@ -506,6 +505,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
+
             {/* Phone Field */}
             <div>
               <label className="block text-xs font- mb-1">
@@ -520,6 +520,7 @@ export default function ContactSection() {
                 className="w-full border border-[#fffbea]/30 bg-white p-2 mt-1 focus:outline-none focus:ring-1 focus:ring-[#fffbea] text-black"
               />
             </div>
+
             {/* Email Field */}
             <div>
               <label className="block text-xs font- mb-1">
@@ -838,6 +839,7 @@ export default function ContactSection() {
                   })}
                 </select>
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Which services are you looking for?</label>
                 <div className="space-y-2">
@@ -862,6 +864,7 @@ export default function ContactSection() {
                   ))}
                 </div>
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700">Message</label>
                 <textarea
