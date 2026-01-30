@@ -36,8 +36,9 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "NICARA - Luxury Interior Architecture & Lifestyle Studio | Hyderabad, India",
-  description: "NICARA is a Hyderabad-based interior architecture and lifestyle studio crafting bespoke residential, commercial, and hospitality spaces. We design thoughtful interiors, curate signature furniture & décor, and create refined experiences aligned with your lifestyle vision.",
+  title: "Luxury Interior Architecture & Lifestyle Studio in Hyderabad | NICARA",
+  description: "NICARA is a luxury interior architecture and lifestyle studio in Hyderabad, designing bespoke residential, commercial, and hospitality spaces. We craft thoughtful interiors, curated furniture, and refined spatial experiences aligned with your lifestyle vision.",
+  keywords: "interior design Hyderabad, luxury interior architecture, bespoke interiors India, curated furniture, lifestyle studio, design consultancy",
 };
 
 export default function RootLayout({ children }) {
