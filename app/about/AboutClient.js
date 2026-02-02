@@ -1,4 +1,4 @@
-
+  
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -322,16 +322,24 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10">
-          <div className="relative h-[80vh] md:h-[140vh] overflow-visible md:overflow-hidden transform md:-translate-x-38 md:translate-y-50 -mt-60 md:mt-8">
-            <Image src="/about2.png" alt="Additional about image" fill className="object-cover" />
+        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 -mt-16 md:mt-0">
+          <div className="flex flex-col gap-4 relative overflow-hidden transform md:-translate-x-38 md:translate-y-50 -mt-60 md:mt-8">
+            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden">
+              <Image src="/about3.png" alt="Additional about image" fill className="object-cover" />
+            </div>
+            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden hidden md:block">
+              <Image src="/about4.png" alt="Another about image" fill className="object-cover" />
+            </div>
           </div>
-          <div className="text-black leading-7 mt-10 md:mt-0 md:translate-y-67 md:-translate-x-19">
+          <div className="text-black leading-7 -mt-6 md:-mt-10 md:translate-y-80 md:-translate-x-19">
             <h2 className="text-xl md:text-xl font mb-4" style={{ fontFamily: 'serif' }}>Founders</h2>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
             Nishanth is the co-founder of NICARA. With a Master’s from London and an MBA from Bangalore, he is driven by the belief that spaces should be experienced, not just designed. His work blends luxury with warmth, playfulness, and a deeply personal sensibility.</p>
-             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
+             <p className="text-sm md:text-sm mb-4 md:mb-84 font-avenir-next-lt-pro-light font-medium">
              A passionate traveler with a love for beautiful homes, boutique stays, and curated experiences, Nishanth draws inspiration from every journey. With a background in real estate and lifestyle consulting, he brings together design vision, property insight, and refined living to shape environments that feel thoughtful, elegant, and effortless.</p>
+            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden md:hidden mb-4 -translate-y-1">
+              <Image src="/about4.png" alt="Another about image" fill className="object-cover" />
+            </div>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
             Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He brings clarity, structure, and precision to every project, ensuring that design intent is translated seamlessly into reality.</p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
