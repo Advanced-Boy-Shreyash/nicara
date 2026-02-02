@@ -322,7 +322,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 -mt-5 md:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 -mt-4 md:mt-0">
           <div className="flex flex-col gap-4 relative overflow-hidden transform md:-translate-x-38 md:translate-y-50 -mt-60 md:mt-8">
             <div className="relative h-[40vh] md:h-[70vh] overflow-hidden">
               <Image src="/about3.png" alt="Additional about image" fill className="object-cover" />
