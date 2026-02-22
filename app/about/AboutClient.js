@@ -322,6 +322,12 @@ export default function About() {
 
           {/* Nishanth */}
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10">
+            {/* Mobile Header Accent */}
+            <div className="md:hidden transform translate-x-0 text-black">
+              <div className="w-20 h-[1.5px] bg-black/30 mb-6"></div>
+              <h2 className="text-xl font-medium mb-6 tracking-wide" style={{ fontFamily: 'serif' }}>Founders</h2>
+            </div>
+
             <div className="relative w-full h-[35vh] md:h-[40vh] overflow-hidden transform md:-translate-x-32 bg-[#F8F8F8] border border-gray-100/50">
               <Image
                 src="/about3.png"
@@ -331,8 +337,10 @@ export default function About() {
               />
             </div>
             <div className="text-black leading-7 ml-0 md:-ml-20 transform md:translate-x-5">
-              <div className="w-20 h-[1.5px] bg-black/30 mb-6"></div>
-              <h2 className="text-xl md:text-xl font-medium mb-6 tracking-wide" style={{ fontFamily: 'serif' }}>Founders</h2>
+              <div className="hidden md:block">
+                <div className="w-20 h-[1.5px] bg-black/30 mb-6"></div>
+                <h2 className="text-xl md:text-xl font-medium mb-6 tracking-wide" style={{ fontFamily: 'serif' }}>Founders</h2>
+              </div>
               <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
                 Nishanth is the co-founder of NICARA. With a Master’s from London and an MBA from Bangalore, he is driven by the belief that spaces should be experienced, not just designed. His work blends luxury with warmth, playfulness, and a deeply personal sensibility.
               </p>
@@ -344,6 +352,11 @@ export default function About() {
 
           {/* Sriniketh */}
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10">
+            {/* Mobile Header Accent */}
+            <div className="md:hidden transform translate-x-0">
+              <div className="w-8 h-[1.5px] bg-black/30 mb-6"></div>
+            </div>
+
             <div className="relative w-full h-[35vh] md:h-[40vh] overflow-hidden transform md:-translate-x-32 bg-[#F8F8F8] border border-gray-100/50">
               <Image
                 src="/about4.png"
@@ -353,7 +366,9 @@ export default function About() {
               />
             </div>
             <div className="text-black leading-7 ml-0 md:-ml-20 transform md:translate-x-5">
-              <div className="w-8 h-[1.5px] bg-black/30 mb-6"></div>
+              <div className="hidden md:block">
+                <div className="w-8 h-[1.5px] bg-black/30 mb-6"></div>
+              </div>
               <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
                 Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He brings clarity, structure, and precision to every project, ensuring that design intent is translated seamlessly into reality.
               </p>
