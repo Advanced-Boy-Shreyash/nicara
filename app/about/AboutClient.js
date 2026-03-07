@@ -1,4 +1,4 @@
-  
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -172,15 +172,14 @@ export default function About() {
           </div>
         )}
       </nav>
-      
+
       {/* Floating Contact Bar */}
       <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-10 flex flex-col space-y-0">
         {/* Toggle Button */}
         <button
           onClick={() => setContactBarOpen(!contactBarOpen)}
-          className={`bg-black flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] translate-x-0' : 'w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] rounded-full translate-x-1/2'
-          }`}
+          className={`bg-black flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${contactBarOpen ? 'w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] translate-x-0' : 'w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] rounded-full translate-x-1/2'
+            }`}
         >
           {contactBarOpen ? <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />}
         </button>
@@ -189,9 +188,8 @@ export default function About() {
           onMouseEnter={() => setIsContactHovered(true)}
           onMouseLeave={() => setIsContactHovered(false)}
           onClick={() => setMobileFormOpen(!mobileFormOpen)}
-          className={`w-[40px] h-[120px] sm:w-[50px] sm:h-[150px] bg-[#7E6BF2] flex flex-col items-center justify-start pt-12 sm:pt-15 text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`w-[40px] h-[120px] sm:w-[50px] sm:h-[150px] bg-[#7E6BF2] flex flex-col items-center justify-start pt-12 sm:pt-15 text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           <span className="text-xs sm:text-sm transform -rotate-90 whitespace-nowrap mb-6 sm:mb-8">Contact Us</span>
           <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -199,93 +197,91 @@ export default function About() {
         {/* WhatsApp Button */}
         <a
           href="https://wa.me/8559901234"
-          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#2C2C2C] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#2C2C2C] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
           </svg>
         </a>
         {/* Call Button */}
         <a
           href="tel:8559901234"
-          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#25D366] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#25D366] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>
       </div>
 
-        {/* Contact Form */}
-        {contactBarOpen && ((isContactHovered || isFormHovered) || mobileFormOpen) && (
-          <div
-            onMouseEnter={() => setIsFormHovered(true)}
-            onMouseLeave={() => setIsFormHovered(false)}
-            className="fixed right-0 top-1/2 transform -translate-y-3/5 sm:-translate-y-2/4 z-20 bg-white shadow-lg p-6 rounded w-80 sm:w-96 mr-12"
-            style={{ marginTop: '50px' }}
+      {/* Contact Form */}
+      {contactBarOpen && ((isContactHovered || isFormHovered) || mobileFormOpen) && (
+        <div
+          onMouseEnter={() => setIsFormHovered(true)}
+          onMouseLeave={() => setIsFormHovered(false)}
+          className="fixed right-0 top-1/2 transform -translate-y-3/5 sm:-translate-y-2/4 z-20 bg-white shadow-lg p-6 rounded w-80 sm:w-96 mr-12"
+          style={{ marginTop: '50px' }}
+        >
+          <button
+            onClick={() => {
+              setMobileFormOpen(false);
+              setIsFormHovered(false);
+              setIsContactHovered(false);
+            }}
+            className="absolute top-6 right-4 text-gray-500 hover:text-gray-700 sm:hidden"
           >
-            <button
-              onClick={() => {
-                setMobileFormOpen(false);
-                setIsFormHovered(false);
-                setIsContactHovered(false);
-              }}
-              className="absolute top-6 right-4 text-gray-500 hover:text-gray-700 sm:hidden"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <h3 className="text-lg font-bold mb-4 text-black">Contact Form</h3>
-            <form onSubmit={handleContactSubmit}>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={contactFormData.name}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
-              </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={contactFormData.phone}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
-              </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={contactFormData.email}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
-              </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Message</label>
-                <textarea
-                  name="message"
-                  value={contactFormData.message}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-2xl"
-                  rows="2"
-                ></textarea>
-              </div>
-              <button type="submit" className="bg-[#7E6BF2] text-white px-4 py-2 rounded-4xl hover:bg-[#6a5acd] w-full">Submit</button>
-            </form>
-          </div>
-        )}
+            <X className="w-6 h-6" />
+          </button>
+          <h3 className="text-lg font-bold mb-4 text-black">Contact Form</h3>
+          <form onSubmit={handleContactSubmit}>
+            <div className="mb-4 text-black">
+              <label className="block text-sm font-medium mb-2 text-black">Name</label>
+              <input
+                type="text"
+                name="name"
+                value={contactFormData.name}
+                onChange={handleContactInputChange}
+                required
+                className="w-full p-2 border border-black rounded-4xl"
+              />
+            </div>
+            <div className="mb-4 text-black">
+              <label className="block text-sm font-medium mb-2 text-black">Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                value={contactFormData.phone}
+                onChange={handleContactInputChange}
+                required
+                className="w-full p-2 border border-black rounded-4xl"
+              />
+            </div>
+            <div className="mb-4 text-black">
+              <label className="block text-sm font-medium mb-2 text-black">Email</label>
+              <input
+                type="email"
+                name="email"
+                value={contactFormData.email}
+                onChange={handleContactInputChange}
+                required
+                className="w-full p-2 border border-black rounded-4xl"
+              />
+            </div>
+            <div className="mb-4 text-black">
+              <label className="block text-sm font-medium mb-2 text-black">Message</label>
+              <textarea
+                name="message"
+                value={contactFormData.message}
+                onChange={handleContactInputChange}
+                required
+                className="w-full p-2 border border-black rounded-2xl"
+                rows="2"
+              ></textarea>
+            </div>
+            <button type="submit" className="bg-[#7E6BF2] text-white px-4 py-2 rounded-4xl hover:bg-[#6a5acd] w-full">Submit</button>
+          </form>
+        </div>
+      )}
 
       <section className="min-h-screen bg-white pt-24 px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32">
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10 h-[160vh]">
@@ -293,133 +289,169 @@ export default function About() {
             <Image src="/about1.png" alt="About image" fill className="object-cover" />
           </div>
           <div className="text-black leading-7 md:sticky md:top-28 ml-0 md:-ml-20 transform md:translate-x-5 md:translate-y-19">
-          <h2 className="text-xl md:text-xl font-medium mb-4" style={{ fontFamily: 'serif' }}>Our Story</h2>
+            <h2 className="text-xl md:text-xl font-medium mb-4" style={{ fontFamily: 'serif' }}>Our Story</h2>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Every space has a story, and every story deserves to be lived beautifully.<br className="hidden md:block" />
+              Every space has a story, and every story deserves to be lived beautifully.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            NICARA began in Hyderabad with a simple belief - that design is not just<br className="hidden md:block" />
-            about aesthetics, but about creating experiences that linger as memories.<br className="hidden md:block" />
-            What started as a passion for luxury residential, commercial, and hospitality<br className="hidden md:block" />
-            interior architecture soon evolved into a broader lifestyle philosophy.<br className="hidden md:block" />
+              NICARA began in Hyderabad with a simple belief - that design is not just<br className="hidden md:block" />
+              about aesthetics, but about creating experiences that linger as memories.<br className="hidden md:block" />
+              What started as a passion for luxury residential, commercial, and hospitality<br className="hidden md:block" />
+              interior architecture soon evolved into a broader lifestyle philosophy.<br className="hidden md:block" />
             </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            At NICARA, each project is approached as a deeply personal journey. Interiors,<br className="hidden md:block" />
-            curated furniture, styling, and immersive experiences come together to reflect<br className="hidden md:block" />
-            the individuality, aspirations, and rhythm of our clients’ lives.<br className="hidden md:block" />
-              </p>
+              At NICARA, each project is approached as a deeply personal journey. Interiors,<br className="hidden md:block" />
+              curated furniture, styling, and immersive experiences come together to reflect<br className="hidden md:block" />
+              the individuality, aspirations, and rhythm of our clients’ lives.<br className="hidden md:block" />
+            </p>
             <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            As our work deepened, clients began seeking our perspective even before a <br className="hidden md:block" />
-            space was chosen. Naturally, our role expanded into helping them discover<br className="hidden md:block" />
-            spaces aligned with their sensibility and long-term vision - from apartments <br className="hidden md:block" />
-            and villas to plots and holiday homes. Designing and shaping these environments <br className="hidden md:block" />
-            then became a seamless continuation of that trust.<br className="hidden md:block" />
-           
+              As our work deepened, clients began seeking our perspective even before a <br className="hidden md:block" />
+              space was chosen. Naturally, our role expanded into helping them discover<br className="hidden md:block" />
+              spaces aligned with their sensibility and long-term vision - from apartments <br className="hidden md:block" />
+              and villas to plots and holiday homes. Designing and shaping these environments <br className="hidden md:block" />
+              then became a seamless continuation of that trust.<br className="hidden md:block" />
+
             </p>
             <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
-            Today, NICARA stands for living elegantly, effortlessly, and intentionally - <br className="hidden md:block" />
-            turning spaces into stories, moments into memories, and dreams into reality.<br className="hidden md:block" />
+              Today, NICARA stands for living elegantly, effortlessly, and intentionally - <br className="hidden md:block" />
+              turning spaces into stories, moments into memories, and dreams into reality.<br className="hidden md:block" />
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[60%_40%] gap-10 -mt-4 md:mt-0">
-          <div className="flex flex-col gap-4 relative overflow-hidden transform md:-translate-x-38 md:translate-y-50 -mt-60 md:mt-8">
-            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden">
-              <Image src="/about3.png" alt="Additional about image" fill className="object-cover" />
+        <div className="mx-auto w-full max-w-[2200px] flex flex-col gap-10 md:gap-12 mt-20 md:mt-32 pb-20">
+
+          {/* Nishanth */}
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10">
+            {/* Mobile Header Accent */}
+            <div className="md:hidden transform translate-x-0 text-black">
+              <div className="w-20 h-[1.5px] bg-black/30 mb-6"></div>
+              <h2 className="text-xl font-medium mb-6 tracking-wide" style={{ fontFamily: 'serif' }}>Founders</h2>
             </div>
-            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden hidden md:block">
-              <Image src="/about4.png" alt="Another about image" fill className="object-cover" />
+
+            <div className="relative w-full h-[35vh] md:h-[40vh] overflow-hidden transform md:-translate-x-32 bg-[#F8F8F8] border border-gray-100/50">
+              <Image
+                src="/about3.png"
+                alt="Nishanth"
+                fill
+                className="object-contain object-center scale-90"
+              />
+            </div>
+            <div className="text-black leading-7 ml-0 md:-ml-20 transform md:translate-x-5">
+              <div className="hidden md:block">
+                <div className="w-20 h-[1.5px] bg-black/30 mb-6"></div>
+                <h2 className="text-xl md:text-xl font-medium mb-6 tracking-wide" style={{ fontFamily: 'serif' }}>Founders</h2>
+              </div>
+              <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
+                Nishanth is the co-founder of NICARA. With a Master’s from London and an MBA from Bangalore, he is driven by the belief that spaces should be experienced, not just designed. His work blends luxury with warmth, playfulness, and a deeply personal sensibility.
+              </p>
+              <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
+                A passionate traveler with a love for beautiful homes, boutique stays, and curated experiences, Nishanth draws inspiration from every journey. With a background in real estate and lifestyle consulting, he brings together design vision, property insight, and refined living to shape environments that feel thoughtful, elegant, and effortless.
+              </p>
             </div>
           </div>
-          <div className="text-black leading-7 -mt-6 md:-mt-10 md:translate-y-80 md:-translate-x-19">
-            <h2 className="text-xl md:text-xl font mb-4" style={{ fontFamily: 'serif' }}>Founders</h2>
-            <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Nishanth is the co-founder of NICARA. With a Master’s from London and an MBA from Bangalore, he is driven by the belief that spaces should be experienced, not just designed. His work blends luxury with warmth, playfulness, and a deeply personal sensibility.</p>
-             <p className="text-sm md:text-sm mb-4 md:mb-84 font-avenir-next-lt-pro-light font-medium">
-             A passionate traveler with a love for beautiful homes, boutique stays, and curated experiences, Nishanth draws inspiration from every journey. With a background in real estate and lifestyle consulting, he brings together design vision, property insight, and refined living to shape environments that feel thoughtful, elegant, and effortless.</p>
-            <div className="relative h-[40vh] md:h-[70vh] overflow-hidden md:hidden mb-4 -translate-y-1">
-              <Image src="/about4.png" alt="Another about image" fill className="object-cover" />
-            </div>
-            <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He brings clarity, structure, and precision to every project, ensuring that design intent is translated seamlessly into reality.</p>
-            <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
-            With strong expertise in operations and project management, Sriniketh oversees systems, execution, and on-ground delivery. His ability to balance creative ambition with disciplined execution forms the backbone of NICARA’s commitment to quality, reliability, and refined living.</p>
-            </div>
-        </div>
-            </section>
-            <footer
-                className="mt-45 md:mt-70 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
 
-       style={{ backgroundColor: '#755306' }}
+          {/* Sriniketh */}
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-10">
+            {/* Mobile Header Accent */}
+            <div className="md:hidden transform translate-x-0">
+              <div className="w-8 h-[1.5px] bg-black/30 mb-6"></div>
+            </div>
+
+            <div className="relative w-full h-[35vh] md:h-[40vh] overflow-hidden transform md:-translate-x-32 bg-[#F8F8F8] border border-gray-100/50">
+              <Image
+                src="/about4.png"
+                alt="Sriniketh"
+                fill
+                className="object-contain object-center scale-90"
+              />
+            </div>
+            <div className="text-black leading-7 ml-0 md:-ml-20 transform md:translate-x-5">
+              <div className="hidden md:block">
+                <div className="w-8 h-[1.5px] bg-black/30 mb-6"></div>
+              </div>
+              <p className="text-sm md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
+                Sriniketh is the co-founder of NICARA, with a background in Structural Engineering from BITS Pilani. He brings clarity, structure, and precision to every project, ensuring that design intent is translated seamlessly into reality.
+              </p>
+              <p className="text-sm md:text-sm font-avenir-next-lt-pro-light font-medium">
+                With strong expertise in operations and project management, Sriniketh oversees systems, execution, and on-ground delivery. His ability to balance creative ambition with disciplined execution forms the backbone of NICARA’s commitment to quality, reliability, and refined living.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer
+        className="mt-45 md:mt-70 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
+
+        style={{ backgroundColor: '#755306' }}
       >
         <div className="mx-auto w-full max-w-[2200px] space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Links section */}
             <div className="flex flex-wrap gap-3 sm:gap-6 justify-center md:justify-start text-center md:text-left relative md:-ml-4">
-                          <div className="relative ">
-                      <button
-                        className="md:hidden text-md hover:underline flex items-center font-avenir-next-lt-pro-light font-light"
-                        onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}
-                      >
-                        Projects
-                              <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${footerDropdownOpen ? 'rotate-180' : ''}`} />
-                            </button>
-                            <a
-                              href="#"
-                              className="hidden md:block text-md hover:underline font-avenir-next-lt-pro-light font-light"
-                              onMouseEnter={() => setFooterDropdownOpen(true)}
-                              onMouseLeave={() => setFooterDropdownOpen(false)}
-                            >
-                              Projects
-                            </a>
-                            {footerDropdownOpen && (
-                              <div
-                                className="absolute bottom-full left-0 bg-[#755306] shadow-lg py-2 w-48 z-30"
-                                onMouseEnter={() => setFooterDropdownOpen(true)}
-                                onMouseLeave={() => setFooterDropdownOpen(false)}
-                              >
-                                <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Interiors
-                                </a>
-                                
-                                <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Events & Experiences
-                                </a>
-                              </div>
-                            )}
-                          </div>
-                          <a href="/about" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">About</a>
-                          <a href="/contact" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">Contact</a>
-                        </div>
-                  
-                        {/* Description section */}
-                        <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
-                        </div>
-            
-                        {/* Social section */}
-                        <div className="text-[1.05rem] text-center md:text-left md:-mr-19 md:ml-52 space-y-1 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                          <div>
-                            IG: <a href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg==" className="underline hover:no-underline">@nicaradesign</a>
-                          </div>
-                          <div>
-                            Phone: <a href="tel:8559901234" className="underline hover:no-underline">+91 855 990 1234</a>
-                          </div>
-                        </div>
-                      </div>
-            
-                      {/* Bottom section */}
-                      <div className="flex flex-col md:flex-row justify-between items-center text-[1.05rem] gap-4 text-center md:text-left -ml-5" style={{ fontFamily: 'Crimson Text, serif' }}>
-                        <div>
-                          Questions? Reach out:<br />
-                          <a href="mailto:hello@dwelltales.com" className="underline hover:no-underline">
-                          hello@dwelltales.com
-                          </a>
-                        </div>
-                        </div>
-                        <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
-                    </div>
-                  </footer>
+              <div className="relative ">
+                <button
+                  className="md:hidden text-md hover:underline flex items-center font-avenir-next-lt-pro-light font-light"
+                  onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}
+                >
+                  Projects
+                  <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${footerDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                <a
+                  href="#"
+                  className="hidden md:block text-md hover:underline font-avenir-next-lt-pro-light font-light"
+                  onMouseEnter={() => setFooterDropdownOpen(true)}
+                  onMouseLeave={() => setFooterDropdownOpen(false)}
+                >
+                  Projects
+                </a>
+                {footerDropdownOpen && (
+                  <div
+                    className="absolute bottom-full left-0 bg-[#755306] shadow-lg py-2 w-48 z-30"
+                    onMouseEnter={() => setFooterDropdownOpen(true)}
+                    onMouseLeave={() => setFooterDropdownOpen(false)}
+                  >
+                    <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
+                      Interiors
+                    </a>
+
+                    <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
+                      Events & Experiences
+                    </a>
+                  </div>
+                )}
+              </div>
+              <a href="/about" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">About</a>
+              <a href="/contact" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">Contact</a>
+            </div>
+
+            {/* Description section */}
+            <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
+              Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
+            </div>
+
+            {/* Social section */}
+            <div className="text-[1.05rem] text-center md:text-left md:-mr-19 md:ml-52 space-y-1 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
+              <div>
+                IG: <a href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg==" className="underline hover:no-underline">@nicaradesign</a>
+              </div>
+              <div>
+                Phone: <a href="tel:8559901234" className="underline hover:no-underline">+91 855 990 1234</a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom section */}
+          <div className="flex flex-col md:flex-row justify-between items-center text-[1.05rem] gap-4 text-center md:text-left -ml-5" style={{ fontFamily: 'Crimson Text, serif' }}>
+            <div>
+              Questions? Reach out:<br />
+              <a href="mailto:hello@dwelltales.com" className="underline hover:no-underline">
+                hello@dwelltales.com
+              </a>
+            </div>
+          </div>
+          <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
+        </div>
+      </footer>
     </div>
   );
 }
