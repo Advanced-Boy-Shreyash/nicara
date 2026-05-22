@@ -307,7 +307,7 @@ const BarARanch = () => {
           </div>
           <div className="flex flex-col sm:flex-row items-start gap-8 mt-14">
             <div className="text-left">
-              <h4 className="text-sm font-bold mb-4 text-black font-avenir-next-lt-pro-light font-medium">Project Info -</h4 >
+              <h4 className="text-sm mb-4 text-black font-avenir-next-lt-pro-light font-medium">Project Info -</h4 >
               <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Location: Encampment, Wyoming</p>
               <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Historic Preservation</p>
               <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium" >1920&apos;s Guest Ranch & Guest Cabins</p>
