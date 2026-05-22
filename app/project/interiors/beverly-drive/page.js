@@ -292,28 +292,28 @@ export default function BeverlyDrive() {
       <div className="pt-24 min-h-screen px-4">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Beverly Drive - Highland Park</h1>
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Rajapushpa Eterna</h1>
           <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">1939 Art Moderne Home</p>
         </div>
         {/* Full Page Image */}
-        <Image src="/int1.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        <Image src="/p1/p_img1.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
   This full gut renovation of this iconic Dallas home and one of very few remaining<br className="hidden sm:block" /> streamline modern homes in Texas focuses on era specific details and<br className="hidden sm:block" /> preserving the energy of the original build while updating the layout and<br className="hidden sm:block" /> functionality to accommodate modern life.
 </p>
 <div className="flex flex-col sm:flex-row">
-  <Image src="/beverly2.png" alt="Beverly Drive" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
-  <Image src="/Beverly1.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
-  <Image src="/beverly3.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
+  <Image src="/p1/p_img2.png" alt="Beverly Drive" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
+  <Image src="/p1/p_img3.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
+  <Image src="/p1/p_img4.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
 </div>
 <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
   She began by conducting intensive research and<br className="hidden sm:block" /> was soon drawn to certain Art Moderne principles<br className="hidden sm:block" />—organic silhouettes juxtaposed with linear<br className="hidden sm:block" /> architectural details, moments of saturated color<br className="hidden sm:block" /> and reflective materials against neutral fields.
 </p>
 <div className="flex flex-col sm:flex-row">
-  <Image src="/beverly4.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
-  <Image src="/beverly5.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 sm:mt-30" />
+  <Image src="/p1/p_img5.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
+  <Image src="/p1/p_img6.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 sm:mt-30" />
 </div>
-<Image src="/int1.png" alt="Beverly Drive" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+<Image src="/p1/p_img1.png" alt="Beverly Drive" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
 <div className="pt-28"> {/* was pt-20 — increased slightly */}
   <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
     To amplify the volume downstairs, Cox—who, named after the artist Milton Avery,<br className="hidden sm:block" /> looked to his oeuvre to inspire her own color choices—was clever not to miss the<br className="hidden sm:block" /> opportunity to make a few bold gestures. Among them: lacquering the dining room<br className="hidden sm:block" /> ceiling in a peachy hue from Fine Paints of Europe; lining the bar with industrial-grade<br className="hidden sm:block" /> high-polish aluminum siding; anchoring the living room with a vintage purple B&B Italia<br className="hidden sm:block" /> daybed; and soaking the den in texture-rich shades of blue-green.
@@ -322,7 +322,7 @@ export default function BeverlyDrive() {
 
 <div className="relative">
   <Image
-    src="/beverly7.png"
+    src="/p1/p_img7.png"
     alt="Beverly Drive"
     width={920}
     height={580}
@@ -330,7 +330,7 @@ export default function BeverlyDrive() {
   />
 
   <Image
-    src="/beverly6.png"
+    src="/p1/p_img6.png"
     alt="Beverly Drive"
     width={920}
     height={580}
@@ -338,7 +338,7 @@ export default function BeverlyDrive() {
   />
 
   <Image
-    src="/beverly8.png"
+    src="/p1/p_img8.png"
     alt="Beverly Drive"
     width={1920}
     height={1080}
@@ -346,7 +346,7 @@ export default function BeverlyDrive() {
   />
 </div>
 
-<Image src="/beverly10.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+<Image src="/p1/p_img9.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
 
 
       </div>

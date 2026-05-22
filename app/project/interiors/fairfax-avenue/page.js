@@ -291,18 +291,18 @@ export default function FairfaxAvenue() {
 
       <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
               <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-              Fairfax Avenue, Highland Park — Coming Soon
+              Flat at Auro Kohinoor
               </div>
               <div className="flex flex-col items-center gap-8 mt-12">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <Image src="/fair1.png" alt="Bar A Ranch 1" width={385} height={298} className="w-full h-auto object-cover" />
-                  <Image src="/fair2.png" alt="Bar A Ranch 2" width={320} height={240} className="w-full h-auto object-cover" />
-                  <Image src="/fair3.png" alt="Bar A Ranch 3" width={280} height={350} className="w-full h-auto object-cover" />
-                  <Image src="/fair4.png" alt="Bar A Ranch 4" width={350} height={280} className="w-full h-auto object-cover" />
-                  <Image src="/fair5.png" alt="Bar A Ranch 5" width={300} height={320} className="w-full h-auto object-cover sm:mt-20" />
-                  <Image src="/fair6.png" alt="Bar A Ranch 6" width={290} height={340} className="w-full h-auto object-cover" />
-                  <Image src="/fair7.png" alt="Bar A Ranch 7" width={330} height={290} className="w-full h-auto object-cover" />
-                  <Image src="/fair8.png" alt="Bar A Ranch 8" width={310} height={310} className="w-full h-auto object-cover sm:ml-119" />
+                  <Image src="/p4/p_img1.png" alt="Bar A Ranch 1" width={385} height={298} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img2.png" alt="Bar A Ranch 2" width={320} height={240} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img3.png" alt="Bar A Ranch 3" width={280} height={350} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img4.png" alt="Bar A Ranch 4" width={350} height={280} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img5.png" alt="Bar A Ranch 5" width={300} height={320} className="w-full h-auto object-cover sm:mt-20" />
+                  <Image src="/p4/p_img6.png" alt="Bar A Ranch 6" width={290} height={340} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img7.png" alt="Bar A Ranch 7" width={330} height={290} className="w-full h-auto object-cover" />
+                  <Image src="/p4/p_img2.png" alt="Bar A Ranch 8" width={310} height={310} className="w-full h-auto object-cover sm:ml-119" />
                 </div>
                 <div className="flex flex-col sm:flex-row items-start gap-8 mt-14">
                   <div className="text-left">

@@ -291,11 +291,11 @@ export default function ContemporaryCabins() {
 
       <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
         <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-          Contemporary Cabin I & II, Seabeck, Washington — In Process
+          Villa at Aadhya Advaita
         </div>
         <div className="flex flex-col sm:flex-row gap-4 mt-12">
         <Image
-    src="/con1.png"
+    src="/p3/p_img1.png"
     alt="Contemporary Cabin 1"
     width={380}
     height={280}
@@ -304,7 +304,7 @@ export default function ContemporaryCabins() {
 
   {/* Middle image */}
   <Image
-    src="/con2.png"
+    src="/p3/p_img2.png"
     alt="Contemporary Cabin 2"
     width={300}
     height={200}
@@ -313,7 +313,7 @@ export default function ContemporaryCabins() {
 
   {/* Right image */}
   <Image
-    src="/con3.png"
+    src="/p3/p_img3.png"
     alt="Contemporary Cabin 3"
     width={380}
     height={280}

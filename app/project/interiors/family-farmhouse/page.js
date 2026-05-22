@@ -292,7 +292,7 @@ export default function FamilyFarmhouse() {
       <div className="pt-24 min-h-screen px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Family Farmhouse - East Texas</h1>
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Aparna</h1>
           <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">New Build</p>
         </div>
         {/* Full Page Image */}
