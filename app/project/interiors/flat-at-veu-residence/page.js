@@ -292,7 +292,7 @@ export default function VermontModern() {
       <div className="pt-24 min-h-screen px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Vermont Modern - Charlotte, Vermont</h1>
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Veu Residence</h1>
           <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Handbuilt in 1968</p>
         </div>
         {/* Full Page Image */}
