@@ -305,9 +305,9 @@ export default function Interiors() {
             <Image src="/p3/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
             <p className="mt-4 text-black text-center sm:-ml-85 font-avenir-next-lt-pro-light font-medium">Villa at Aadhya Advaita</p>
           </Link>
-          <Link href="/project/interiors/flat-at-aura-kohinoor" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-veu-residence-2" className="flex flex-col items-center">
             <Image src="/p4/p_img1.png" alt="Image 2" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-85 font-avenir-next-lt-pro-light font-medium">Flat at Auro Kohinoor</p>
+            <p className="mt-4 text-black text-center sm:-ml-85 font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-10">

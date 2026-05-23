@@ -291,7 +291,7 @@ export default function FairfaxAvenue() {
 
       <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
               <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-              Flat at Auro Kohinoor
+              Flat at Veu Residence
               </div>
               <div className="flex flex-col items-center gap-8 mt-12">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

@@ -296,25 +296,25 @@ export default function FamilyFarmhouse() {
           <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">New Build</p>
         </div>
         {/* Full Page Image */}
-        <Image src="/int6.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        <Image src="/p6/p_img1.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
         As a stand alone farmhouse that sits a field away from a larger Ranch style<br className="hidden sm:block" /> compound in East Texas, this charming home serves as a folly for the owner,<br className="hidden sm:block" /> a matriarch who dreamed of a space where she could showcase her extensive<br className="hidden sm:block" /> collection of Willow Blue and comfortably work on her many quilting projects.
 </p>
 <div className="flex flex-col sm:flex-row">
-  <Image src="/f1.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
-  <Image src="/f2.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
-  <Image src="/f3.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
+  <Image src="/p6/p_img2.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
+  <Image src="/p6/p_img3.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
+  <Image src="/p6/p_img4.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
 
 </div>
 <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
 Avery and her team embarked on a light renovation,<br className="hidden sm:block" /> and filled the space out with appropriately scaled<br className="hidden sm:block" /> furnishings and antiques. They expertly sourced new<br className="hidden sm:block" /> and placed existing collections of art and ceramics<br className="hidden sm:block" /> throughout. The renovation showcases a harmonious<br className="hidden sm:block" /> blend of the surrounding light and views, complemented<br className="hidden sm:block" /> by cherished family heirlooms that infuse the home with warmth and sentimentality.
 </p>
 <div className="flex flex-col sm:flex-row">
-  <Image src="/f4.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
-  <Image src="/f5.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
+  <Image src="/p6/p_img5.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
+  <Image src="/p6/p_img6.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
 </div>
-<Image src="/f6.png" alt="Family Farmhouse" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+<Image src="/p6/p_img7.png" alt="Family Farmhouse" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
 <div className="pt-28"> {/* was pt-20 — increased slightly */}
   <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
   The design embraces a lived-in aesthetic with soothing open air blues, rustic reds, and warm<br className="hidden sm:block" /> creams, creating a soulful and grounded atmosphere. The result is a farmhouse that not only<br className="hidden sm:block" /> celebrates family and tradition but also offers a safe haven filled with natural light and inviting<br className="hidden sm:block" /> warmth.
@@ -323,7 +323,7 @@ Avery and her team embarked on a light renovation,<br className="hidden sm:block
 
 <div className="relative">
   <Image
-    src="/f7.png"
+    src="/p6/p_img8.png"
     alt="Beverly Drive"
     width={920}
     height={580}
@@ -331,7 +331,7 @@ Avery and her team embarked on a light renovation,<br className="hidden sm:block
   />
 
   <Image
-    src="/f8.png"
+    src="/p6/p_img9.png"
     alt="Beverly Drive"
     width={920}
     height={580}
@@ -339,14 +339,14 @@ Avery and her team embarked on a light renovation,<br className="hidden sm:block
   />
 
   <Image
-    src="/f10.png"
+    src="/p6/p_img10.png"
     alt="Beverly Drive"
     width={1920}
     height={1080}
     className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
   />
 </div>
-<Image src="/f9.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+<Image src="/p6/p_img9.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
 
 
       </div>
