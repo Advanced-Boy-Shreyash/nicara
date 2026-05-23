@@ -311,9 +311,9 @@ export default function Interiors() {
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-10">
-          <Link href="/project/interiors/vermont-modern" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-veu-residence" className="flex flex-col items-center">
             <Image src="/p5/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-103 font-avenir-next-lt-pro-light font-medium">Vermont Modern - Charlotte, Vermont</p>
+            <p className="mt-4 text-black text-center sm:-ml-103 font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
           </Link>
           <Link href="/project/interiors/flat-at-aparna" className="flex flex-col items-center">
             <Image src="/int6.png" alt="Image 2" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
