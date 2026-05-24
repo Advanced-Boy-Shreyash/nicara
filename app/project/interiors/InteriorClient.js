@@ -291,39 +291,39 @@ export default function Interiors() {
 
       <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4">
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-1">
-          <Link href="/project/interiors/rajapushpa-eterna" className="flex flex-col items-center">
+          <Link href="/project/interiors/rajapushpa-eterna" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p1/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-120 font-avenir-next-lt-pro-light font-medium">Flat at Rajapushpa Eterna</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Flat at Rajapushpa Eterna</p>
           </Link>
-          <Link href="/project/interiors/flat-at-skyon" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-skyon" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p2/p_img1.png" alt="Image 2" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-105 font-avenir-next-lt-pro-light font-medium">Flat at Skyon</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Flat at Skyon</p>
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-10">
-          <Link href="/project/interiors/villa-at-aadhaya-advaita" className="flex flex-col items-center">
+          <Link href="/project/interiors/villa-at-aadhaya-advaita" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p3/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-85 font-avenir-next-lt-pro-light font-medium">Villa at Aadhya Advaita</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Villa at Aadhya Advaita</p>
           </Link>
-          <Link href="/project/interiors/flat-at-veu-residence-2" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-veu-residence-2" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p4/p_img1.png" alt="Image 2" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-85 font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-10">
-          <Link href="/project/interiors/flat-at-veu-residence" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-veu-residence" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p5/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-103 font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Flat at Veu Residence</p>
           </Link>
-          <Link href="/project/interiors/flat-at-aparna" className="flex flex-col items-center">
+          <Link href="/project/interiors/flat-at-aparna" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p6/p_img1.png" alt="Image 2" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-113 font-avenir-next-lt-pro-light font-medium">Flat at Aparna</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Flat at Aparna</p>
           </Link>
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mt-10">
-          <Link href="/project/interiors/villa-at-the-promenade-villas" className="flex flex-col items-center sm:-ml-177">
+          <Link href="/project/interiors/villa-at-the-promenade-villas" className="flex w-full max-w-[700px] flex-col items-center">
             <Image src="/p7/p_img1.png" alt="Image 1" width={700} height={400} className="w-[700px] h-[400px] object-cover" />
-            <p className="mt-4 text-black text-center sm:-ml-126 font-avenir-next-lt-pro-light font-medium">Villa at The Promenade Villas</p>
+            <p className="mt-4 w-full text-black text-center font-avenir-next-lt-pro-light font-medium">Villa at The Promenade Villas</p>
           </Link>
         </div>
       </div>
