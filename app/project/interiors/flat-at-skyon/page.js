@@ -330,15 +330,15 @@ const BarARanch = () => {
           />
 
           <Image
-            src="/p2/p_img6.png"
+            src="/p2/p_img9.png"
             alt="Flat at Skyon wardrobe detail"
             width={920}
             height={580}
-            className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+            className="w-[32%] h-auto object-contain ml-19 -mt-250 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
           />
 
           <Image
-            src="/p2/p_img1.png"
+            src="/p2/p_img6.png"
             alt="Flat at Skyon living room detail"
             width={1920}
             height={1080}

@@ -317,7 +317,7 @@ export default function VermontModern() {
     alt="Beverly Drive"
     width={920}
     height={580}
-    className="w-[32%] h-auto object-contain ml-19 mt-135 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+    className="w-[32%] h-auto object-contain ml-19 mt-190 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
   />
 
   <Image
@@ -325,7 +325,7 @@ export default function VermontModern() {
     alt="Beverly Drive"
     width={920}
     height={580}
-    className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+    className="w-[32%] h-auto object-contain ml-19 -mt-320 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
   />
 
   <Image
@@ -333,7 +333,7 @@ export default function VermontModern() {
     alt="Beverly Drive"
     width={1920}
     height={1080}
-    className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+    className="w-4/7 h-auto object-cover ml-180 -mt-125 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
   />
 </div>
 <Image src="/p5/p_img11.png" alt="Vermont Modern" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
