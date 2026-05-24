@@ -293,13 +293,12 @@ export default function BeverlyDrive() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
           <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Rajapushpa Eterna</h1>
-          <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">1939 Art Moderne Home</p>
         </div>
         {/* Full Page Image */}
         <Image src="/p1/p_img1.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-  This full gut renovation of this iconic Dallas home and one of very few remaining<br className="hidden sm:block" /> streamline modern homes in Texas focuses on era specific details and<br className="hidden sm:block" /> preserving the energy of the original build while updating the layout and<br className="hidden sm:block" /> functionality to accommodate modern life.
+  From the moment you walk in, the open living and dining space feels warm and welcoming with textured walls, natural wood, and soft lighting that makes every evening feel calm and easy.
 </p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p1/p_img2.png" alt="Beverly Drive" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
@@ -307,7 +306,7 @@ export default function BeverlyDrive() {
   <Image src="/p1/p_img4.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
 </div>
 <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
-  She began by conducting intensive research and<br className="hidden sm:block" /> was soon drawn to certain Art Moderne principles<br className="hidden sm:block" />—organic silhouettes juxtaposed with linear<br className="hidden sm:block" /> architectural details, moments of saturated color<br className="hidden sm:block" /> and reflective materials against neutral fields.
+  She started by asking one simple question how do you want to feel when you come home?
 </p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p1/p_img5.png" alt="Beverly Drive" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
@@ -316,8 +315,8 @@ export default function BeverlyDrive() {
 <Image src="/p1/p_img1.png" alt="Beverly Drive" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
 <div className="pt-28"> {/* was pt-20 — increased slightly */}
   <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
-    To amplify the volume downstairs, Cox—who, named after the artist Milton Avery,<br className="hidden sm:block" /> looked to his oeuvre to inspire her own color choices—was clever not to miss the<br className="hidden sm:block" /> opportunity to make a few bold gestures. Among them: lacquering the dining room<br className="hidden sm:block" /> ceiling in a peachy hue from Fine Paints of Europe; lining the bar with industrial-grade<br className="hidden sm:block" /> high-polish aluminum siding; anchoring the living room with a vintage purple B&B Italia<br className="hidden sm:block" /> daybed; and soaking the den in texture-rich shades of blue-green.
-  </p>
+  From that, everything followed. Warm wood that makes a kitchen feel like the heart of the home. Soft lighting that turns an ordinary evening into something special. A bedroom that feels like a deep breath after a long day. Bold touches where you want to feel inspired, and calm quiet corners where you just want to rest.
+</p>
 </div>
 
 <div className="relative">
@@ -347,6 +346,9 @@ export default function BeverlyDrive() {
 </div>
 
 <Image src="/p1/p_img9.png" alt="Beverly Drive" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+<p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+  To bring life into the common spaces, she chose bold over ordinary. Warm amber lighting above the dining area adds a soft glow and makes every meal feel special. The bar unit stands out with sleek shelves, metal details, and subtle lighting that sets the mood. And at the heart of it all, a solid wood dining table anchors the space — made for good conversations and everyday moments.
+</p>
 
 
       </div>

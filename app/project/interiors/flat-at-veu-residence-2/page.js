@@ -289,43 +289,37 @@ export default function FairfaxAvenue() {
           </div>
         )}
 
-      <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
-              <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-              Flat at Veu Residence
-              </div>
-              <div className="flex flex-col items-center gap-8 mt-12">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <Image src="/p4/p_img1.png" alt="Bar A Ranch 1" width={385} height={298} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img2.png" alt="Bar A Ranch 2" width={320} height={240} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img3.png" alt="Bar A Ranch 3" width={280} height={350} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img4.png" alt="Bar A Ranch 4" width={350} height={280} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img5.png" alt="Bar A Ranch 5" width={300} height={320} className="w-full h-auto object-cover sm:mt-20" />
-                  <Image src="/p4/p_img6.png" alt="Bar A Ranch 6" width={290} height={340} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img7.png" alt="Bar A Ranch 7" width={330} height={290} className="w-full h-auto object-cover" />
-                  <Image src="/p4/p_img2.png" alt="Bar A Ranch 8" width={310} height={310} className="w-full h-auto object-cover sm:ml-119" />
-                </div>
-                <div className="flex flex-col sm:flex-row items-start gap-8 mt-14">
-                  <div className="text-left">
-                    <h4 className="text-sm font-bold mb-4 text-black font-avenir-next-lt-pro-light font-medium">Project Info -</h4 >
-                    <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Location: Highland Park, Dallas, Texas<br/>
-                    Historic Preservation — 1927 Georgian</p>
-                    <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Builder: Diane Lewis Design
-                    </p>
-                    <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium" >Completed project coming soon.
-
-</p>
-                  </div>
-                  <div className="text-left sm:ml-40">
-                    <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed">
-                    A full gut renovation, this project is inventive, spirited, and fearless, with inspiration ranging from the Swiss<br className="hidden sm:block" /> alps to ancient Rome. We’ve created a high degree of theatricality for this art loving, joyful family of three.
-                    </p>
-                    <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
-                    This project truly lets the creative spirit free with its playful yet sophisticated palette and bold commitment<br className="hidden sm:block" /> to pattern and custom design elements.
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <div className="pt-24 min-h-screen px-4">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Veu Residence</h1>
+        </div>
+        {/* Full Page Image */}
+        <Image src="/p4/p_img1.png" alt="Flat at Veu Residence" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        <div className="mt-20">
+          <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 sm:px-6 lg:px-10">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+              <Image src="/p4/p_img2.png" alt="Flat at Veu Residence bathroom" width={1400} height={1000} className="w-full h-[58vh] md:h-[74vh] object-cover md:col-span-7" />
+              <Image src="/p4/p_img3.png" alt="Flat at Veu Residence pooja room" width={1100} height={1400} className="w-full h-[58vh] md:h-[74vh] object-cover md:col-span-5" />
+              <Image src="/p4/p_img4.png" alt="Flat at Veu Residence kitchen" width={1600} height={1000} className="w-full h-[62vh] md:h-screen object-cover md:col-span-12" />
+              <Image src="/p4/p_img5.png" alt="Flat at Veu Residence kids room" width={1100} height={1400} className="w-full h-[58vh] md:h-[78vh] object-cover md:col-span-5" />
+              <Image src="/p4/p_img6.png" alt="Flat at Veu Residence kids room" width={1400} height={1000} className="w-full h-[58vh] md:h-[78vh] object-cover md:col-span-7" />
+              <Image src="/p4/p_img7.png" alt="Flat at Veu Residence detail" width={1600} height={1000} className="w-full h-[62vh] md:h-[88vh] object-cover md:col-span-12" />
             </div>
+          </div>
+          <div className="text-left max-w-3xl mt-20 mx-4 sm:mx-auto">
+            <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed">
+              The Vue Residences is what happens when a home is designed for the whole family not just the living room.
+            </p>
+            <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
+              The bathroom feels like a mini spa with its green floating vanity, glowing mirror and gold taps. The pooja room sits proudly at the heart of the home, beautifully framed and warmly lit, because faith deserves a beautiful space too. The kitchen has a cosy wooden breakfast nook just a counter and a stool  perfect for that first quiet cup of chai. And then there are the kids&apos; rooms, honestly the best part of the whole home. One has a magical bunk bed with a loft, soft pink touches and warm wood that makes bedtime feel like an adventure. The other has a giant bunny on the wall, a cloud-shaped bed and golden stars the kind of room kids never want to leave. From the parents&apos; spaces to the little ones&apos; corners, every single room in The Vue Residences was thought through, cared for and designed with love.
+            </p>
+            <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
+              Because a happy home takes care of everyone in it.
+            </p>
+          </div>
+        </div>
+      </div>
       <footer
       className="mt-15 md:mt-30 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
       style={{ backgroundColor: '#755306' }}

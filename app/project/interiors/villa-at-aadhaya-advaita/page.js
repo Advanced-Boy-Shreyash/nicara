@@ -289,56 +289,76 @@ export default function ContemporaryCabins() {
           </div>
         )}
 
-      <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
-        <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-          Villa at Aadhya Advaita
+      <div className="pt-24 min-h-screen px-4">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Villa at Aadhya Advaita</h1>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 mt-12">
-        <Image
-    src="/p3/p_img1.png"
-    alt="Contemporary Cabin 1"
-    width={380}
-    height={280}
-    className="w-full sm:w-[390px] h-auto sm:h-[270px] object-cover"
-  />
+        {/* Full Page Image */}
+        <Image src="/p3/p_img1.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        {/* Description */}
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          Some homes are built. Villa at Aadhya Advaita was crafted.
+        </p>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p3/p_img2.png" alt="Villa at Aadhya Advaita dining room" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
+          <Image src="/p3/p_img3.png" alt="Villa at Aadhya Advaita detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
+          <Image src="/p3/p_img4.png" alt="Villa at Aadhya Advaita detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
+        </div>
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
+          From the very first conversation, we knew this was going to be something special. The clients had a vision &mdash; bold, warm, and unapologetically personal. Our job was simply to bring it to life.
+        </p>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p3/p_img5.png" alt="Villa at Aadhya Advaita kitchen" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
+          <Image src="/p3/p_img6.png" alt="Villa at Aadhya Advaita bedroom" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 sm:mt-30" />
+        </div>
+        <Image src="/p3/p_img7.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+        <div className="pt-28">
+          <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
+            And so we did. The dining room stops you in your tracks. Copper inlays cut across concrete walls like brushstrokes &mdash; sharp, geometric, confident. The solid wood table beneath it feels like it&apos;s been there forever. This is a room that says we enjoy good food and even better company.
+          </p>
+        </div>
 
-  {/* Middle image */}
-  <Image
-    src="/p3/p_img2.png"
-    alt="Contemporary Cabin 2"
-    width={300}
-    height={200}
-    className="w-full sm:w-[460px] h-auto sm:h-[640px] object-cover sm:ml-10"
-  />
+        <div className="relative">
+          <Image
+            src="/p3/p_img8.png"
+            alt="Villa at Aadhya Advaita dining detail"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 mt-135 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
 
-  {/* Right image */}
-  <Image
-    src="/p3/p_img3.png"
-    alt="Contemporary Cabin 3"
-    width={380}
-    height={280}
-    className="w-full sm:w-[390px] h-auto sm:h-[270px] object-cover mt-0 sm:ml-10"
-  />
-    </div>
-    <div className="flex flex-col sm:flex-row items-start gap-8 mt-34">
-            <div className="text-left">
-              <h4 className="text-sm font-bold mb-4 text-black font-avenir-next-lt-pro-light font-medium">Project Info -</h4 >
-              <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">2015 Little House (featured in Dwell), 2023 Main<br/> House</p>
-              <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Location: Seabeck, Washington</p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium" >Architect: MW|Works</p>
-            </div>
-            <div className="text-left sm:ml-40">
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed">
-              After working with the clients to complete what will now be the guest quarters on this stunning Hood Canal<br className="hidden sm:block" /> property, we were commissioned to guide the design of the Main House.
-             </p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
-              Working with MW|Works in Washington State, we hope to build a cozy yet contemporary dwelling that<br className="hidden sm:block" /> highlights the beauty of the landscape and allows for seamless integration of indoor and outdoor spaces.
-              </p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
-              Punchy colors, warm woods, and integrated architecture will be the standout characteristics of this design.
-              </p>
-            </div>
-          </div>
+          <Image
+            src="/p3/p_img9.png"
+            alt="Villa at Aadhya Advaita kitchen detail"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+
+          <Image
+            src="/p3/p_img10.png"
+            alt="Villa at Aadhya Advaita bedroom detail"
+            width={1920}
+            height={1080}
+            className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+        </div>
+
+        <Image src="/p3/p_img1.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          The kitchen doesn&apos;t just function &mdash; it performs. Glossy cabinets, black marble counters, pendant lights that hang just right. There&apos;s even a breakfast counter for those mornings when you just want a quiet coffee before the day begins.
+        </p>
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          The bedrooms each tell their own story. One is sharp and dramatic &mdash; geometric lighting, dark tones, a motorbike print on the wall for the one who doesn&apos;t do ordinary. Another is soft and easy &mdash; white linen, warm wood, curtains that let the morning in gently.
+        </p>
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          And running through every room &mdash; warm wood, punchy moments of colour, and light that knows exactly where to land.
+        </p>
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          Villa at Aadhya Advaita isn&apos;t just a home. It&apos;s a reflection of the people who live in it.
+        </p>
+
       </div>
       <footer
       className="mt-15 md:mt-30 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"

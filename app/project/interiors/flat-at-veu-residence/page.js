@@ -293,13 +293,12 @@ export default function VermontModern() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Veu Residence</h1>
-          <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Handbuilt in 1968</p>
         </div>
         {/* Full Page Image */}
         <Image src="/p5/p_img1.png" alt="Vermont Modern" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-        Hand built by Carl L. Bausch, Jr. in 1968, the property features a main house and a studio for his <br className="hidden sm:block" /> artist wife. While an innovative structure with amazing light, scale, and setting, the home needed <br className="hidden sm:block" /> lots of work. We set off on a journey to thoughtfully update this architectural gem to fit its new<br className="hidden sm:block" /> role as a family home and Airbnb in the verdant and charming town of Charlotte, VT.
+  A modern Indian home that blends tradition with contemporary design. From the handcrafted wooden ceiling and ikat-detailed columns to the forest-green bathroom vanity and travertine pooja niche — every space is designed with intention, warmth, and a deep respect for craft
 </p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p5/p_img2.png" alt="Vermont Modern" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
@@ -307,20 +306,11 @@ export default function VermontModern() {
   <Image src="/p5/p_img4.png" alt="Vermont Modern" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
 
 </div>
-<p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
-In the dining room, Cox created what she likes to<br className="hidden sm:block" /> call a color corridor by drenching the walls in berry-<br className="hidden sm:block" />hued paint—a move that gave the illusion that the<br className="hidden sm:block" /> barely 8-foot-tall ceilings are a little bit higher than<br className="hidden sm:block" /> they actually are.
-</p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p5/p_img5.png" alt="Vermont Modern" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
   <Image src="/p5/p_img6.png" alt="Vermont Modern" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
 </div>
 <Image src="/p5/p_img7.png" alt="Vermont Modern" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
-<div className="pt-28"> {/* was pt-20 — increased slightly */}
-  <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
-  Constructed in 1968 by architect Carl L. Bausch, Jr., it features slit windows that are almost as<br className="hidden sm:block" /> tall as the wood-burning stove’s chimney, cantilevered skylights that drench the living area in<br className="hidden sm:block" /> sunshine, and stilts that support the shingle-clad structure.
-  </p>
-</div>
-
 <div className="relative">
   <Image
     src="/p5/p_img8.png"

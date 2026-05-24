@@ -290,41 +290,67 @@ const BarARanch = () => {
           </div>
         )}
 
-      <div className="pt-24 min-h-screen flex flex-col items-center justify-center px-4 relative">
-        <div className="absolute top-4 left-4 text-black font-avenir-next-lt-pro-light font-medium text-sm mt-20">
-          Flat at Skyon
+      <div className="pt-24 min-h-screen px-4">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Flat at Skyon</h1>
         </div>
-        <div className="flex flex-col items-center gap-8 mt-12">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Image src="/p2/p_img2.png" alt="Bar A Ranch 1" width={385} height={298} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img3.png" alt="Bar A Ranch 2" width={320} height={240} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img4.png" alt="Bar A Ranch 3" width={280} height={350} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img5.png" alt="Bar A Ranch 4" width={350} height={280} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img6.png" alt="Bar A Ranch 5" width={300} height={320} className="w-full h-auto object-cover sm:mt-20" />
-            <Image src="/p2/p_img7.png" alt="Bar A Ranch 6" width={290} height={340} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img8.png" alt="Bar A Ranch 7" width={330} height={290} className="w-full h-auto object-cover" />
-            <Image src="/p2/p_img1.png" alt="Bar A Ranch 8" width={310} height={310} className="w-full h-auto object-cover sm:ml-119" />
-          </div>
-          <div className="flex flex-col sm:flex-row items-start gap-8 mt-14">
-            <div className="text-left">
-              <h4 className="text-sm mb-4 text-black font-avenir-next-lt-pro-light font-medium">Project Info -</h4 >
-              <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Location: Encampment, Wyoming</p>
-              <p className="text-sm mb-2 text-black font-avenir-next-lt-pro-light font-medium">Historic Preservation</p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium" >1920&apos;s Guest Ranch & Guest Cabins</p>
-            </div>
-            <div className="text-left sm:ml-40">
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed">
-                Founded in 1922 and having one of the only surviving buildings designed by Thomas Molesworth, this iconic<br className="hidden sm:block" /> guest ranch has a long history of gathering generations of families to ride horses, fly fish, and enjoy the<br className="hidden sm:block" /> charms of the west.
-              </p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
-                We were commissioned to re-envision the guest cabins design to create a cohesive feeling across the ranch<br className="hidden sm:block" /> that can be implemented over time.
-              </p>
-              <p className="text-sm text-black font-avenir-next-lt-pro-light font-medium leading-relaxed mt-4">
-                The design marries utility and “working ranch” style, with the tradition of western design founded by the<br className="hidden sm:block" /> artists in the Cody, WY community. With updates to materiality and color, we hope to create a style for the<br className="hidden sm:block" /> Ranch that will stay relevant for the next 100 years.
-              </p>
-            </div>
-          </div>
+        {/* Full Page Image */}
+        <Image src="/p2/p_img1.png" alt="Flat at Skyon" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        {/* Description */}
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          Skyon feels like a home you naturally want to stay in, where every corner is designed to make daily life feel calmer and more beautiful.
+        </p>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p2/p_img2.png" alt="Flat at Skyon living room" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
+          <Image src="/p2/p_img3.png" alt="Flat at Skyon artwork" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
+          <Image src="/p2/p_img4.png" alt="Flat at Skyon detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
         </div>
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
+          The living room carries a soft, welcoming warmth with its neutral palette, gentle lighting, and striking artwork.
+        </p>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p2/p_img5.png" alt="Flat at Skyon bedroom" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
+          <Image src="/p2/p_img6.png" alt="Flat at Skyon wardrobe" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 sm:mt-30" />
+        </div>
+        <Image src="/p2/p_img7.png" alt="Flat at Skyon" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+        <div className="pt-28">
+          <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
+            The bedroom offers a quiet sense of comfort with its clean, restful simplicity, the wardrobe brings both style and practicality through its illuminated, well-organized design, and the vanity adds a spa-like touch with warm light, a round mirror, and subtle gold details.
+          </p>
+        </div>
+
+        <div className="relative">
+          <Image
+            src="/p2/p_img8.png"
+            alt="Flat at Skyon vanity"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 mt-135 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+
+          <Image
+            src="/p2/p_img6.png"
+            alt="Flat at Skyon wardrobe detail"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+
+          <Image
+            src="/p2/p_img1.png"
+            alt="Flat at Skyon living room detail"
+            width={1920}
+            height={1080}
+            className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+        </div>
+
+        <Image src="/p2/p_img1.png" alt="Flat at Skyon" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
+          Every corner is designed to make daily life feel calmer and more beautiful, with subtle gold details that make the space feel refined and personal.
+        </p>
+
       </div>
       <footer
       className="mt-15 md:mt-30 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"

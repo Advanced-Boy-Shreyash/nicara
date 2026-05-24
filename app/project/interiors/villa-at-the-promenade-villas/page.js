@@ -293,63 +293,55 @@ export default function Clarksville() {
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Villa at The Promenade Villas</h1>
-          <p className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">1933 Bungalow</p>
         </div>
         {/* Full Page Image */}
-        <Image src="/p7/p_img1.png" alt="Clarksville" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
+        <Image src="/p7/p_img1.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
-        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-        Charlie Rice is the sort of person you’d want for a neighbor. Not only because<br className="hidden sm:block" /> his bungalow is always brimming with joyful gatherings, freshly cut flowers,<br className="hidden sm:block" /> and the occasional swing band on the front porch, but also because—if you’re<br className="hidden sm:block" /> lucky—you might even clinch an invite to one of his famous five-course dinner<br className="hidden sm:block" /> parties.
-</p>
-<div className="flex flex-col sm:flex-row">
-  <Image src="/p7/p_img2.png" alt="Clarksville" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
-  <Image src="/p7/p_img3.png" alt="Clarksville" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
-  <Image src="/p7/p_img4.png" alt="Clarksville" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
+        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55 space-y-4">
+          <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
+          <p>Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece sitting quietly on it was chosen because it adds just the right touch of personality.</p>
+          <p>The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family dinner into something worth remembering.</p>
+          <p>The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.</p>
+          <p>The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash; tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.</p>
+          <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
+        </div>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p7/p_img2.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
+          <Image src="/p7/p_img3.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
+          <Image src="/p7/p_img4.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
 
-</div>
-<p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
-We retrofitted an antique oak-back bar with mirrored<br className="hidden sm:block" /> glass and lighting to create a cozy glow reminiscent<br className="hidden sm:block" /> of a 1920s speakeasy. Nothing has ever felt more quintessentially Austin than this entertainer’s jewel<br className="hidden sm:block" /> box bachelor pad.</p>
-<div className="flex flex-col sm:flex-row">
-  <Image src="/p7/p_img5.png" alt="Clarksville" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
-  <Image src="/p7/p_img6.png" alt="Clarksville" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
-</div>
-<Image src="/p7/p_img7.png" alt="Clarksville" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
-<div className="pt-28"> {/* was pt-20 — increased slightly */}
-  <p className="text-black text-center sm:text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
-    Builder: Richard Gift<br/><br/>
-    Photography: Lindsay Brown<br/><br/>
-    Awards: Austin Home- Best Use of a Collection, Antiques, or Art and Austin<br className="hidden sm:block" /> Home- Best Use of Color<br/><br/>
-    Press: Clever, Architectural Digest, Austin Home, Tribeza, The Identite<br className="hidden sm:block" /> Collective, Cottage Home, Good House Keeping
-  </p>
-</div>
+        </div>
+        <div className="flex flex-col sm:flex-row">
+          <Image src="/p7/p_img5.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
+          <Image src="/p7/p_img6.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
+        </div>
+        <Image src="/p7/p_img7.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+        <div className="relative">
+          <Image
+            src="/p7/p_img8.png"
+            alt="Villa at The Promenade Villas detail"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 mt-135 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
 
-<div className="relative">
-  <Image
-    src="/p7/p_img8.png"
-    alt="Beverly Drive"
-    width={920}
-    height={580}
-    className="w-[32%] h-auto object-contain ml-19 mt-135 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-  />
+          <Image
+            src="/p7/p_img9.png"
+            alt="Villa at The Promenade Villas detail"
+            width={920}
+            height={580}
+            className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
 
-  <Image
-    src="/p7/p_img9.png"
-    alt="Beverly Drive"
-    width={920}
-    height={580}
-    className="w-[32%] h-auto object-contain ml-19 -mt-313 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-  />
-
-  <Image
-    src="/p7/p_img10.png"
-    alt="Beverly Drive"
-    width={1920}
-    height={1080}
-    className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-  />
-</div>
-<Image src="/p7/p_img11.png" alt="Clarksville" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
-
+          <Image
+            src="/p7/p_img10.png"
+            alt="Villa at The Promenade Villas detail"
+            width={1920}
+            height={1080}
+            className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+          />
+        </div>
+        <Image src="/p7/p_img11.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
 
       </div>
       <footer
