@@ -325,23 +325,23 @@ export default function ContemporaryCabins() {
             alt="Villa at Aadhya Advaita dining detail"
             width={920}
             height={580}
-            className="w-[32%] h-auto object-contain ml-19 mt-165 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+            className="w-[40%] h-auto object-contain ml-19 -mt-24 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
           />
 
-          <Image
+          {/* <Image
             src="/p3/p_img9.png"
             alt="Villa at Aadhya Advaita kitchen detail"
             width={920}
             height={580}
             className="w-[32%] h-auto object-contain ml-19 -mt-250 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-          />
+          /> */}
 
           <Image
             src="/p3/p_img10.png"
             alt="Villa at Aadhya Advaita bedroom detail"
             width={1920}
             height={1080}
-            className="w-4/7 h-auto object-cover ml-180 -mt-85 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
+            className="w-[55%] h-auto object-cover ml-180 -mt-150 max-md:w-[100%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
           />
         </div>
 
