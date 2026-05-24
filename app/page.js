@@ -1,14 +1,20 @@
+"use client";
 
-'use client';
-
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import Link from 'next/link';
-import { Menu, X, ChevronDown, Mail, Phone, ChevronRight, ChevronLeft } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Mail,
+  Phone,
+  ChevronRight,
+  ChevronLeft,
+} from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function Home() {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [footerDropdownOpen, setFooterDropdownOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -21,17 +27,16 @@ export default function Home() {
   const [showPopupForm, setShowPopupForm] = useState(false);
 
   const [contactFormData, setContactFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    hearAboutUs: '',
-    message: ''
+    name: "",
+    phone: "",
+    email: "",
+    hearAboutUs: "",
+    message: "",
   });
-
 
   const [videoPlaying, setVideoPlaying] = useState(false);
   const videoRef = useRef(null);
-  
+
   // Video control states
   const [videoVolume, setVideoVolume] = useState(1);
   const [videoMuted, setVideoMuted] = useState(false);
@@ -52,51 +57,62 @@ export default function Home() {
 
   useEffect(() => {
     if (showPopupForm) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [showPopupForm]);
 
   const handleContactInputChange = (e) => {
     const { name, value } = e.target;
-    setContactFormData(prev => ({ ...prev, [name]: value }));
+    setContactFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    console.log('Contact form submitted:', contactFormData);
+    console.log("Contact form submitted:", contactFormData);
 
     // Send email using EmailJS (same as main contact form)
-    emailjs.send(
-      'service_b769gdc',
-      'template_0hzoxjk',
-      {
-        from_name: contactFormData.name,
-        from_email: contactFormData.email,
-        phone: contactFormData.phone,
-        hear_about_us: contactFormData.hearAboutUs,
-        message: contactFormData.message,
-      },
-      'VFpd616Sj6d9RlzWA'
-    ).then((result) => {
-      console.log('Home page popup contact email sent successfully:', result.text);
-      alert('Message sent successfully!');
-      setContactFormData({
-        name: '',
-        phone: '',
-        email: '',
-        hearAboutUs: '',
-        message: ''
-      });
-      setShowPopupForm(false);
-    }, (error) => {
-      console.error('Error sending home page popup contact email:', error.text);
-      alert('Error sending message. Please try again.');
-    });
+    emailjs
+      .send(
+        "service_b769gdc",
+        "template_0hzoxjk",
+        {
+          from_name: contactFormData.name,
+          from_email: contactFormData.email,
+          phone: contactFormData.phone,
+          hear_about_us: contactFormData.hearAboutUs,
+          message: contactFormData.message,
+        },
+        "VFpd616Sj6d9RlzWA",
+      )
+      .then(
+        (result) => {
+          console.log(
+            "Home page popup contact email sent successfully:",
+            result.text,
+          );
+          alert("Message sent successfully!");
+          setContactFormData({
+            name: "",
+            phone: "",
+            email: "",
+            hearAboutUs: "",
+            message: "",
+          });
+          setShowPopupForm(false);
+        },
+        (error) => {
+          console.error(
+            "Error sending home page popup contact email:",
+            error.text,
+          );
+          alert("Error sending message. Please try again.");
+        },
+      );
   };
 
   // Video control functions
@@ -125,12 +141,12 @@ export default function Home() {
   const handleVideoLoadedMetadata = () => {
     const video = videoRef.current;
     if (video) {
-      console.log('Video metadata loaded:', {
+      console.log("Video metadata loaded:", {
         duration: video.duration,
         readyState: video.readyState,
-        networkState: video.networkState
+        networkState: video.networkState,
       });
-      
+
       if (video.duration && !isNaN(video.duration) && video.duration > 0) {
         setVideoDuration(video.duration);
       }
@@ -140,11 +156,11 @@ export default function Home() {
   const handleVideoCanPlay = () => {
     const video = videoRef.current;
     if (video) {
-      console.log('Video can play:', {
+      console.log("Video can play:", {
         duration: video.duration,
-        readyState: video.readyState
+        readyState: video.readyState,
       });
-      
+
       if (video.duration && !isNaN(video.duration) && video.duration > 0) {
         setVideoDuration(video.duration);
       }
@@ -152,17 +168,17 @@ export default function Home() {
   };
 
   const handleVideoLoadStart = () => {
-    console.log('Video load started');
+    console.log("Video load started");
   };
 
   const handleVideoLoadedData = () => {
     const video = videoRef.current;
     if (video) {
-      console.log('Video loaded data:', {
+      console.log("Video loaded data:", {
         duration: video.duration,
-        readyState: video.readyState
+        readyState: video.readyState,
       });
-      
+
       if (video.duration && !isNaN(video.duration) && video.duration > 0) {
         setVideoDuration(video.duration);
       }
@@ -175,7 +191,7 @@ export default function Home() {
     if (video) {
       // Force load metadata
       video.load();
-      
+
       const checkMetadata = () => {
         if (video.duration && !isNaN(video.duration) && video.duration > 0) {
           setVideoDuration(video.duration);
@@ -184,7 +200,7 @@ export default function Home() {
           setTimeout(checkMetadata, 100);
         }
       };
-      
+
       // Start checking after a brief delay
       setTimeout(checkMetadata, 500);
     }
@@ -223,14 +239,14 @@ export default function Home() {
   };
 
   const formatTime = (time) => {
-    if (isNaN(time)) return '0:00';
+    if (isNaN(time)) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
 
   const toggleFullscreen = () => {
-    const videoContainer = document.getElementById('video-container');
+    const videoContainer = document.getElementById("video-container");
     if (videoContainer) {
       if (!isFullscreen) {
         if (videoContainer.requestFullscreen) {
@@ -274,23 +290,23 @@ export default function Home() {
     if (!video) return;
 
     switch (e.code) {
-      case 'Space':
+      case "Space":
         e.preventDefault();
         togglePlayPause();
         break;
-      case 'ArrowLeft':
+      case "ArrowLeft":
         e.preventDefault();
         video.currentTime = Math.max(0, video.currentTime - 10);
         break;
-      case 'ArrowRight':
+      case "ArrowRight":
         e.preventDefault();
         video.currentTime = Math.min(video.duration, video.currentTime + 10);
         break;
-      case 'KeyM':
+      case "KeyM":
         e.preventDefault();
         toggleMute();
         break;
-      case 'KeyF':
+      case "KeyF":
         e.preventDefault();
         toggleFullscreen();
         break;
@@ -300,40 +316,50 @@ export default function Home() {
   // Effect to handle fullscreen changes
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(!!(document.fullscreenElement || 
-        document.webkitFullscreenElement || 
-        document.mozFullScreenElement || 
-        document.msFullscreenElement));
+      setIsFullscreen(
+        !!(
+          document.fullscreenElement ||
+          document.webkitFullscreenElement ||
+          document.mozFullScreenElement ||
+          document.msFullscreenElement
+        ),
+      );
     };
 
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-    document.addEventListener('mozfullscreenchange', handleFullscreenChange);
-    document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
+    document.addEventListener("MSFullscreenChange", handleFullscreenChange);
 
     return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
-      document.removeEventListener('mozfullscreenchange', handleFullscreenChange);
-      document.removeEventListener('MSFullscreenChange', handleFullscreenChange);
+      document.removeEventListener("fullscreenchange", handleFullscreenChange);
+      document.removeEventListener(
+        "webkitfullscreenchange",
+        handleFullscreenChange,
+      );
+      document.removeEventListener(
+        "mozfullscreenchange",
+        handleFullscreenChange,
+      );
+      document.removeEventListener(
+        "MSFullscreenChange",
+        handleFullscreenChange,
+      );
     };
   }, []);
 
   // Effect to add keyboard event listeners
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyPress);
+    document.addEventListener("keydown", handleKeyPress);
     return () => {
-      document.removeEventListener('keydown', handleKeyPress);
+      document.removeEventListener("keydown", handleKeyPress);
     };
   }, [videoPlaying, videoMuted, videoVolume, isFullscreen, handleKeyPress]);
 
   return (
     <div className="font-sans relative min-h-screen bg-white overflow-x-hidden">
-
       {/* ✅ NAVBAR */}
-      <nav
-        className="fixed top-0 left-0 right-0 bg-white flex justify-between items-center w-full px-6 py-4 z-20 sm:grid sm:grid-cols-3 sm:items-center font-medium"
-      >
+      <nav className="fixed top-0 left-0 right-0 bg-white flex justify-between items-center w-full px-6 py-4 z-20 sm:grid sm:grid-cols-3 sm:items-center font-medium">
         {/* Projects (Desktop Left) */}
         <div className="hidden sm:flex sm:justify-start relative">
           <div
@@ -342,7 +368,6 @@ export default function Home() {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             Projects
-            
           </div>
           {dropdownOpen && (
             <div
@@ -350,10 +375,16 @@ export default function Home() {
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
+              <Link
+                href="/project/interiors"
+                className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+              >
                 Interiors
               </Link>
-              <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
+              <Link
+                href="/project/events-experiences"
+                className="block px-4 py-2 text-sm text-black hover:bg-gray-100"
+              >
                 Events & Experiences
               </Link>
             </div>
@@ -365,7 +396,7 @@ export default function Home() {
           <Link
             href="/"
             className="text-lg text-black font-bold"
-            style={{ fontFamily: 'Didot, serif' }}
+            style={{ fontFamily: "Didot, serif" }}
           >
             NICARA
           </Link>
@@ -376,14 +407,22 @@ export default function Home() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
-            {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
+            {menuOpen ? (
+              <X className="w-6 h-6 text-black" />
+            ) : (
+              <Menu className="w-6 h-6 text-black" />
+            )}
           </button>
         </div>
 
         {/* About and Contact (Desktop Right) */}
         <div className="hidden sm:flex sm:justify-end gap-5">
-          <a href="/about" className="text-sm hover:underline text-black">About</a>
-          <a href="/contact" className="text-sm hover:underline text-black">Contact</a>
+          <a href="/about" className="text-sm hover:underline text-black">
+            About
+          </a>
+          <a href="/contact" className="text-sm hover:underline text-black">
+            Contact
+          </a>
         </div>
 
         {/* Mobile Dropdown Menu */}
@@ -402,7 +441,9 @@ export default function Home() {
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
               >
                 Projects
-                <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`w-5 h-5 ml-2 transition-transform ${mobileDropdownOpen ? "rotate-180" : ""}`}
+                />
               </div>
               {mobileDropdownOpen && (
                 <div className="flex flex-col items-center w-full space-y-2">
@@ -447,10 +488,16 @@ export default function Home() {
         <button
           onClick={() => setContactBarOpen(!contactBarOpen)}
           className={`bg-black flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] translate-x-0' : 'w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] rounded-full translate-x-1/2'
+            contactBarOpen
+              ? "w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] translate-x-0"
+              : "w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] rounded-full translate-x-1/2"
           }`}
         >
-          {contactBarOpen ? <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />}
+          {contactBarOpen ? (
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+          ) : (
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+          )}
         </button>
         {/* Contact Us Button */}
         <div
@@ -458,41 +505,48 @@ export default function Home() {
           onMouseLeave={() => setIsContactHovered(false)}
           onClick={() => setMobileFormOpen(!mobileFormOpen)}
           className={`w-[40px] h-[120px] sm:w-[50px] sm:h-[150px] bg-[#7E6BF2] flex flex-col items-center justify-start pt-12 sm:pt-15 text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            contactBarOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <span className="text-xs sm:text-sm transform -rotate-90 whitespace-nowrap mb-6 sm:mb-8">Contact Us</span>
+          <span className="text-xs sm:text-sm transform -rotate-90 whitespace-nowrap mb-6 sm:mb-8">
+            Contact Us
+          </span>
           <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
         {/* WhatsApp Button */}
         <a
           href="https://wa.me/8559901234"
           className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#2C2C2C] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            contactBarOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
           </svg>
         </a>
         {/* Call Button */}
         <a
           href="tel:8559901234"
           className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#25D366] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
+            contactBarOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
         </a>
       </div>
 
-        {/* Contact Form */}
-        {contactBarOpen && ((isContactHovered || isFormHovered) || mobileFormOpen) && (
+      {/* Contact Form */}
+      {contactBarOpen &&
+        (isContactHovered || isFormHovered || mobileFormOpen) && (
           <div
             onMouseEnter={() => setIsFormHovered(true)}
             onMouseLeave={() => setIsFormHovered(false)}
             className="fixed right-0 top-1/2 transform -translate-y-3/5 sm:-translate-y-2/4 z-20 bg-white shadow-lg p-6 rounded w-80 sm:w-96 mr-12"
-            style={{ marginTop: '50px' }}
+            style={{ marginTop: "50px" }}
           >
             <button
               onClick={() => {
@@ -507,7 +561,9 @@ export default function Home() {
             <h3 className="text-lg font-bold mb-4 text-black">Contact Form</h3>
             <form onSubmit={handleContactSubmit}>
               <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Name</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -518,7 +574,9 @@ export default function Home() {
                 />
               </div>
               <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Phone</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Phone
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -529,7 +587,9 @@ export default function Home() {
                 />
               </div>
               <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Email</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -540,7 +600,9 @@ export default function Home() {
                 />
               </div>
               <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">How did you hear about us?</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  How did you hear about us?
+                </label>
                 <input
                   type="text"
                   name="hearAboutUs"
@@ -551,7 +613,9 @@ export default function Home() {
                 />
               </div>
               <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Message</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={contactFormData.message}
@@ -561,7 +625,12 @@ export default function Home() {
                   rows="3"
                 ></textarea>
               </div>
-              <button type="submit" className="bg-[#7E6BF2] text-white px-4 py-2 rounded hover:bg-[#6a5acd] w-full">Submit</button>
+              <button
+                type="submit"
+                className="bg-[#7E6BF2] text-white px-4 py-2 rounded hover:bg-[#6a5acd] w-full"
+              >
+                Submit
+              </button>
             </form>
           </div>
         )}
@@ -570,45 +639,88 @@ export default function Home() {
       <main
         className="flex flex-col items-center sm:items-start w-full"
         style={{
-          backgroundImage: 'url(/hero.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-          minHeight: '100vh',
+          backgroundImage: "url(/hero.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
         }}
       ></main>
 
       {/* ✅ ABOUT SECTION */}
-      <section id="about" className="min-h-screen bg-white pt-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32">
+      <section
+        id="about"
+        className="min-h-screen bg-white pt-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
+      >
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-10 items-start">
-        <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
-      <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      NICARA  is a Hyderabad-based Interior Architecture & Lifestyle Studio shaping luxury residential, commercial, and hospitality projects across India.      </p>
-      <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      We craft thoughtful, bespoke interiors, curate signature furniture and decor, provide styling, and design exclusive events and experiences - all infused with warmth, playfulness, and subtle theatricality. </p>
-      <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-      For our clients, we also scout and curate handpicked spaces aligned with their lifestyle vision, including apartments, villas, residential <br/>and farm plots, holiday homes, and select commercial spaces. From discovering the right space to designing and executing the complete environment, NICARA offers a seamless path to refined, effortless living.
-      </p>
+          <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
+            <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+              NICARA is a Hyderabad-based Interior Architecture & Lifestyle
+              Studio shaping luxury residential, commercial, and hospitality
+              projects across India.{" "}
+            </p>
+            <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+              We craft thoughtful, bespoke interiors, curate signature furniture
+              and decor, provide styling, and design exclusive events and
+              experiences - all infused with warmth, playfulness, and subtle
+              theatricality.{" "}
+            </p>
+            <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+              For our clients, we also scout and curate handpicked spaces
+              aligned with their lifestyle vision, including apartments, villas,
+              residential <br />
+              and farm plots, holiday homes, and select commercial spaces. From
+              discovering the right space to designing and executing the
+              complete environment, NICARA offers a seamless path to refined,
+              effortless living.
+            </p>
 
-      <div className="relative inline-block">
-        <Link
-          href="/project/interiors"
-          className="inline-block mt-20 sm:mt-22 md:mt-15 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
-        >
-          View Projects
-        </Link>
-      </div>
-    </div>
+            <div className="relative inline-block">
+              <Link
+                href="/project/interiors"
+                className="inline-block mt-20 sm:mt-22 md:mt-15 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
+              >
+                View Projects
+              </Link>
+            </div>
+          </div>
 
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:translate-x-25">
-            <Link href="/project/interiors" className="w-full aspect-[4/5] bg-gray-100 overflow-hidden">
-              <Image src="/hero1.png" alt="Project 1" width={1200} height={1500} className="w-full h-full object-cover" />
+            <Link
+              href="/project/interiors"
+              className="w-full aspect-[4/5] bg-gray-100 overflow-hidden"
+            >
+              <Image
+                src="/home/hero1.png"
+                alt="Project 1"
+                width={1200}
+                height={1500}
+                className="w-full h-full object-cover"
+              />
             </Link>
-            <Link href="/project/interiors" className="w-full aspect-[4/5] bg-gray-100 overflow-hidden">
-              <Image src="/hero2.png" alt="Project 2" width={1200} height={1500} className="w-full h-full object-cover" />
+            <Link
+              href="/project/interiors"
+              className="w-full aspect-[4/5] bg-gray-100 overflow-hidden"
+            >
+              <Image
+                src="/home/hero2.png"
+                alt="Project 2"
+                width={1200}
+                height={1500}
+                className="w-full h-full object-cover"
+              />
             </Link>
-            <Link href="/project/interiors" className="w-full aspect-[4/5] bg-gray-100 overflow-hidden">
-              <Image src="/hero3.png" alt="Project 3" width={1200} height={1500} className="w-full h-full object-cover" />
+            <Link
+              href="/project/interiors"
+              className="w-full aspect-[4/5] bg-gray-100 overflow-hidden"
+            >
+              <Image
+                src="/home/hero3.png"
+                alt="Project 3"
+                width={1200}
+                height={1500}
+                className="w-full h-full object-cover"
+              />
             </Link>
           </div>
         </div>
@@ -616,12 +728,15 @@ export default function Home() {
 
       {/* ✅ NEXT SECTION */}
       <section id="next" className="bg-white w-screen mt-4 md:-mt-42">
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
-          <div className="relative w-full h-[60vh] sm:h-[100vh]">
-            <Image src="/hero4.png" alt="Showcase image 1" fill priority className="object-cover" />
-          </div>
-          <div className="relative w-full h-[60vh] sm:h-[100vh]">
-            <Image src="/hero5.png" alt="Showcase image 2" fill className="object-cover" />
+        <div className="w-full">
+          <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[100vh]">
+            <Image
+              src="/hero5.png"
+              alt="Showcase image"
+              fill
+              priority
+              className="object-cover w-full h-full"
+            />
           </div>
         </div>
       </section>
@@ -633,35 +748,32 @@ export default function Home() {
             {[
               {
                 quote:
-                  '“From design concept to completion, Nicara handled everything with precision and care. Their project management made the entire process smooth and stress-free.”',
-                cite: '— Meera T., Private Residence, Bengaluru',
+                  "“From design concept to completion, Nicara handled everything with precision and care. Their project management made the entire process smooth and stress-free.”",
+                cite: "— Meera T., Private Residence, Bengaluru",
               },
               {
                 quote:
                   '"We spent months looking for a holiday home but nothing matched our vision - until Nicara took charge. They found us the perfect space & beautifully executed the interiors with every detail in place. The result is a space that feels personal, peaceful, & meaningful to us."',
-                cite: '— Vikram P., Investor, Goa',
+                cite: "— Vikram P., Investor, Goa",
               },
               {
                 quote:
                   '"We had a vision for our restaurant but struggled to translate it into reality. Nicara stepped in, refined our concept, and executed layout, lighting, seating and decor beautifully. Today, customers praise the ambience as much as the food its truly the space we imagined."',
-                cite: '— Sanya R., Restaurant Owner, Hyderabad',
+                cite: "— Sanya R., Restaurant Owner, Hyderabad",
               },
             ].map((t, i) => (
               <div key={i} className="text-black">
-                <blockquote className="text-sm md:text-md leading-relaxed mb-4 font-avenir-next-lt-pro-light font-medium">{t.quote}</blockquote>
-                <cite className="text-sm underline font-avenir-next-lt-pro-light font-medium">{t.cite}</cite>
+                <blockquote className="text-sm md:text-md leading-relaxed mb-4 font-avenir-next-lt-pro-light font-medium">
+                  {t.quote}
+                </blockquote>
+                <cite className="text-sm underline font-avenir-next-lt-pro-light font-medium">
+                  {t.cite}
+                </cite>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
 
       {/* ✅ FULL VIDEO */}
       <section className="bg-white min-h-screen">
@@ -712,7 +824,7 @@ export default function Home() {
               absolute bottom-0 left-0 right-0 
               bg-gradient-to-t from-black/80 via-black/40 to-transparent
               p-4 transition-opacity duration-300
-              ${showControls ? 'opacity-100' : 'opacity-0'}
+              ${showControls ? "opacity-100" : "opacity-0"}
             `}
             onClick={(e) => e.stopPropagation()}
           >
@@ -726,7 +838,7 @@ export default function Home() {
                 onChange={handleVideoSeeking}
                 className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
                 style={{
-                  background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${videoProgress}%, #6b7280 ${videoProgress}%, #6b7280 100%)`
+                  background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${videoProgress}%, #6b7280 ${videoProgress}%, #6b7280 100%)`,
                 }}
               />
             </div>
@@ -741,11 +853,19 @@ export default function Home() {
                   className="hover:scale-110 transition-transform"
                 >
                   {videoPlaying ? (
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
                     </svg>
                   ) : (
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   )}
@@ -758,11 +878,19 @@ export default function Home() {
                     className="hover:scale-110 transition-transform"
                   >
                     {videoMuted || videoVolume === 0 ? (
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z" />
                       </svg>
                     ) : (
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <svg
+                        className="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
                         <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
                       </svg>
                     )}
@@ -776,7 +904,7 @@ export default function Home() {
                     onChange={handleVolumeChange}
                     className="w-20 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
                     style={{
-                      background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 100%)`
+                      background: `linear-gradient(to right, #ef4444 0%, #ef4444 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 ${(videoMuted ? 0 : videoVolume) * 100}%, #6b7280 100%)`,
                     }}
                   />
                 </div>
@@ -795,11 +923,19 @@ export default function Home() {
                   className="hover:scale-110 transition-transform"
                 >
                   {isFullscreen ? (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" />
                     </svg>
                   ) : (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
                     </svg>
                   )}
@@ -839,8 +975,9 @@ export default function Home() {
       </section>
 
       {/* Custom Slider Styles */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
           .slider::-webkit-slider-thumb {
             appearance: none;
             height: 12px;
@@ -861,9 +998,9 @@ export default function Home() {
             border: 2px solid white;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
           }
-        `
-      }} />
-
+        `,
+        }}
+      />
 
       {/* Popup Contact Form */}
       {showPopupForm && (
@@ -881,10 +1018,17 @@ export default function Home() {
             >
               <X className="w-6 h-6" />
             </button>
-            <h3 className="text-lg font-bold mb-4 text-black text-center font-poppins">Get a Free Curated Consultation</h3>
-            <form onSubmit={handleContactSubmit} className="flex flex-col space-y-4">
+            <h3 className="text-lg font-bold mb-4 text-black text-center font-poppins">
+              Get a Free Curated Consultation
+            </h3>
+            <form
+              onSubmit={handleContactSubmit}
+              className="flex flex-col space-y-4"
+            >
               <div>
-                <label className="block text-sm font-medium mb-2 text-black">Name</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Name
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -895,7 +1039,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-black">Phone</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Phone
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -906,7 +1052,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-black">Email</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Email
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -917,7 +1065,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-black">How did you hear about us?</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  How did you hear about us?
+                </label>
                 <input
                   type="text"
                   name="hearAboutUs"
@@ -928,7 +1078,9 @@ export default function Home() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium mb-2 text-black">Message</label>
+                <label className="block text-sm font-medium mb-2 text-black">
+                  Message
+                </label>
                 <textarea
                   name="message"
                   value={contactFormData.message}
@@ -938,92 +1090,144 @@ export default function Home() {
                   rows="3"
                 ></textarea>
               </div>
-              <button type="submit" className="bg-[#7E6BF2] text-white px-4 py-2 rounded hover:bg-[#6a5acd] w-full">Send</button>
+              <button
+                type="submit"
+                className="bg-[#7E6BF2] text-white px-4 py-2 rounded hover:bg-[#6a5acd] w-full"
+              >
+                Send
+              </button>
             </form>
           </div>
         </div>
       )}
 
-
       {/* ✅ FOOTER */}
       <footer
-         className="
+        className="
          text-amber-50 
          py-16 sm:py-24 
          px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32
          -mt-138 sm:-mt-8 md:mt-0
        "
-       style={{ backgroundColor: '#755306' }}
+        style={{ backgroundColor: "#755306" }}
       >
         <div className="mx-auto w-full max-w-[2200px] space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* Links section */}
             <div className="flex flex-wrap gap-3 sm:gap-6 justify-center md:justify-start text-center md:text-left relative md:-ml-4">
-                          <div className="relative ">
-                      <button
-                        className="md:hidden text-md hover:underline flex items-center font-avenir-next-lt-pro-light font-light"
-                        onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}
-                      >
-                        Projects
-                              <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${footerDropdownOpen ? 'rotate-180' : ''}`} />
-                            </button>
-                            <a
-                              href="#"
-                              className="hidden md:block text-md hover:underline font-avenir-next-lt-pro-light font-light"
-                              onMouseEnter={() => setFooterDropdownOpen(true)}
-                              onMouseLeave={() => setFooterDropdownOpen(false)}
-                            >
-                              Projects
-                            </a>
-                            {footerDropdownOpen && (
-                              <div
-                                className="absolute bottom-full left-0 bg-[#755306] shadow-lg py-2 w-48 z-30"
-                                onMouseEnter={() => setFooterDropdownOpen(true)}
-                                onMouseLeave={() => setFooterDropdownOpen(false)}
-                              >
-                                <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Interiors
-                                </a>
-                                
-                                <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                                  Events & Experiences
-                                </a>
-                              </div>
-                            )}
-                          </div>
-                          <a href="/about" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">About</a>
-                          <a href="/contact" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">Contact</a>
-                        </div>
-                  
-                        {/* Description section */}
-                        <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                           Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
-                        </div>
-            
-                        {/* Social section */}
-                        <div className="text-[1.05rem] text-center md:text-left md:-mr-19 md:ml-52 space-y-1 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                          <div>
-                            IG: <a href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg==" className="underline hover:no-underline">@nicaradesign</a>
-                          </div>
-                          <div>
-                            Phone: <a href="tel:8559901234" className="underline hover:no-underline">+91 855 990 1234</a>
-                          </div>
-                        </div>
-                      </div>
-            
-                      {/* Bottom section */}
-                      <div className="flex flex-col md:flex-row justify-between items-center text-[1.05rem] gap-4 text-center md:text-left -ml-5" style={{ fontFamily: 'Crimson Text, serif' }}>
-                        <div>
-                          Questions? Reach out:<br />
-                          <a href="mailto:hello@dwelltales.com" className="underline hover:no-underline">
-                          hello@dwelltales.com
-                          </a>
-                        </div>
-                        </div>
-                        <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
-                    </div>
-                  </footer>
+              <div className="relative ">
+                <button
+                  className="md:hidden text-md hover:underline flex items-center font-avenir-next-lt-pro-light font-light"
+                  onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}
+                >
+                  Projects
+                  <ChevronDown
+                    className={`w-4 h-4 ml-1 transition-transform ${footerDropdownOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <a
+                  href="#"
+                  className="hidden md:block text-md hover:underline font-avenir-next-lt-pro-light font-light"
+                  onMouseEnter={() => setFooterDropdownOpen(true)}
+                  onMouseLeave={() => setFooterDropdownOpen(false)}
+                >
+                  Projects
+                </a>
+                {footerDropdownOpen && (
+                  <div
+                    className="absolute bottom-full left-0 bg-[#755306] shadow-lg py-2 w-48 z-30"
+                    onMouseEnter={() => setFooterDropdownOpen(true)}
+                    onMouseLeave={() => setFooterDropdownOpen(false)}
+                  >
+                    <a
+                      href="/project/interiors"
+                      className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light"
+                    >
+                      Interiors
+                    </a>
 
+                    <a
+                      href="/project/events-experiences"
+                      className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light"
+                    >
+                      Events & Experiences
+                    </a>
+                  </div>
+                )}
+              </div>
+              <a
+                href="/about"
+                className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light"
+              >
+                About
+              </a>
+              <a
+                href="/contact"
+                className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light"
+              >
+                Contact
+              </a>
+            </div>
+
+            {/* Description section */}
+            <div
+              className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0"
+              style={{ fontFamily: "Crimson Text, serif" }}
+            >
+              Established in 2019, Nicara is a full-service design and lifestyle
+              studio based in Hyderabad, India.
+            </div>
+
+            {/* Social section */}
+            <div
+              className="text-[1.05rem] text-center md:text-left md:-mr-19 md:ml-52 space-y-1 px-4 md:px-0"
+              style={{ fontFamily: "Crimson Text, serif" }}
+            >
+              <div>
+                IG:{" "}
+                <a
+                  href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg=="
+                  className="underline hover:no-underline"
+                >
+                  @nicaradesign
+                </a>
+              </div>
+              <div>
+                Phone:{" "}
+                <a
+                  href="tel:8559901234"
+                  className="underline hover:no-underline"
+                >
+                  +91 855 990 1234
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom section */}
+          <div
+            className="flex flex-col md:flex-row justify-between items-center text-[1.05rem] gap-4 text-center md:text-left -ml-5"
+            style={{ fontFamily: "Crimson Text, serif" }}
+          >
+            <div>
+              Questions? Reach out:
+              <br />
+              <a
+                href="mailto:hello@dwelltales.com"
+                className="underline hover:no-underline"
+              >
+                hello@dwelltales.com
+              </a>
+            </div>
+          </div>
+          <div
+            className="ml-256 text-md -mb-12 -mt-18"
+            style={{ fontFamily: "font-avenir-next-lt-pro-light, serif" }}
+          >
+            Nicara Design © 2025
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
