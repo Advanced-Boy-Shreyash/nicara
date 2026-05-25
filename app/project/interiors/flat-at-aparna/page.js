@@ -298,7 +298,7 @@ export default function FamilyFarmhouse() {
         <Image src="/p6/p_img1.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-  Aparna is a home that stops you the moment you walk in.
+  Aparna is a home that stops you the moment you walk in. The living room draws you in with gold pendant lights, deep red accents and sofas warm enough to sink into for hours. 
 </p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p6/p_img2.png" alt="Family Farmhouse" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
@@ -307,7 +307,7 @@ export default function FamilyFarmhouse() {
 
 </div>
 <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
-  The living room draws you in with gold pendant lights, deep red accents and sofas warm enough to sink into for hours. The dining space makes every meal feel like a special occasion dark marble table, velvet chairs and a bold red grid wall that you simply can&apos;t take your eyes off. The kitchen surprises you the most dark matte cabinets paired with the most stunning green marble wall, making even everyday cooking feel elevated. The bedroom is personal and calm, with a rich wine-red headboard, a sculptural art piece and a living tree that breathes life into the room. And the wardrobe full glass, warm amber light inside, clothes displayed like a private boutique. Every piece in this home was chosen with care, every corner tells a story, and nothing was placed just to fill space. Aparna is bold, warm and completely one of a kind a true reflection of the family that calls it home.
+  The dining space makes every meal feel like a special occasion dark marble table, velvet chairs and a bold red grid wall that you simply can&apos;t take your eyes off. Nicara and team did what they do best they turned a house into a home that takes your breath away. 
 </p>
 <div className="flex flex-col sm:flex-row">
   <Image src="/p6/p_img5.png" alt="Family Farmhouse" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
@@ -316,7 +316,7 @@ export default function FamilyFarmhouse() {
 <Image src="/p6/p_img7.png" alt="Family Farmhouse" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
 <div className="pt-28"> {/* was pt-20 — increased slightly */}
   <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
-  Nicara and team did what they do best they turned a house into a home that takes your breath away.
+   The kitchen surprises you the most dark matte cabinets paired with the most stunning green marble wall, making even everyday cooking feel elevated. The bedroom is personal and calm, with a rich wine-red headboard, a sculptural art piece and a living tree that breathes life into the room. And the wardrobe full glass, warm amber light inside, clothes displayed like a private boutique. Every piece in this home was chosen with care, every corner tells a story, and nothing was placed just to fill space. Aparna is bold, warm and completely one of a kind a true reflection of the family that calls it home.
 </p>
 </div>
 

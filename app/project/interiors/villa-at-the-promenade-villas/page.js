@@ -297,25 +297,26 @@ export default function Clarksville() {
         {/* Full Page Image */}
         <Image src="/p7/p_img1.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
-        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55 space-y-4">
+        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
           <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
           <p>Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece sitting quietly on it was chosen because it adds just the right touch of personality.</p>
-          <p>The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family dinner into something worth remembering.</p>
-          <p>The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.</p>
-          <p>The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash; tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.</p>
-          <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
         </div>
         <div className="flex flex-col sm:flex-row">
           <Image src="/p7/p_img2.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
           <Image src="/p7/p_img3.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
           <Image src="/p7/p_img4.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
-
+        </div>
+        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-205 space-y-4">
+          <p>The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family dinner into something worth remembering.</p>
         </div>
         <div className="flex flex-col sm:flex-row">
-          <Image src="/p7/p_img5.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-30" />
-          <Image src="/p7/p_img6.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[34%] h-auto object-contain sm:ml-35 mt-30" />
+          <Image src="/p7/p_img5.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-20" />
+          <Image src="/p7/p_img6.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[70%] h-auto object-contain sm:ml-35 mt-30" />
         </div>
-        <Image src="/p7/p_img7.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
+        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-205 space-y-4">
+          <p>The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.</p>
+        </div>
+        <Image src="/p7/p_img7.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-20" />
         <div className="relative">
           <Image
             src="/p7/p_img8.png"
@@ -342,6 +343,10 @@ export default function Clarksville() {
           />
         </div>
         <Image src="/p7/p_img11.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
+        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-35">
+          <p>The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash; tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.</p>
+          <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
+        </div>
 
       </div>
       <footer

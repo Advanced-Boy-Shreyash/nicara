@@ -298,7 +298,7 @@ export default function ContemporaryCabins() {
         <Image src="/p3/p_img1.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
         {/* Description */}
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-          Some homes are built. Villa at Aadhya Advaita was crafted.
+          Some homes are built. Villa at Aadhya Advaita was crafted. 
         </p>
         <div className="flex flex-col sm:flex-row">
           <Image src="/p3/p_img2.png" alt="Villa at Aadhya Advaita dining room" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
@@ -306,7 +306,7 @@ export default function ContemporaryCabins() {
           <Image src="/p3/p_img4.png" alt="Villa at Aadhya Advaita detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 sm:mt-85" />
         </div>
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 sm:-mt-22 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-249">
-          From the very first conversation, we knew this was going to be something special. The clients had a vision &mdash; bold, warm, and unapologetically personal. Our job was simply to bring it to life.
+            And so we did. The dining room stops you in your tracks. Copper inlays cut across concrete walls like brushstrokes &mdash; sharp, geometric, confident. The solid wood table beneath it feels like it&apos;s been there forever. This is a room that says we enjoy good food and even better company.
         </p>
         <div className="flex flex-col sm:flex-row">
           <Image src="/p3/p_img5.png" alt="Villa at Aadhya Advaita kitchen" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 sm:mt-30" />
@@ -315,7 +315,8 @@ export default function ContemporaryCabins() {
         <Image src="/p3/p_img7.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-40" />
         <div className="pt-28">
           <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-180">
-            And so we did. The dining room stops you in your tracks. Copper inlays cut across concrete walls like brushstrokes &mdash; sharp, geometric, confident. The solid wood table beneath it feels like it&apos;s been there forever. This is a room that says we enjoy good food and even better company.
+            The kitchen doesn&apos;t just function &mdash; it performs. Glossy cabinets, black marble counters, pendant lights that hang just right. There&apos;s even a breakfast counter for those mornings when you just want a quiet coffee before the day begins.
+            The bedrooms each tell their own story. One is sharp and dramatic &mdash; geometric lighting, dark tones, a motorbike print on the wall for the one who doesn&apos;t do ordinary. Another is soft and easy &mdash; white linen, warm wood, curtains that let the morning in gently.
           </p>
         </div>
 
@@ -346,16 +347,8 @@ export default function ContemporaryCabins() {
         </div>
 
         <Image src="/p3/p_img1.png" alt="Villa at Aadhya Advaita" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
-        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-          The kitchen doesn&apos;t just function &mdash; it performs. Glossy cabinets, black marble counters, pendant lights that hang just right. There&apos;s even a breakfast counter for those mornings when you just want a quiet coffee before the day begins.
-        </p>
-        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-          The bedrooms each tell their own story. One is sharp and dramatic &mdash; geometric lighting, dark tones, a motorbike print on the wall for the one who doesn&apos;t do ordinary. Another is soft and easy &mdash; white linen, warm wood, curtains that let the morning in gently.
-        </p>
         <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
           And running through every room &mdash; warm wood, punchy moments of colour, and light that knows exactly where to land.
-        </p>
-        <p className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
           Villa at Aadhya Advaita isn&apos;t just a home. It&apos;s a reflection of the people who live in it.
         </p>
 
