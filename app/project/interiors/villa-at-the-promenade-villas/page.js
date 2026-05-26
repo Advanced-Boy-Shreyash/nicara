@@ -1,76 +1,106 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from "react";
 import Image from "next/image";
-import Link from 'next/link';
-import { Menu, X, ChevronDown, Mail, Phone, ChevronRight, ChevronLeft } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import FloatingContactBar from '../../../components/FloatingContactBar';
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+import FloatingContactBar from "../../../components/FloatingContactBar";
 
-export default function Clarksville() {
+const images = {
+  cover: {
+    src: "/p7/p_img1.png",
+    alt: "Villa at The Promenade Villas",
+    width: 1500,
+    height: 1125,
+  },
+  gallery: [
+    {
+      src: "/p7/p_img2.png",
+      alt: "Villa at The Promenade Villas living room",
+      width: 1125,
+      height: 1500,
+    },
+    {
+      src: "/p7/p_img3.png",
+      alt: "Villa at The Promenade Villas sculptural divider",
+      width: 1500,
+      height: 2000,
+    },
+    {
+      src: "/p7/p_img4.png",
+      alt: "Villa at The Promenade Villas lounge",
+      width: 1500,
+      height: 2000,
+    },
+    {
+      src: "/p7/p_img5.png",
+      alt: "Villa at The Promenade Villas dining area",
+      width: 1500,
+      height: 2000,
+    },
+    {
+      src: "/p7/p_img6.png",
+      alt: "Villa at The Promenade Villas kitchen",
+      width: 1500,
+      height: 2000,
+    },
+    {
+      src: "/p7/p_img9.png",
+      alt: "Villa at The Promenade Villas bedroom",
+      width: 1125,
+      height: 1500,
+    },
+    {
+      src: "/p7/p_img8.png",
+      alt: "Villa at The Promenade Villas wardrobe",
+      width: 1125,
+      height: 1500,
+    },
+    {
+      src: "/p7/p_img7.png",
+      alt: "Villa at The Promenade Villas shelving wall",
+      width: 2000,
+      height: 1500,
+    },
+  ],
+};
 
+function ProjectImage({ image, className = "", sizes = "100vw", priority = false }) {
+  return (
+    <figure className={`group overflow-hidden rounded-[18px] bg-[#eee8de] shadow-[0_18px_50px_rgba(36,31,24,0.10)] ${className}`}>
+      <Image
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        priority={priority}
+        sizes={sizes}
+        className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+      />
+    </figure>
+  );
+}
+
+function CopyBlock({ children, className = "" }) {
+  return (
+    <div className={`mx-auto max-w-3xl space-y-4 text-sm font-medium leading-7 text-[#1f1d18] ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+export default function VillaAtThePromenadeVillas() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [footerDropdownOpen, setFooterDropdownOpen] = useState(false);
-  const [contactBarOpen, setContactBarOpen] = useState(true);
-  const [isContactHovered, setIsContactHovered] = useState(false);
-  const [isFormHovered, setIsFormHovered] = useState(false);
-  const [mobileFormOpen, setMobileFormOpen] = useState(false);
-  const [contactFormData, setContactFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    message: ''
-  });
-
-  const handleContactInputChange = (e) => {
-    const { name, value } = e.target;
-    setContactFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleContactSubmit = (e) => {
-    e.preventDefault();
-    console.log('Contact form submitted:', contactFormData);
-
-    // Send email using EmailJS (same as main contact form)
-    emailjs.send(
-      'service_b769gdc',
-      'template_0hzoxjk',
-      {
-        from_name: contactFormData.name,
-        from_email: contactFormData.email,
-        phone: contactFormData.phone,
-        hear_about_us: 'Clarksville Page Floating Contact Form',
-        message: contactFormData.message,
-      },
-      'VFpd616Sj6d9RlzWA'
-    ).then((result) => {
-      console.log('Clarksville page floating contact email sent successfully:', result.text);
-      alert('Message sent successfully!');
-      setContactFormData({
-        name: '',
-        phone: '',
-        email: '',
-        message: ''
-      });
-    }, (error) => {
-      console.error('Error sending Clarksville page floating contact email:', error.text);
-      alert('Error sending message. Please try again.');
-    });
-  };
 
   return (
-    <div className="font-sans relative min-h-screen bg-white overflow-x-hidden">
-
-      {/* ✅ NAVBAR */}
-      <nav
-        className="fixed top-0 left-0 right-0 bg-white flex justify-between items-center w-full px-6 py-4 z-20 sm:grid sm:grid-cols-3 sm:items-center font-medium"
-      >
-        {/* Projects (Desktop Left) */}
-        <div className="hidden sm:flex sm:justify-start relative">
+    <div className="font-sans relative min-h-screen overflow-x-hidden bg-[#f7f4ee] text-black">
+      <nav className="fixed left-0 right-0 top-0 z-20 flex w-full items-center justify-between bg-white px-6 py-4 font-medium sm:grid sm:grid-cols-3 sm:items-center">
+        <div className="relative hidden sm:flex sm:justify-start">
           <div
-            className="text-sm hover:underline text-black cursor-pointer flex items-center justify-between w-full font-avenir-next-lt-pro-light font-medium"
+            className="flex w-full cursor-pointer items-center justify-between text-sm font-medium text-black hover:underline"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
@@ -78,96 +108,69 @@ export default function Clarksville() {
           </div>
           {dropdownOpen && (
             <div
-              className="absolute top-full left-0 bg-white shadow-lg py-2 w-48 z-30"
+              className="absolute left-0 top-full z-30 w-48 bg-white py-2 shadow-lg"
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
             >
-              <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100 font-avenir-next-lt-pro-light font-medium">
+              <Link href="/project/interiors" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Interiors
               </Link>
-             
-              <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100 font-avenir-next-lt-pro-light font-medium">
+              <Link href="/project/events-experiences" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">
                 Events & Experiences
               </Link>
             </div>
           )}
         </div>
 
-        {/* NICARA (Centered on Desktop, Left on Mobile) */}
-        <div className="flex items-center justify-between w-full sm:w-auto sm:justify-center sm:col-start-2">
-          <Link
-            href="/"
-            className="text-lg text-black font-bold"
-            style={{ fontFamily: 'Didot, serif' }}
-          >
+        <div className="flex w-full items-center justify-between sm:col-start-2 sm:w-auto sm:justify-center">
+          <Link href="/" className="text-lg font-bold text-black" style={{ fontFamily: "Didot, serif" }}>
             NICARA
           </Link>
-
-          {/* Hamburger Menu (mobile only) */}
-          <button
-            className="sm:hidden p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle Menu"
-          >
-            {menuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
+          <button className="p-2 sm:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle Menu">
+            {menuOpen ? <X className="h-6 w-6 text-black" /> : <Menu className="h-6 w-6 text-black" />}
           </button>
         </div>
 
-        {/* About and Contact (Desktop Right) */}
-        <div className="hidden sm:flex sm:justify-end gap-5">
-          <a href="/about" className="text-sm hover:underline text-black font-avenir-next-lt-pro-light font-medium">About</a>
-          <a href="/contact" className="text-sm hover:underline text-black font-avenir-next-lt-pro-light font-medium">Contact</a>
+        <div className="hidden gap-5 sm:flex sm:justify-end">
+          <a href="/about" className="text-sm font-medium text-black hover:underline">
+            About
+          </a>
+          <a href="/contact" className="text-sm font-medium text-black hover:underline">
+            Contact
+          </a>
         </div>
 
-        {/* Mobile Dropdown Menu */}
         {menuOpen && (
-          <div className="fixed inset-0 bg-[rgb(31,44,32)] z-50 flex flex-col items-center justify-center slide-up-menu">
+          <div className="slide-up-menu fixed inset-0 z-50 flex flex-col items-center justify-center bg-[rgb(31,44,32)]">
             <button
-              className="absolute top-6 right-6 text-white hover:text-gray-200"
+              className="absolute right-6 top-6 text-white hover:text-gray-200"
               onClick={() => setMenuOpen(false)}
               aria-label="Close Menu"
             >
-              <X className="w-8 h-8" />
+              <X className="h-8 w-8" />
             </button>
-            <div className="flex flex-col items-center space-y-4 text-white text-lg font-medium">
+            <div className="flex flex-col items-center space-y-4 text-lg font-medium text-white">
               <div
-                className="py-2 text-white hover:underline cursor-pointer flex items-center justify-center w-full"
+                className="flex w-full cursor-pointer items-center justify-center py-2 text-white hover:underline"
                 onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
               >
                 Projects
-                <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${mobileDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`ml-2 h-5 w-5 transition-transform ${mobileDropdownOpen ? "rotate-180" : ""}`} />
               </div>
               {mobileDropdownOpen && (
-                <div className="flex flex-col items-center w-full space-y-2">
-                  <a
-                    href="/project/interiors"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                <div className="flex w-full flex-col items-center space-y-2">
+                  <a href="/project/interiors" className="py-2 text-white hover:underline" onClick={() => setMenuOpen(false)}>
                     Interiors
                   </a>
-                  
-                  <a
-                    href="/project/events-experiences"
-                    className="py-2 text-white hover:underline"
-                    onClick={() => setMenuOpen(false)}
-                  >
+                  <a href="/project/events-experiences" className="py-2 text-white hover:underline" onClick={() => setMenuOpen(false)}>
                     Events & Experiences
                   </a>
                 </div>
               )}
-              <a
-                href="/about"
-                className="py-2 text-white hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
+              <a href="/about" className="py-2 text-white hover:underline" onClick={() => setMenuOpen(false)}>
                 About
               </a>
-              <a
-                href="/contact"
-                className="py-2 text-white hover:underline"
-                onClick={() => setMenuOpen(false)}
-              >
+              <a href="/contact" className="py-2 text-white hover:underline" onClick={() => setMenuOpen(false)}>
                 Contact
               </a>
             </div>
@@ -175,253 +178,152 @@ export default function Clarksville() {
         )}
       </nav>
 
-      {/* Floating Contact Bar */}
-      <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-10 flex flex-col space-y-0">
-        {/* Toggle Button */}
-        <button
-          onClick={() => setContactBarOpen(!contactBarOpen)}
-          className={`bg-black flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] translate-x-0' : 'w-[32px] h-[32px] sm:w-[40px] sm:h-[40px] rounded-full translate-x-1/2'
-          }`}
-        >
-          {contactBarOpen ? <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />}
-        </button>
-        {/* Contact Us Button */}
-        <div
-          onMouseEnter={() => setIsContactHovered(true)}
-          onMouseLeave={() => setIsContactHovered(false)}
-          onClick={() => setMobileFormOpen(!mobileFormOpen)}
-          className={`w-[40px] h-[120px] sm:w-[50px] sm:h-[150px] bg-[#7E6BF2] flex flex-col items-center justify-start pt-12 sm:pt-15 text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <span className="text-xs sm:text-sm transform -rotate-90 whitespace-nowrap mb-6 sm:mb-8">Contact Us</span>
-          <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
-        </div>
-        {/* WhatsApp Button */}
-        <a
-          href="https://wa.me/8559901234"
-          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#2C2C2C] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-          </svg>
-        </a>
-        {/* Call Button */}
-        <a
-          href="tel:8559901234"
-          className={`w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] bg-[#25D366] flex items-center justify-center text-white hover:scale-110 hover:shadow-lg transition-all duration-200 ${
-            contactBarOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-        </a>
-      </div>
+      <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
+        <div className="mx-auto max-w-[1500px]">
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Villa at The Promenade Villas</h1>
 
-        {/* Contact Form */}
-        {contactBarOpen && ((isContactHovered || isFormHovered) || mobileFormOpen) && (
-          <div
-            onMouseEnter={() => setIsFormHovered(true)}
-            onMouseLeave={() => setIsFormHovered(false)}
-            className="fixed right-0 top-1/2 transform -translate-y-3/5 sm:-translate-y-2/4 z-20 bg-white shadow-lg p-6 rounded w-80 sm:w-96 mr-4 sm:mr-12"
-            style={{ marginTop: '50px' }}
-          >
-            <button
-              onClick={() => {
-                setMobileFormOpen(false);
-                setIsFormHovered(false);
-                setIsContactHovered(false);
-              }}
-              className="absolute top-6 right-4 text-gray-500 hover:text-gray-700 sm:hidden"
-            >
-              <X className="w-6 h-6" />
-            </button>
-            <h3 className="text-lg font-bold mb-4 text-black">Contact Form</h3>
-            <form onSubmit={handleContactSubmit}>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={contactFormData.name}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
+          <ProjectImage
+            image={images.cover}
+            priority
+            className="aspect-[4/3] rounded-[22px] sm:aspect-[16/7]"
+            sizes="(max-width: 768px) 100vw, 92vw"
+          />
+
+          <CopyBlock className="py-10 md:py-12">
+            <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
+            <p>
+              Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical
+              lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The
+              marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece
+              sitting quietly on it was chosen because it adds just the right touch of personality.
+            </p>
+          </CopyBlock>
+
+          <section className="grid gap-4 md:grid-cols-3">
+            {images.gallery.slice(0, 3).map((image, index) => (
+              <ProjectImage
+                key={image.src}
+                image={image}
+                priority={index === 0}
+                className="aspect-[3/4]"
+                sizes="(max-width: 768px) 100vw, 31vw"
+              />
+            ))}
+          </section>
+
+          <CopyBlock className="py-10 text-center md:py-12">
+            <p>
+              The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze
+              room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family
+              dinner into something worth remembering.
+            </p>
+          </CopyBlock>
+
+          <section className="grid gap-4 lg:grid-cols-2">
+            <ProjectImage image={images.gallery[3]} className="aspect-[3/4] lg:aspect-auto lg:h-[760px]" sizes="(max-width: 1024px) 100vw, 46vw" />
+            <ProjectImage image={images.gallery[4]} className="aspect-[3/4] lg:aspect-auto lg:h-[760px]" sizes="(max-width: 1024px) 100vw, 46vw" />
+          </section>
+
+          <CopyBlock className="py-10 text-center md:py-12">
+            <p>
+              The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate
+              hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the
+              whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.
+            </p>
+          </CopyBlock>
+
+          <ProjectImage image={images.gallery[5]} className="aspect-[16/7]" sizes="92vw" />
+
+          <section className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ProjectImage image={images.gallery[6]} className="aspect-[3/4]" sizes="(max-width: 768px) 100vw, 31vw" />
+            <ProjectImage image={images.gallery[7]} className="aspect-[4/3] md:col-span-1 lg:col-span-2" sizes="(max-width: 768px) 100vw, 62vw" />
+          </section>
+
+          <CopyBlock className="pt-10 md:pt-12">
+            <p>
+              The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash;
+              tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.
+            </p>
+            <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
+          </CopyBlock>
+        </div>
+      </main>
+
+      <footer className="text-amber-50 px-4 py-16 sm:px-10 sm:py-24 md:px-16 lg:px-24 xl:px-32" style={{ backgroundColor: "#755306" }}>
+        <div className="mx-auto w-full max-w-[2200px] space-y-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="relative flex flex-wrap justify-center gap-6 text-center md:justify-start md:text-left">
+              <div className="relative">
+                <button className="flex text-md font-light hover:underline md:hidden" onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}>
+                  Projects
+                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${footerDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+                <a
+                  href="#"
+                  className="hidden text-md font-light hover:underline md:block"
+                  onMouseEnter={() => setFooterDropdownOpen(true)}
+                  onMouseLeave={() => setFooterDropdownOpen(false)}
+                >
+                  Projects
+                </a>
+                {footerDropdownOpen && (
+                  <div
+                    className="absolute bottom-full left-0 z-30 w-48 bg-[#755306] py-2 shadow-lg"
+                    onMouseEnter={() => setFooterDropdownOpen(true)}
+                    onMouseLeave={() => setFooterDropdownOpen(false)}
+                  >
+                    <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306]">
+                      Interiors
+                    </a>
+                    <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306]">
+                      Events & Experiences
+                    </a>
+                  </div>
+                )}
               </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={contactFormData.phone}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
+              <a href="/about" className="text-md font-light hover:underline">
+                About
+              </a>
+              <a href="/contact" className="text-md font-light hover:underline">
+                Contact
+              </a>
+            </div>
+
+            <div className="px-4 text-center text-[1.05rem] md:px-0 md:text-left" style={{ fontFamily: "Crimson Text, serif" }}>
+              Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
+            </div>
+
+            <div className="space-y-1 px-4 text-center text-[1.05rem] md:px-0 md:text-left" style={{ fontFamily: "Crimson Text, serif" }}>
+              <div>
+                IG:{" "}
+                <a href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg==" className="underline hover:no-underline">
+                  @nicaradesign
+                </a>
               </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={contactFormData.email}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-4xl"
-                />
+              <div>
+                Phone:{" "}
+                <a href="tel:8559901234" className="underline hover:no-underline">
+                  +91 855 990 1234
+                </a>
               </div>
-              <div className="mb-4 text-black">
-                <label className="block text-sm font-medium mb-2 text-black">Message</label>
-                <textarea
-                  name="message"
-                  value={contactFormData.message}
-                  onChange={handleContactInputChange}
-                  required
-                  className="w-full p-2 border border-black rounded-2xl"
-                  rows="2"
-                ></textarea>
-              </div>
-              <button type="submit" className="bg-[#7E6BF2] text-white px-4 py-2 rounded-4xl hover:bg-[#6a5acd] w-full">Submit</button>
-            </form>
+            </div>
           </div>
-        )}
 
-      <div className="pt-24 min-h-screen px-4">
-        {/* Header */}
-        <div className="flex justify-between items-center mb-4">
-          <h1 className="text-black font-avenir-next-lt-pro-light font-medium text-sm mb-4">Villa at The Promenade Villas</h1>
+          <div className="flex flex-col justify-between gap-4 text-center text-[1.05rem] md:flex-row md:text-left" style={{ fontFamily: "Crimson Text, serif" }}>
+            <div>
+              Questions? Reach out:
+              <br />
+              <a href="mailto:hello@dwelltales.com" className="underline hover:no-underline">
+                hello@dwelltales.com
+              </a>
+            </div>
+            <div className="text-md" style={{ fontFamily: "var(--font-avenir-next-lt-pro-light), serif" }}>
+              Nicara Design &copy; 2025
+            </div>
+          </div>
         </div>
-        {/* Full Page Image */}
-        <Image src="/p7/p_img1.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mb-4 " />
-        {/* Description */}
-        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-55">
-          <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
-          <p>Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece sitting quietly on it was chosen because it adds just the right touch of personality.</p>
-        </div>
-        <div className="flex flex-col sm:flex-row">
-          <Image src="/p7/p_img2.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full sm:w-4/7 h-auto object-cover sm:-ml-5 mt-20" />
-          <Image src="/p7/p_img3.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:ml-52 sm:-mt-190" />
-          <Image src="/p7/p_img4.png" alt="Villa at The Promenade Villas detail" width={920} height={580} className="w-full sm:w-[25%] h-auto object-contain sm:-ml-88 mt-85" />
-        </div>
-        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-205 space-y-4">
-          <p>The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family dinner into something worth remembering.</p>
-        </div>
-        <div className="flex flex-col sm:flex-row">
-          <Image src="/p7/p_img5.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[35%] h-auto object-contain sm:ml-37 mt-20" />
-          <Image src="/p7/p_img6.png" alt="Villa at The Promenade Villas" width={920} height={580} className="w-full sm:w-[70%] h-auto object-contain sm:ml-35 mt-30" />
-        </div>
-        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-8 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-205 space-y-4">
-          <p>The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.</p>
-        </div>
-        <Image src="/p7/p_img7.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-[100%] h-screen object-cover mt-20" />
-        <div className="relative">
-          <Image
-            src="/p7/p_img8.png"
-            alt="Villa at The Promenade Villas detail"
-            width={920}
-            height={580}
-            className="w-[32%] h-auto object-contain ml-19 mt-160 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-          />
-
-          <Image
-            src="/p7/p_img9.png"
-            alt="Villa at The Promenade Villas detail"
-            width={920}
-            height={580}
-            className="w-[32%] h-auto object-contain ml-19 -mt-300 max-md:w-[90%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-          />
-
-          <Image
-            src="/p7/p_img10.png"
-            alt="Villa at The Promenade Villas detail"
-            width={1920}
-            height={1080}
-            className="w-4/7 h-auto object-cover ml-180 -mt-150 max-md:w-[95%] max-md:ml-0 max-md:mt-8 max-md:mx-auto"
-          />
-        </div>
-        <Image src="/p7/p_img11.png" alt="Villa at The Promenade Villas" width={1920} height={1080} className="w-full h-screen object-cover mt-40" />
-        <div className="text-black text-left font-avenir-next-lt-pro-light font-medium text-sm mb-4 mt-20 leading-relaxed max-w-3xl mx-4 sm:mx-auto sm:ml-35">
-          <p>The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash; tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.</p>
-          <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
-        </div>
-
-      </div>
-      <footer
-      className="mt-15 md:mt-30 text-amber-50 py-16 sm:py-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
-      style={{ backgroundColor: '#755306' }}
-    >
-      <div className="mx-auto w-full max-w-[2200px] space-y-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {/* Links section */}
-         <div className="flex flex-wrap gap-3 sm:gap-6 justify-center md:justify-start text-center md:text-left relative md:-ml-4">
-                       <div className="relative ">
-                   <button
-                     className="md:hidden text-md hover:underline flex items-center font-avenir-next-lt-pro-light font-light"
-                     onClick={() => setFooterDropdownOpen(!footerDropdownOpen)}
-                   >
-                     Projects
-                           <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${footerDropdownOpen ? 'rotate-180' : ''}`} />
-                         </button>
-                         <a
-                           href="#"
-                           className="hidden md:block text-md hover:underline font-avenir-next-lt-pro-light font-light"
-                           onMouseEnter={() => setFooterDropdownOpen(true)}
-                           onMouseLeave={() => setFooterDropdownOpen(false)}
-                         >
-                           Projects
-                         </a>
-                         {footerDropdownOpen && (
-                           <div
-                             className="absolute bottom-full left-0 bg-[#755306] shadow-lg py-2 w-48 z-30"
-                             onMouseEnter={() => setFooterDropdownOpen(true)}
-                             onMouseLeave={() => setFooterDropdownOpen(false)}
-                           >
-                             <a href="/project/interiors" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                               Interiors
-                             </a>
-                             
-                             <a href="/project/events-experiences" className="block px-4 py-2 text-sm text-amber-50 hover:bg-amber-50 hover:text-[#755306] font-avenir-next-lt-pro-light font-light">
-                               Events & Experiences
-                             </a>
-                           </div>
-                         )}
-                       </div>
-                       <a href="/about" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">About</a>
-                       <a href="/contact" className="text-md hover:underline ml-4 font-avenir-next-lt-pro-light font-light">Contact</a>
-                     </div>
-               
-                     {/* Description section */}
-                     <div className="text-[1.05rem] text-center md:text-left md:-mr-39 md:ml-80 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                        Established in 2019, Nicara is a full-service design and lifestyle studio based in Hyderabad, India.
-                     </div>
-         
-                     {/* Social section */}
-                     <div className="text-[1.05rem] text-center md:text-left md:-mr-19 md:ml-52 space-y-1 px-4 md:px-0" style={{ fontFamily: 'Crimson Text, serif' }}>
-                       <div>
-                         IG: <a href="https://www.instagram.com/nicaradesign?igsh=MTRyZHkzeDNtMGRoeg==" className="underline hover:no-underline">@nicaradesign</a>
-                       </div>
-                       <div>
-                         Phone: <a href="tel:8559901234" className="underline hover:no-underline">+91 855 990 1234</a>
-                       </div>
-                     </div>
-                   </div>
-         
-                   {/* Bottom section */}
-                   <div className="flex flex-col md:flex-row justify-between items-center text-[1.05rem] gap-4 text-center md:text-left -ml-5" style={{ fontFamily: 'Crimson Text, serif' }}>
-                     <div>
-                       Questions? Reach out:<br />
-                       <a href="mailto:hello@dwelltales.com" className="underline hover:no-underline">
-                       hello@dwelltales.com
-                       </a>
-                     </div>
-                     </div>
-                     <div className="ml-256 text-md -mb-12 -mt-18" style={{ fontFamily: 'font-avenir-next-lt-pro-light, serif' }}>Nicara Design © 2025</div>
-                 </div>
-               </footer>
-               <FloatingContactBar />
+      </footer>
+      <FloatingContactBar />
     </div>
   );
 }

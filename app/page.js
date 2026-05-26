@@ -655,7 +655,7 @@ export default function Home() {
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-10 items-start">
           <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
             <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
-              NICARA is a Hyderabad-based Interior Architecture & Lifestyle
+              NICARA is a Interior Architecture & Lifestyle
               Studio shaping luxury residential, commercial, and hospitality
               projects across India.{" "}
             </p>
