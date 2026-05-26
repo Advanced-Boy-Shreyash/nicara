@@ -636,16 +636,16 @@ export default function Home() {
         )}
 
       {/* ✅ HERO SECTION */}
-      <main
-        className="flex flex-col items-center sm:items-start w-full"
-        style={{
-          backgroundImage: "url(/hero.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
-          minHeight: "100vh",
-        }}
-      ></main>
+      <main className="relative flex aspect-[818/898] w-full overflow-hidden bg-white sm:aspect-[1600/898] lg:aspect-auto lg:min-h-[100svh]">
+        <Image
+          src="/hero.png"
+          alt="Nicara cover image"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+      </main>
 
       {/* ✅ ABOUT SECTION */}
       <section
