@@ -650,22 +650,22 @@ export default function Home() {
       {/* ✅ ABOUT SECTION */}
       <section
         id="about"
-        className="min-h-screen bg-white pt-24 px-4 sm:px-10 md:px-16 lg:px-24 xl:px-32"
+        className="bg-white px-4 py-16 sm:px-10 sm:py-20 md:px-16 lg:px-24 xl:px-32"
       >
         <div className="mx-auto w-full max-w-[2200px] grid grid-cols-1 md:grid-cols-[250px_minmax(0,1fr)] gap-10 items-start">
-          <div className="text-black leading-9 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
-            <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+          <div className="text-black leading-8 md:sticky md:top-28 pl-0 sm:pl-4 md:pl-0 -ml-0 md:-ml-22">
+            <p className="text-sm sm:text-base md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
               NICARA is a Interior Architecture & Lifestyle
               Studio shaping luxury residential, commercial, and hospitality
               projects across India.{" "}
             </p>
-            <p className="text-sm sm:text-base md:text-sm mb-4 -px-3 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+            <p className="text-sm sm:text-base md:text-sm mb-4 font-avenir-next-lt-pro-light font-medium">
               We craft thoughtful, bespoke interiors, curate signature furniture
               and decor, provide styling, and design exclusive events and
               experiences - all infused with warmth, playfulness, and subtle
               theatricality.{" "}
             </p>
-            <p className="text-sm sm:text-base md:text-sm -mb-9 -px-2 -sm:px-6 font-avenir-next-lt-pro-light font-medium">
+            <p className="text-sm sm:text-base md:text-sm font-avenir-next-lt-pro-light font-medium">
               For our clients, we also scout and curate handpicked spaces
               aligned with their lifestyle vision, including apartments, villas,
               residential <br />
@@ -678,7 +678,7 @@ export default function Home() {
             <div className="relative inline-block">
               <Link
                 href="/project/interiors"
-                className="inline-block mt-20 sm:mt-22 md:mt-15 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
+                className="inline-block mt-8 text-sm sm:text-base underline underline-offset-4 hover:opacity-70 ml-2 md:ml-0 font-medium"
               >
                 View Projects
               </Link>
@@ -727,7 +727,7 @@ export default function Home() {
       </section>
 
       {/* ✅ NEXT SECTION */}
-      <section id="next" className="bg-white w-screen mt-4 md:-mt-42">
+      <section id="next" className="bg-white w-screen">
         <div className="w-full">
           <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[100vh]">
             <Image

@@ -9,56 +9,56 @@ import FloatingContactBar from "../../../components/FloatingContactBar";
 const images = {
   cover: {
     src: "/p6/p_img1.png",
-    alt: "Flat at Aparna",
+    alt: "Apartment at Aparna",
     width: 1920,
     height: 1080,
   },
   gallery: [
     {
       src: "/p6/p_img2.png",
-      alt: "Flat at Aparna living room",
+      alt: "Apartment at Aparna living room",
       width: 1920,
       height: 1080,
     },
     {
       src: "/p6/p_img4.png",
-      alt: "Flat at Aparna accent detail",
+      alt: "Apartment at Aparna accent detail",
       width: 920,
       height: 580,
     },
     {
       src: "/p6/p_img7.png",
-      alt: "Flat at Aparna lounge",
+      alt: "Apartment at Aparna lounge",
       width: 920,
       height: 580,
     },
     {
       src: "/p6/p_img5.png",
-      alt: "Flat at Aparna dining area",
+      alt: "Apartment at Aparna dining area",
       width: 920,
       height: 580,
     },
     {
       src: "/p6/p_img3.png",
-      alt: "Flat at Aparna dining wall",
+      alt: "Apartment at Aparna dining wall",
       width: 920,
       height: 580,
     },
     {
       src: "/p6/p_img6.png",
-      alt: "Flat at Aparna kitchen",
+      alt: "Apartment at Aparna kitchen",
       width: 1920,
       height: 1080,
     },
     {
       src: "/p6/p_img8.png",
-      alt: "Flat at Aparna bedroom",
+      alt: "Apartment at Aparna bedroom",
       width: 920,
       height: 580,
     },
     {
       src: "/p6/p_img9.png",
-      alt: "Flat at Aparna wardrobe",
+      alt: "Apartment at Aparna wardrobe",
       width: 920,
       height: 580,
     },
@@ -89,7 +89,7 @@ function CopyBlock({ children, className = "" }) {
   );
 }
 
-export default function FlatAtAparna() {
+export default function ApartmentAtAparna() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -180,7 +180,7 @@ export default function FlatAtAparna() {
 
       <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Flat at Aparna</h1>
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Apartment at Aparna</h1>
 
           <ProjectImage
             image={images.cover}

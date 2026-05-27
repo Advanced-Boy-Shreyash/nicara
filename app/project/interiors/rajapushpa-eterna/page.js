@@ -9,56 +9,56 @@ import FloatingContactBar from "../../../components/FloatingContactBar";
 const images = {
   cover: {
     src: "/p1/p_img1.png",
-    alt: "Flat at Rajapushpa Eterna",
+    alt: "Apartment at Rajapushpa Eterna",
     width: 1920,
     height: 1080,
   },
   gallery: [
     {
       src: "/p1/p_img2.png",
-      alt: "Flat at Rajapushpa Eterna living room",
+      alt: "Apartment at Rajapushpa Eterna living room",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p1/p_img3.png",
-      alt: "Flat at Rajapushpa Eterna interior view",
+      alt: "Apartment at Rajapushpa Eterna interior view",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img4.png",
-      alt: "Flat at Rajapushpa Eterna lounge",
+      alt: "Apartment at Rajapushpa Eterna lounge",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img5.png",
-      alt: "Flat at Rajapushpa Eterna dining area",
+      alt: "Apartment at Rajapushpa Eterna dining area",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img6.png",
-      alt: "Flat at Rajapushpa Eterna kitchen",
+      alt: "Apartment at Rajapushpa Eterna kitchen",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img9.png",
-      alt: "Flat at Rajapushpa Eterna bedroom",
+      alt: "Apartment at Rajapushpa Eterna bedroom",
       width: 1920,
       height: 1080,
     },
     {
       src: "/p1/p_img7.png",
-      alt: "Flat at Rajapushpa Eterna detail",
+      alt: "Apartment at Rajapushpa Eterna detail",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p1/p_img8.png",
-      alt: "Flat at Rajapushpa Eterna shelving wall",
+      alt: "Apartment at Rajapushpa Eterna shelving wall",
       width: 1920,
       height: 1080,
     },
@@ -89,7 +89,7 @@ function CopyBlock({ children, className = "" }) {
   );
 }
 
-export default function FlatAtRajapushpaEterna() {
+export default function ApartmentAtRajapushpaEterna() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -180,7 +180,7 @@ export default function FlatAtRajapushpaEterna() {
 
       <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Flat at Rajapushpa Eterna</h1>
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Apartment at Rajapushpa Eterna</h1>
 
           <ProjectImage
             image={images.cover}

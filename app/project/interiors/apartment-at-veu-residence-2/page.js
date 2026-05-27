@@ -5,19 +5,19 @@ import ProjectDetailLayout from "../ProjectDetailLayout";
 const images = {
   cover: {
     src: "/p4/p_img1.png",
-    alt: "Flat at Veu Residence",
+    alt: "Apartment at Veu Residence",
     width: 1920,
     height: 1080,
   },
   gallery: [
-    { src: "/p4/p_img2.png", alt: "Flat at Veu Residence bathroom", width: 1400, height: 1000 },
-    { src: "/p4/p_img3.png", alt: "Flat at Veu Residence pooja room", width: 1100, height: 1400 },
-    { src: "/p4/p_img4.png", alt: "Flat at Veu Residence kitchen", width: 1600, height: 1000 },
-    { src: "/p4/p_img5.png", alt: "Flat at Veu Residence kids room", width: 1100, height: 1400 },
-    { src: "/p4/p_img6.png", alt: "Flat at Veu Residence kids room", width: 1400, height: 1000 },
-    { src: "/p4/p_img3.png", alt: "Flat at Veu Residence detail", width: 1600, height: 1000 },
-    { src: "/p4/p_img7.png", alt: "Flat at Veu Residence kids room detail", width: 1100, height: 1400 },
-    { src: "/p4/p_img1.png", alt: "Flat at Veu Residence kids room detail", width: 1400, height: 1000 },
+    { src: "/p4/p_img2.png", alt: "Apartment at Veu Residence bathroom", width: 1400, height: 1000 },
+    { src: "/p4/p_img3.png", alt: "Apartment at Veu Residence pooja room", width: 1100, height: 1400 },
+    { src: "/p4/p_img4.png", alt: "Apartment at Veu Residence kitchen", width: 1600, height: 1000 },
+    { src: "/p4/p_img5.png", alt: "Apartment at Veu Residence kids room", width: 1100, height: 1400 },
+    { src: "/p4/p_img6.png", alt: "Apartment at Veu Residence kids room", width: 1400, height: 1000 },
+    { src: "/p4/p_img3.png", alt: "Apartment at Veu Residence detail", width: 1600, height: 1000 },
+    { src: "/p4/p_img7.png", alt: "Apartment at Veu Residence kids room detail", width: 1100, height: 1400 },
+    { src: "/p4/p_img1.png", alt: "Apartment at Veu Residence kids room detail", width: 1400, height: 1000 },
   ],
 };
 
@@ -36,6 +36,6 @@ const copy = {
   ],
 };
 
-export default function FlatAtVeuResidenceTwo() {
-  return <ProjectDetailLayout title="Flat at Veu Residence" images={images} copy={copy} />;
+export default function ApartmentAtVeuResidenceTwo() {
+  return <ProjectDetailLayout title="Apartment at Veu Residence" images={images} copy={copy} />;
 }

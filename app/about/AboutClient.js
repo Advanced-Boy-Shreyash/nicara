@@ -42,7 +42,7 @@ function TextBlock({ title, children }) {
           {title}
         </h2>
       )}
-      {children && <div className="space-y-5 text-sm font-medium leading-7 text-[#252119]">{children}</div>}
+      {children && <div className="space-y-5 text-[13px] font-medium leading-6 text-[#252119] sm:text-sm sm:leading-7">{children}</div>}
     </div>
   );
 }
@@ -137,8 +137,8 @@ export default function About() {
       </nav>
 
       <main className="pt-20">
-        <section className="mx-auto grid max-w-[1500px] gap-10 px-5 py-8 sm:px-8 md:px-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(390px,0.72fr)] lg:items-start lg:px-12 lg:py-16">
-          <div className="relative min-h-[430px] overflow-hidden rounded-[18px] bg-[#eee8de] shadow-[0_18px_50px_rgba(36,31,24,0.10)] sm:min-h-[620px] lg:sticky lg:top-28 lg:h-[calc(100vh-8rem)]">
+        <section className="mx-auto grid max-w-[1500px] gap-10 px-5 py-8 sm:px-8 md:px-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(390px,0.72fr)] lg:items-stretch lg:px-12 lg:py-16">
+          <div className="relative min-h-[430px] overflow-hidden rounded-[18px] bg-[#eee8de] shadow-[0_18px_50px_rgba(36,31,24,0.10)] sm:min-h-[620px] lg:min-h-0 lg:self-stretch">
             <Image src="/about1.png" alt="About image" fill priority sizes="(max-width: 1024px) 100vw, 56vw" className="object-cover" />
           </div>
 
@@ -160,7 +160,7 @@ export default function About() {
                 <article
                   key={founder.alt}
                   className={`grid gap-8 py-10 md:items-center md:gap-12 lg:gap-20 ${
-                    index % 2 === 1 ? "md:grid-cols-[0.66fr_0.34fr]" : "md:grid-cols-[0.34fr_0.66fr]"
+                    index % 2 === 1 ? "md:grid-cols-[0.7fr_0.3fr]" : "md:grid-cols-[0.3fr_0.7fr]"
                   } ${
                     index > 0 ? "border-t border-[#ded4c5]" : ""
                   }`}
@@ -171,10 +171,10 @@ export default function About() {
                       alt={founder.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 34vw"
-                      className="object-contain object-center p-8 grayscale sm:p-12"
+                      className="object-contain object-center p-10 grayscale sm:p-14"
                     />
                   </div>
-                  <div className="max-w-2xl space-y-5 text-sm font-medium leading-7 text-[#252119] md:py-8">
+                  <div className="max-w-2xl space-y-5 text-[13px] font-medium leading-6 text-[#252119] sm:text-sm sm:leading-7 md:py-8">
                     {founder.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
