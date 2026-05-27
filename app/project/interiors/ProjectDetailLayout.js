@@ -4,66 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import FloatingContactBar from "../../../components/FloatingContactBar";
-
-const images = {
-  cover: {
-    src: "/p7/p_img1.png",
-    alt: "Villa at The Promenade Villas",
-    width: 1500,
-    height: 1125,
-  },
-  gallery: [
-    {
-      src: "/p7/p_img2.png",
-      alt: "Villa at The Promenade Villas living room",
-      width: 1125,
-      height: 1500,
-    },
-    {
-      src: "/p7/p_img3.png",
-      alt: "Villa at The Promenade Villas sculptural divider",
-      width: 1500,
-      height: 2000,
-    },
-    {
-      src: "/p7/p_img4.png",
-      alt: "Villa at The Promenade Villas lounge",
-      width: 1500,
-      height: 2000,
-    },
-    {
-      src: "/p7/p_img7.png",
-      alt: "Villa at The Promenade Villas dining area",
-      width: 1500,
-      height: 2000,
-    },
-    {
-      src: "/p7/p_img6.png",
-      alt: "Villa at The Promenade Villas kitchen",
-      width: 1500,
-      height: 2000,
-    },
-    {
-      src: "/p7/p_img5.png",
-      alt: "Villa at The Promenade Villas bedroom",
-      width: 1125,
-      height: 1500,
-    },
-    {
-      src: "/p7/p_img8.png",
-      alt: "Villa at The Promenade Villas wardrobe",
-      width: 1125,
-      height: 1500,
-    },
-    {
-      src: "/p7/p_img9.png",
-      alt: "Villa at The Promenade Villas shelving wall",
-      width: 2000,
-      height: 1500,
-    },
-  ],
-};
+import FloatingContactBar from "../../components/FloatingContactBar";
 
 function ProjectImage({ image, className = "", sizes = "100vw", priority = false }) {
   return (
@@ -82,6 +23,8 @@ function ProjectImage({ image, className = "", sizes = "100vw", priority = false
 }
 
 function CopyBlock({ children, className = "" }) {
+  if (!children) return null;
+
   return (
     <div className={`mx-auto max-w-3xl space-y-4 text-sm font-medium leading-7 text-[#1f1d18] ${className}`}>
       {children}
@@ -89,7 +32,12 @@ function CopyBlock({ children, className = "" }) {
   );
 }
 
-export default function VillaAtThePromenadeVillas() {
+function Paragraphs({ items = [] }) {
+  if (!items.length) return null;
+  return items.map((text) => <p key={text}>{text}</p>);
+}
+
+export default function ProjectDetailLayout({ title, images, copy }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
@@ -180,43 +128,22 @@ export default function VillaAtThePromenadeVillas() {
 
       <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Villa at The Promenade Villas</h1>
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">{title}</h1>
 
-          <ProjectImage
-            image={images.cover}
-            priority
-            className="aspect-[4/3] rounded-[22px] sm:aspect-[16/7]"
-            sizes="(max-width: 768px) 100vw, 92vw"
-          />
+          <ProjectImage image={images.cover} priority className="aspect-[4/3] rounded-[22px] sm:aspect-[16/7]" sizes="(max-width: 768px) 100vw, 92vw" />
 
           <CopyBlock className="py-10 md:py-12">
-            <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
-            <p>
-              Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical
-              lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The
-              marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece
-              sitting quietly on it was chosen because it adds just the right touch of personality.
-            </p>
+            <Paragraphs items={copy.intro} />
           </CopyBlock>
 
           <section className="grid gap-4 md:grid-cols-3">
             {images.gallery.slice(0, 3).map((image, index) => (
-              <ProjectImage
-                key={image.src}
-                image={image}
-                priority={index === 0}
-                className="aspect-[3/4]"
-                sizes="(max-width: 768px) 100vw, 31vw"
-              />
+              <ProjectImage key={`${image.src}-${index}`} image={image} priority={index === 0} className="aspect-[3/4]" sizes="(max-width: 768px) 100vw, 31vw" />
             ))}
           </section>
 
           <CopyBlock className="py-10 text-center md:py-12">
-            <p>
-              The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze
-              room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family
-              dinner into something worth remembering.
-            </p>
+            <Paragraphs items={copy.afterFirstGallery} />
           </CopyBlock>
 
           <section className="grid gap-4 lg:grid-cols-2">
@@ -225,11 +152,7 @@ export default function VillaAtThePromenadeVillas() {
           </section>
 
           <CopyBlock className="py-10 text-center md:py-12">
-            <p>
-              The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate
-              hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the
-              whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.
-            </p>
+            <Paragraphs items={copy.afterPair} />
           </CopyBlock>
 
           <ProjectImage image={images.gallery[5]} className="aspect-[16/7]" sizes="92vw" />
@@ -240,11 +163,7 @@ export default function VillaAtThePromenadeVillas() {
           </section>
 
           <CopyBlock className="pt-10 md:pt-12">
-            <p>
-              The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash;
-              tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.
-            </p>
-            <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
+            <Paragraphs items={copy.closing} />
           </CopyBlock>
         </div>
       </main>

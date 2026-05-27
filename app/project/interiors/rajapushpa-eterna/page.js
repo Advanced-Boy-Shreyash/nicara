@@ -228,7 +228,7 @@ export default function FlatAtRajapushpaEterna() {
           <ProjectImage image={images.gallery[5]} className="aspect-[16/7]" sizes="92vw" />
 
           <section className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <ProjectImage image={images.gallery[6]} className="aspect-[3/4]" sizes="(max-width: 768px) 100vw, 31vw" />
+            <ProjectImage image={images.gallery[6]} className="h-full" sizes="(max-width: 768px) 100vw, 31vw" />
             <ProjectImage image={images.gallery[7]} className="aspect-[4/3] md:col-span-1 lg:col-span-2" sizes="(max-width: 768px) 100vw, 62vw" />
           </section>
 
