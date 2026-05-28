@@ -9,56 +9,56 @@ import FloatingContactBar from "../../../components/FloatingContactBar";
 const images = {
   cover: {
     src: "/p1/p_img1.png",
-    alt: "Apartment at Rajapushpa Eterna",
+    alt: "Rajapushpa Eterna",
     width: 1920,
     height: 1080,
   },
   gallery: [
     {
       src: "/p1/p_img2.png",
-      alt: "Apartment at Rajapushpa Eterna living room",
+      alt: "Rajapushpa Eterna living room",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p1/p_img3.png",
-      alt: "Apartment at Rajapushpa Eterna interior view",
+      alt: "Rajapushpa Eterna interior view",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img4.png",
-      alt: "Apartment at Rajapushpa Eterna lounge",
+      alt: "Rajapushpa Eterna lounge",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img5.png",
-      alt: "Apartment at Rajapushpa Eterna dining area",
+      alt: "Rajapushpa Eterna dining area",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img6.png",
-      alt: "Apartment at Rajapushpa Eterna kitchen",
+      alt: "Rajapushpa Eterna kitchen",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p1/p_img9.png",
-      alt: "Apartment at Rajapushpa Eterna bedroom",
+      alt: "Rajapushpa Eterna bedroom",
       width: 1920,
       height: 1080,
     },
     {
       src: "/p1/p_img7.png",
-      alt: "Apartment at Rajapushpa Eterna detail",
+      alt: "Rajapushpa Eterna detail",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p1/p_img8.png",
-      alt: "Apartment at Rajapushpa Eterna shelving wall",
+      alt: "Rajapushpa Eterna shelving wall",
       width: 1920,
       height: 1080,
     },
@@ -180,7 +180,7 @@ export default function ApartmentAtRajapushpaEterna() {
 
       <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Apartment at Rajapushpa Eterna</h1>
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Rajapushpa Eterna</h1>
 
           <ProjectImage
             image={images.cover}

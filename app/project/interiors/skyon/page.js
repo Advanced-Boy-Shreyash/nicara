@@ -5,19 +5,19 @@ import ProjectDetailLayout from "../ProjectDetailLayout";
 const images = {
   cover: {
     src: "/p2/p_img1.png",
-    alt: "Apartment at Skyon",
+    alt: "Skyon",
     width: 1920,
     height: 1080,
   },
   gallery: [
-    { src: "/p2/p_img2.png", alt: "Apartment at Skyon living room", width: 1920, height: 1080 },
-    { src: "/p2/p_img3.png", alt: "Apartment at Skyon artwork", width: 920, height: 580 },
-    { src: "/p2/p_img4.png", alt: "Apartment at Skyon detail", width: 920, height: 580 },
-    { src: "/p2/p_img5.png", alt: "Apartment at Skyon bedroom", width: 920, height: 580 },
-    { src: "/p2/p_img6.png", alt: "Apartment at Skyon wardrobe", width: 920, height: 580 },
-    { src: "/p2/p_img9.png", alt: "Apartment at Skyon", width: 1920, height: 1080 },
-    { src: "/p2/p_img8.png", alt: "Apartment at Skyon vanity", width: 920, height: 580 },
-    { src: "/p2/p_img7.png", alt: "Apartment at Skyon wardrobe detail", width: 920, height: 580 },
+    { src: "/p2/p_img2.png", alt: "Skyon living room", width: 1920, height: 1080 },
+    { src: "/p2/p_img3.png", alt: "Skyon artwork", width: 920, height: 580 },
+    { src: "/p2/p_img4.png", alt: "Skyon detail", width: 920, height: 580 },
+    { src: "/p2/p_img5.png", alt: "Skyon bedroom", width: 920, height: 580 },
+    { src: "/p2/p_img6.png", alt: "Skyon wardrobe", width: 920, height: 580 },
+    { src: "/p2/p_img9.png", alt: "Skyon", width: 1920, height: 1080 },
+    { src: "/p2/p_img8.png", alt: "Skyon vanity", width: 920, height: 580 },
+    { src: "/p2/p_img7.png", alt: "Skyon wardrobe detail", width: 920, height: 580 },
   ],
 };
 
@@ -37,5 +37,5 @@ const copy = {
 };
 
 export default function ApartmentAtSkyon() {
-  return <ProjectDetailLayout title="Apartment at Skyon" images={images} copy={copy} />;
+  return <ProjectDetailLayout title="Skyon" images={images} copy={copy} />;
 }

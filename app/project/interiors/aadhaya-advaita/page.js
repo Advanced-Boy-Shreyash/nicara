@@ -5,19 +5,19 @@ import ProjectDetailLayout from "../ProjectDetailLayout";
 const images = {
   cover: {
     src: "/p3/p_img1.png",
-    alt: "Villa at Aadhya Advaita",
+    alt: "Aadhya Advaita",
     width: 1920,
     height: 1080,
   },
   gallery: [
-    { src: "/p3/p_img2.png", alt: "Villa at Aadhya Advaita dining room", width: 1920, height: 1080 },
-    { src: "/p3/p_img3.png", alt: "Villa at Aadhya Advaita detail", width: 920, height: 580 },
-    { src: "/p3/p_img4.png", alt: "Villa at Aadhya Advaita detail", width: 920, height: 580 },
-    { src: "/p3/p_img5.png", alt: "Villa at Aadhya Advaita kitchen", width: 920, height: 580 },
-    { src: "/p3/p_img6.png", alt: "Villa at Aadhya Advaita bedroom", width: 920, height: 580 },
-    { src: "/p3/p_img7.png", alt: "Villa at Aadhya Advaita", width: 1920, height: 1080 },
-    { src: "/p3/p_img8.png", alt: "Villa at Aadhya Advaita dining detail", width: 920, height: 580 },
-    { src: "/p3/p_img9.png", alt: "Villa at Aadhya Advaita kitchen detail", width: 920, height: 580 },
+    { src: "/p3/p_img2.png", alt: "Aadhya Advaita dining room", width: 1920, height: 1080 },
+    { src: "/p3/p_img3.png", alt: "Aadhya Advaita detail", width: 920, height: 580 },
+    { src: "/p3/p_img4.png", alt: "Aadhya Advaita detail", width: 920, height: 580 },
+    { src: "/p3/p_img5.png", alt: "Aadhya Advaita kitchen", width: 920, height: 580 },
+    { src: "/p3/p_img6.png", alt: "Aadhya Advaita bedroom", width: 920, height: 580 },
+    { src: "/p3/p_img7.png", alt: "Aadhya Advaita", width: 1920, height: 1080 },
+    { src: "/p3/p_img8.png", alt: "Aadhya Advaita dining detail", width: 920, height: 580 },
+    { src: "/p3/p_img9.png", alt: "Aadhya Advaita kitchen detail", width: 920, height: 580 },
   ],
 };
 
@@ -39,5 +39,5 @@ const copy = {
 };
 
 export default function VillaAtAadhyaAdvaita() {
-  return <ProjectDetailLayout title="Villa at Aadhya Advaita" images={images} copy={copy} />;
+  return <ProjectDetailLayout title="Aadhya Advaita" images={images} copy={copy} />;
 }

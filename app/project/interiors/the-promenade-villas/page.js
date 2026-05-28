@@ -9,56 +9,56 @@ import FloatingContactBar from "../../../components/FloatingContactBar";
 const images = {
   cover: {
     src: "/p7/p_img1.png",
-    alt: "Villa at The Promenade Villas",
+    alt: "The Promenade Villas",
     width: 1500,
     height: 1125,
   },
   gallery: [
     {
       src: "/p7/p_img2.png",
-      alt: "Villa at The Promenade Villas living room",
+      alt: "The Promenade Villas living room",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p7/p_img3.png",
-      alt: "Villa at The Promenade Villas sculptural divider",
+      alt: "The Promenade Villas sculptural divider",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p7/p_img4.png",
-      alt: "Villa at The Promenade Villas lounge",
+      alt: "The Promenade Villas lounge",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p7/p_img7.png",
-      alt: "Villa at The Promenade Villas dining area",
+      alt: "The Promenade Villas dining area",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p7/p_img6.png",
-      alt: "Villa at The Promenade Villas kitchen",
+      alt: "The Promenade Villas kitchen",
       width: 1500,
       height: 2000,
     },
     {
       src: "/p7/p_img5.png",
-      alt: "Villa at The Promenade Villas bedroom",
+      alt: "The Promenade Villas bedroom",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p7/p_img8.png",
-      alt: "Villa at The Promenade Villas wardrobe",
+      alt: "The Promenade Villas wardrobe",
       width: 1125,
       height: 1500,
     },
     {
       src: "/p7/p_img9.png",
-      alt: "Villa at The Promenade Villas shelving wall",
+      alt: "The Promenade Villas shelving wall",
       width: 2000,
       height: 1500,
     },
@@ -180,7 +180,7 @@ export default function VillaAtThePromenadeVillas() {
 
       <main className="pb-16 pl-5 pr-12 pt-24 sm:px-8 md:px-10 lg:px-12">
         <div className="mx-auto max-w-[1500px]">
-          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">Villa at The Promenade Villas</h1>
+          <h1 className="mb-6 text-sm font-semibold text-[#1f1d18]">The Promenade Villas</h1>
 
           <ProjectImage
             image={images.cover}
