@@ -190,9 +190,7 @@ export default function ApartmentAtRajapushpaEterna() {
           />
 
           <CopyBlock className="py-10 md:py-12">
-            <p>From the moment you walk in, the open living and dining space feels warm and welcoming with textured walls, natural wood, and soft lighting that makes every evening feel calm and easy.</p>
-            <p>
-              She started by asking one simple question how do you want to feel when you come home?
+            <p>A modern kitchen with warm wood cabinets, dark marble countertops, and soft natural light coming through the window. Clean lines and thoughtful details like open shelving and matching appliances give the space a calm, put-together feel.
             </p>
           </CopyBlock>
 
@@ -210,7 +208,7 @@ export default function ApartmentAtRajapushpaEterna() {
 
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              From that, everything followed. Warm wood that makes a kitchen feel like the heart of the home. Soft lighting that turns an ordinary evening into something special. A bedroom that feels like a deep breath after a long day. Bold touches where you want to feel inspired, and calm quiet corners where you just want to rest.
+              Our client wanted their home to look nice and feel comfortable at the same time so we kept things simple, warm, and modern throughout every room.
             </p>
           </CopyBlock>
 
@@ -221,7 +219,7 @@ export default function ApartmentAtRajapushpaEterna() {
 
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              To bring life into the common spaces, she chose bold over ordinary. Warm amber lighting above the dining area adds a soft glow and makes every meal feel special. The bar unit stands out with sleek shelves, metal details, and subtle lighting that sets the mood. And at the heart of it all, a solid wood dining table anchors the space &mdash; made for good conversations and everyday moments.
+              The brief was simple a home that feels bold yet inviting, so we layered textured grey walls with rich wood tones, soft ambient lighting, and statement art to create a dining and living space that has real personality without trying too hard.
             </p>
           </CopyBlock>
 

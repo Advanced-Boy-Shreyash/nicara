@@ -23,16 +23,13 @@ const images = {
 
 const copy = {
   intro: [
-    "The Vue Residences is what happens when a home is designed for the whole family not just the living room.",
+    "The client wanted to show off their nice crockery instead of hiding it in closed cabinets so we built two glowing glass shelves on either side with a big round mirror in the middle that makes the whole setup look really elegant.",
   ],
   afterFirstGallery: [
-    "The bathroom feels like a mini spa with its green floating vanity, glowing mirror and gold taps. The pooja room sits proudly at the heart of the home, beautifully framed and warmly lit, because faith deserves a beautiful space too. The kitchen has a cosy wooden breakfast nook just a counter and a stool  perfect for that first quiet cup of chai.",
+    "From the first sketch to the final nail, we pulled this whole look together in just few days clean wall panelling, bold artwork, plush seating, and a cosy bedroom setup that feels like it took weeks to plan but came to life in no time.",
   ],
   afterPair: [
-    "And then there are the kids' rooms, honestly the best part of the whole home. One has a magical bunk bed with a loft, soft pink touches and warm wood that makes bedtime feel like an adventure. The other has a giant bunny on the wall, a cloud-shaped bed and golden stars the kind of room kids never want to leave. From the parents' spaces to the little ones' corners, every single room in The Vue Residences was thought through, cared for and designed with love.",
-  ],
-  closing: [
-    "Because a happy home takes care of everyone in it.",
+    "Both bedrooms were designed to feel calm and restful , soft colours, cosy beds, pretty artwork on the walls, and just enough warmth to make you never want to leave.",
   ],
 };
 

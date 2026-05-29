@@ -190,13 +190,7 @@ export default function VillaAtThePromenadeVillas() {
           />
 
           <CopyBlock className="py-10 md:py-12">
-            <p>Nicara brought something truly special to life with Villa at The Promenade Villas and every room shows it.</p>
-            <p>
-              Every single item in this home was chosen with intention. The living room&apos;s soft cream panels and warm vertical
-              lighting were carefully picked to make the space feel open, calm and welcoming from the moment you walk in. The
-              marble coffee table grounds the room beautifully without ever feeling heavy, and even the small sculptural piece
-              sitting quietly on it was chosen because it adds just the right touch of personality.
-            </p>
+            <p>A space where everything just feels right the curved sofas, the textured wall art, the sculptural chandelier, and the soft floor lamp all come together to create a living room that looks effortlessly elegant without trying too hard.</p>
           </CopyBlock>
 
           <section className="grid gap-4 md:grid-cols-3">
@@ -213,9 +207,7 @@ export default function VillaAtThePromenadeVillas() {
 
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              The dining area is where Nicara&apos;s eye for the unexpected truly shines &mdash; that stunning sculptural bronze
-              room divider with cane weaving is a rare find, and the looping chandelier above the table turns every family
-              dinner into something worth remembering.
+              The client wanted their living space to feel grand and dramatic without being over the top so we brought in a bold cluster pendant light, a striking red framed partition wall that glows, deep red accent chairs, and long low sofas that make the whole space feel like something out of a luxury hotel.
             </p>
           </CopyBlock>
 
@@ -226,9 +218,7 @@ export default function VillaAtThePromenadeVillas() {
 
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              The bedroom is where the design gets deeply personal. A glowing arched alcove behind the bed with delicate
-              hand-drawn lotus florals, warm amber light wrapping around it softly, and a rust orange throw that pulls the
-              whole room together with warmth and grace. It is the kind of bedroom you never want to leave in the morning.
+              From a cosy dark living room with a bar unit and bold art, to a glass walk-in wardrobe that makes getting dressed feel like a luxury experience this home truly has it all, right down to the very last detail.
             </p>
           </CopyBlock>
 
@@ -238,14 +228,6 @@ export default function VillaAtThePromenadeVillas() {
             <ProjectImage image={images.gallery[6]} className="h-full" sizes="(max-width: 768px) 100vw, 31vw" />
             <ProjectImage image={images.gallery[7]} className="aspect-[4/3] md:col-span-1 lg:col-span-2" sizes="(max-width: 768px) 100vw, 62vw" />
           </section>
-
-          <CopyBlock className="pt-10 md:pt-12">
-            <p>
-              The shelving wall near the foyer &mdash; backlit, layered with books, ceramics and thoughtful sculptures &mdash;
-              tells you everything about how Villa at The Promenade Villas was built. Nothing random. Nothing rushed.
-            </p>
-            <p>Every piece chosen carefully. Every detail executed with Nicara&apos;s signature touch &mdash; warm, bold and always full of soul.</p>
-          </CopyBlock>
         </div>
       </main>
 

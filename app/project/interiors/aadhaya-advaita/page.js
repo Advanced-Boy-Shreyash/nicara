@@ -23,18 +23,13 @@ const images = {
 
 const copy = {
   intro: [
-    "Some homes are built. Villa at Aadhya Advaita was crafted.",
+    "The client wanted their dining area to feel warm and inviting, so we used a solid wood table, a cool metal divider to separate the spaces, and some nice wall detailing that makes the whole room feel cozy and put together.",
   ],
   afterFirstGallery: [
-    "And so we did. The dining room stops you in your tracks. Copper inlays cut across concrete walls like brushstrokes \u2014 sharp, geometric, confident. The solid wood table beneath it feels like it's been there forever. This is a room that says we enjoy good food and even better company.",
+    "Texture and contrast add drama throughout the space: raw concrete wall with copper inlay, metal grid partition, hidden lighting, handleless grey cabinets, warm timber shelves, layered materials and sculptural detailing.",
   ],
   afterPair: [
-    "The kitchen doesn't just function \u2014 it performs. Glossy cabinets, black marble counters, pendant lights that hang just right. There's even a breakfast counter for those mornings when you just want a quiet coffee before the day begins.",
-    "The bedrooms each tell their own story. One is sharp and dramatic \u2014 geometric lighting, dark tones, a motorbike print on the wall for the one who doesn't do ordinary. Another is soft and easy \u2014 white linen, warm wood, curtains that let the morning in gently.",
-  ],
-  closing: [
-    "And running through every room \u2014 warm wood, punchy moments of colour, and light that knows exactly where to land.",
-    "Villa at Aadhya Advaita isn't just a home. It's a reflection of the people who live in it.",
+    "Simple, clean, and homely this space uses soft colours, comfy seating, and natural wood to bring the whole home together in the most effortless way.",
   ],
 };
 

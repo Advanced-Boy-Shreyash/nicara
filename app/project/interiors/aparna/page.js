@@ -192,8 +192,7 @@ export default function ApartmentAtAparna() {
           {/* Intro — living room sets the scene */}
           <CopyBlock className="py-10 md:py-12">
             <p>
-              Aparna is a home that stops you the moment you walk in. The living room draws you in with gold pendant lights,
-              deep red accents and sofas warm enough to sink into for hours.
+              We framed the entryway with a classic arched mirror set against a marble panel, flanked by wall sconces that add a soft glow, while the opposite wall features a full height lit display unit with textured stone cladding and wooden shelves that give the space depth, character, and a really refined finish.
             </p>
           </CopyBlock>
 
@@ -212,9 +211,7 @@ export default function ApartmentAtAparna() {
           {/* Dining space — a natural pause between living and kitchen */}
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              The dining space makes every meal feel like a special occasion &mdash; dark marble table, velvet chairs and a
-              bold red grid wall that you simply can&apos;t take your eyes off. Nicara and team did what they do best: they
-              turned a house into a home that takes your breath away.
+              They wanted each room to feel different yet connected so we gave them an elegant entryway, a peaceful living room with a gorgeous lit wall, and a super cute kids bedroom with a bunny and stars that made their little one jump with joy.
             </p>
           </CopyBlock>
 
@@ -226,9 +223,7 @@ export default function ApartmentAtAparna() {
           {/* Kitchen & bedroom — the home gets deeply personal */}
           <CopyBlock className="py-10 text-center md:py-12">
             <p>
-              The kitchen surprises you the most &mdash; dark matte cabinets paired with the most stunning green marble wall,
-              making even everyday cooking feel elevated. The bedroom is personal and calm, with a rich wine-red headboard,
-              a sculptural art piece and a living tree that breathes life into the room.
+              We listen carefully to what each client pictures for their home and then make sure every detail reflects that from picking the right light fixture that becomes a talking point, to designing a shelf wall that is both useful and beautiful, nothing is done without a reason behind it.
             </p>
           </CopyBlock>
 
@@ -238,21 +233,6 @@ export default function ApartmentAtAparna() {
             <ProjectImage image={images.gallery[6]} className="h-full" sizes="(max-width: 768px) 100vw, 31vw" />
             <ProjectImage image={images.gallery[7]} className="aspect-[4/3] md:col-span-1 lg:col-span-2" sizes="(max-width: 768px) 100vw, 62vw" />
           </section>
-
-          {/* Wardrobe + closing — every corner tells a story */}
-          <CopyBlock className="pt-10 md:pt-12">
-            <p>
-              And the wardrobe &mdash; full glass, warm amber light inside, clothes displayed like a private boutique. Every
-              piece in this home was chosen with care, every corner tells a story, and nothing was placed just to fill space.
-              Aparna is bold, warm and completely one of a kind &mdash; a true reflection of the family that calls it home.
-            </p>
-            <p>
-              Gold pendant lights, bold red accents, a jaw-dropping green marble kitchen wall, a bedroom that feels deeply
-              personal, and a walk-in wardrobe that looks straight out of a luxury hotel. Every detail in Aparna was chosen
-              with care, every corner designed with heart. This is Nicara at her finest &mdash; bold where it counts, warm
-              where it matters, and always, always done with soul.
-            </p>
-          </CopyBlock>
         </div>
       </main>
 

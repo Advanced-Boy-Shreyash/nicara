@@ -23,16 +23,13 @@ const images = {
 
 const copy = {
   intro: [
-    "Skyon feels like a home you naturally want to stay in, where every corner is designed to make daily life feel calmer and more beautiful.",
+    "We kept the style classy and approachable soft cream sofas with detailed panelling, a gorgeous mountain painting on the back wall, warm brown curtains, a unique curvy gold light on the ceiling, and a pretty archway leading into the next room everything just flows together really nicely.",
   ],
   afterFirstGallery: [
-    "The living room carries a soft, welcoming warmth with its neutral palette, gentle lighting, and striking artwork.",
+    "The client wanted every corner of their home to feel special and well thought out so right from the entrance with the gold mirror and marble table, to the living room seating and TV wall, we made sure every single spot had its own charm.",
   ],
   afterPair: [
-    "The bedroom offers a quiet sense of comfort with its clean, restful simplicity, the wardrobe brings both style and practicality through its illuminated, well-organized design, and the vanity adds a spa-like touch with warm light, a round mirror, and subtle gold details.",
-  ],
-  closing: [
-    "Every corner is designed to make daily life feel calmer and more beautiful, with subtle gold details that make the space feel refined and personal.",
+    "At the end of the day, this home has everything the client dreamed of a stylish bar unit to entertain guests, cozy seating to relax in, and big windows that bring the outside in, making the whole space feel alive and personal.",
   ],
 };
 

@@ -23,10 +23,14 @@ const images = {
 
 const copy = {
   intro: [
-    "A modern Indian home that blends tradition with contemporary design. From the handcrafted wooden ceiling and ikat-detailed columns to the forest-green bathroom vanity and travertine pooja niche \u2014 every space is designed with intention, warmth, and a deep respect for craft",
+    "Every kid dreams of having their own little world to sleep, play and hide in ,so we built exactly that, a snug bunk setup with a glowing nook, a fun upper hideout, and soft warm colours that make this room every child's dream come true.",
   ],
-  afterFirstGallery: [],
-  afterPair: [],
+  afterFirstGallery: [
+    "The client just wanted a home that looks good without being too over the top inviting enough to feel homely, stylish enough to impress guests, and each room having its own little something special, whether it's the dining area, the living room, or the bedroom."
+  ],
+  afterPair: [
+    "From the kitchen to the bedroom, we made sure nothing was left as an afterthought clean cabinets with wood touches in the kitchen, and a full wall wardrobe with neat panelling in the bedroom, because every room deserves to look just as good as the next."
+  ],
   closing: [],
 };
 
